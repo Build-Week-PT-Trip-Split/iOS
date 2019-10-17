@@ -22,6 +22,14 @@
             </objects>
             <point key="canvasLocation" x="43" y="134"/>
         </scene>
+        <!--WelcomeBackScreen-->
+        <scene sceneID="NRo-Jj-qPz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WelcomeBackScreen" id="cGw-Vd-283" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYT-DW-Unn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="297"/>
+        </scene>
         <!--ResetPassword-->
         <scene sceneID="nHu-Yr-fDX">
             <objects>

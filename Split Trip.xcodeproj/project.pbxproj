@@ -17,6 +17,8 @@
 		EF03726E2356C57C006161CA /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF03726D2356C57C006161CA /* LogIn.storyboard */; };
 		EF0372702356C652006161CA /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF03726F2356C652006161CA /* ResetPassword.storyboard */; };
 		EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */; };
+		EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */; };
+		EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		EF03726D2356C57C006161CA /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		EF03726F2356C652006161CA /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUserWelcomeScreen.storyboard; sourceTree = "<group>"; };
+		EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeBackScreen.storyboard; sourceTree = "<group>"; };
+		EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +98,13 @@
 			isa = PBXGroup;
 			children = (
 				EF0372542356B61D006161CA /* LandingPage.storyboard */,
-				EF0372592356B61E006161CA /* LaunchScreen.storyboard */,
 				EF03726B2356C536006161CA /* SignUpPage.storyboard */,
-				EF03726D2356C57C006161CA /* LogIn.storyboard */,
-				EF03726F2356C652006161CA /* ResetPassword.storyboard */,
 				EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */,
+				EF03726D2356C57C006161CA /* LogIn.storyboard */,
+				EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */,
+				EF03726F2356C652006161CA /* ResetPassword.storyboard */,
+				EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */,
+				EF0372592356B61E006161CA /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -193,11 +199,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */,
 				EF03725B2356B61E006161CA /* LaunchScreen.storyboard in Resources */,
 				EF0372582356B61E006161CA /* Assets.xcassets in Resources */,
 				EF0372562356B61D006161CA /* LandingPage.storyboard in Resources */,
 				EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */,
 				EF03726C2356C536006161CA /* SignUpPage.storyboard in Resources */,
+				EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */,
 				EF03726E2356C57C006161CA /* LogIn.storyboard in Resources */,
 				EF0372702356C652006161CA /* ResetPassword.storyboard in Resources */,
 			);
