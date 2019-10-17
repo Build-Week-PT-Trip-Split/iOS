@@ -43,11 +43,22 @@
                     <connections>
                         <outlet property="welcomeBackImageView" destination="UI6-IF-uRO" id="Jjt-CA-vVz"/>
                         <outlet property="welcomeBackLabel" destination="LSb-FS-dBu" id="uRO-IA-98V"/>
+                        <segue destination="sCg-Af-rlo" kind="show" identifier="ShowHomeScreenSegue" id="CTK-Xm-KcA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXN-ia-9KT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="79" y="37"/>
+        </scene>
+        <!--HomeScreen-->
+        <scene sceneID="Osz-Y3-BNy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeScreen" id="sCg-Af-rlo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Yvb-Uc-fFp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTR-J9-S1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="14"/>
         </scene>
     </scenes>
 </document>
