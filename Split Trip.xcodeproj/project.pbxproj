@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3748BAD92358DD360022C521 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3748BAD82358DD360022C521 /* Default-568h@2x.png */; };
+		3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADA2358E2B30022C521 /* LoginViewController.swift */; };
 		EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03724E2356B61D006161CA /* AppDelegate.swift */; };
 		EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0372502356B61D006161CA /* SceneDelegate.swift */; };
 		EF0372582356B61E006161CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0372572356B61E006161CA /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		3748BAD82358DD360022C521 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3748BADA2358E2B30022C521 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EF03724B2356B61D006161CA /* Split Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF03724E2356B61D006161CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0372502356B61D006161CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				EF0372692356C4E9006161CA /* LandingPageVC.swift */,
+				3748BADA2358E2B30022C521 /* LoginViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
 				EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */,
 				EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */,
