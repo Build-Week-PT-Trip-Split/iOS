@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3748BAD92358DD360022C521 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3748BAD82358DD360022C521 /* Default-568h@2x.png */; };
 		EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03724E2356B61D006161CA /* AppDelegate.swift */; };
 		EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0372502356B61D006161CA /* SceneDelegate.swift */; };
 		EF0372562356B61D006161CA /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372542356B61D006161CA /* LandingPage.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3748BAD82358DD360022C521 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EF03724B2356B61D006161CA /* Split Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF03724E2356B61D006161CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0372502356B61D006161CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		EF0372422356B61D006161CA = {
 			isa = PBXGroup;
 			children = (
+				3748BAD82358DD360022C521 /* Default-568h@2x.png */,
 				EF03724D2356B61D006161CA /* Split Trip */,
 				EF03724C2356B61D006161CA /* Products */,
 			);
@@ -202,6 +205,7 @@
 				EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */,
 				EF03725B2356B61E006161CA /* LaunchScreen.storyboard in Resources */,
 				EF0372582356B61E006161CA /* Assets.xcassets in Resources */,
+				3748BAD92358DD360022C521 /* Default-568h@2x.png in Resources */,
 				EF0372562356B61D006161CA /* LandingPage.storyboard in Resources */,
 				EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */,
 				EF03726C2356C536006161CA /* SignUpPage.storyboard in Resources */,
