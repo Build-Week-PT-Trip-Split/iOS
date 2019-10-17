@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DaC-zS-lsf">
-                                <rect key="frame" x="125" y="407.66666666666669" width="125" height="120.33333333333331"/>
+                                <rect key="frame" x="125" y="436" width="125" height="117"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri2-6C-aiX">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="45"/>
@@ -34,13 +34,13 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6y-lP-zCM">
-                                        <rect key="frame" x="0.0" y="50" width="125" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="50" width="125" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0is-4h-g5v">
-                                        <rect key="frame" x="0.0" y="75.333333333333314" width="125" height="45"/>
+                                        <rect key="frame" x="0.0" y="72" width="125" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="125" id="NQg-xb-E5b"/>
@@ -57,24 +57,24 @@
                                     <constraint firstAttribute="trailing" secondItem="w6y-lP-zCM" secondAttribute="trailing" id="zaa-fi-Pxg"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PRb-Tc-rZW">
-                                <rect key="frame" x="65" y="160.66666666666669" width="245" height="130.66666666666666"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO PIC" translatesAutoresizingMaskIntoConstraints="NO" id="PRb-Tc-rZW">
+                                <rect key="frame" x="103.66666666666669" y="153" width="168" height="168"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="PRb-Tc-rZW" secondAttribute="height" multiplier="1:1" id="4LQ-sn-0KS"/>
-                                    <constraint firstAttribute="width" secondItem="PRb-Tc-rZW" secondAttribute="height" multiplier="240:131" id="gdN-Qa-QFr"/>
+                                    <constraint firstAttribute="height" constant="168" id="LIf-9g-ABo"/>
+                                    <constraint firstAttribute="width" constant="168" id="Mzd-Es-3nF"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy your trip, TripSplit will  do all of the math for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRN-x0-Oeh">
-                                <rect key="frame" x="20" y="312.66666666666669" width="335" height="75"/>
+                                <rect key="frame" x="20" y="341" width="335" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="YC9-MN-JZW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1I-cP-WZN">
-                                <rect key="frame" x="138.66666666666666" y="536" width="98" height="28"/>
+                                <rect key="frame" x="138.66666666666666" y="561" width="98" height="28"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
                                 <state key="normal" title="Terms|Privacy Policy">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,9 +83,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PRb-Tc-rZW" secondAttribute="trailing" constant="65" id="2WG-xQ-XpA"/>
                             <constraint firstItem="VWC-v7-res" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KOb-KR-Sul"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DaC-zS-lsf" secondAttribute="bottom" constant="250" id="NuO-pF-l1a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DaC-zS-lsf" secondAttribute="bottom" constant="225" id="NuO-pF-l1a"/>
                             <constraint firstItem="DaC-zS-lsf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TEV-Aq-8yD"/>
                             <constraint firstItem="XRN-x0-Oeh" firstAttribute="top" secondItem="PRb-Tc-rZW" secondAttribute="bottom" constant="20" id="URu-po-FXs"/>
                             <constraint firstItem="VWC-v7-res" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VlB-zd-ySy"/>
@@ -95,7 +94,7 @@
                             <constraint firstItem="VWC-v7-res" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kih-sd-YWy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XRN-x0-Oeh" secondAttribute="trailing" constant="20" id="rMR-hK-xV0"/>
                             <constraint firstItem="B1I-cP-WZN" firstAttribute="top" secondItem="DaC-zS-lsf" secondAttribute="bottom" constant="8" id="uT0-6m-9EL"/>
-                            <constraint firstItem="PRb-Tc-rZW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="wjR-Ca-Az2"/>
+                            <constraint firstItem="PRb-Tc-rZW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v1g-UQ-Cfb"/>
                             <constraint firstItem="DaC-zS-lsf" firstAttribute="top" secondItem="XRN-x0-Oeh" secondAttribute="bottom" constant="20" id="y8m-5o-v70"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -135,6 +134,6 @@
     </scenes>
     <resources>
         <image name="LAYOUT" width="375" height="812"/>
-        <image name="person.crop.square.fill" catalog="system" width="64" height="56"/>
+        <image name="LOGO PIC" width="168" height="168"/>
     </resources>
 </document>
