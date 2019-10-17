@@ -7,15 +7,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Your TripsVC-->
         <scene sceneID="zTs-7f-r9I">
             <objects>
-                <viewController id="cu8-ap-O8l" sceneMemberID="viewController">
+                <viewController id="cu8-ap-O8l" customClass="YourTripsVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wA7-Ot-TFJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-S9-Ikd">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-S9-Ikd" customClass="BalanceView" customModule="Split_Trip" customModuleProvider="target">
                                 <rect key="frame" x="20" y="108" width="374" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Balance View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ED0-s1-Wxh">
@@ -32,72 +32,68 @@
                                     <constraint firstItem="ED0-s1-Wxh" firstAttribute="centerX" secondItem="3dj-S9-Ikd" secondAttribute="centerX" id="VaW-rH-otP"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vg-hd-Xjf">
-                                <rect key="frame" x="20" y="308" width="374" height="485"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Trips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV0-dw-77B">
-                                        <rect key="frame" x="8" y="8" width="358" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FYH-mB-gh7">
-                                        <rect key="frame" x="8" y="47.5" width="358" height="429.5"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oDK-yb-Al8">
-                                                <rect key="frame" x="0.0" y="28" width="358" height="60"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oDK-yb-Al8" id="VT6-LH-eDm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="60"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohf-nM-olq">
-                                                            <rect key="frame" x="20" y="18.5" width="126.5" height="23.5"/>
-                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0b-dB-DX5">
-                                                            <rect key="frame" x="254.5" y="18.5" width="83.5" height="23.5"/>
-                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="V0b-dB-DX5" firstAttribute="centerY" secondItem="VT6-LH-eDm" secondAttribute="centerY" id="94q-OE-UKo"/>
-                                                        <constraint firstItem="ohf-nM-olq" firstAttribute="leading" secondItem="VT6-LH-eDm" secondAttribute="leading" constant="20" id="LZS-8j-D2B"/>
-                                                        <constraint firstItem="V0b-dB-DX5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ohf-nM-olq" secondAttribute="trailing" constant="8" id="hrC-CK-bV7"/>
-                                                        <constraint firstItem="ohf-nM-olq" firstAttribute="centerY" secondItem="VT6-LH-eDm" secondAttribute="centerY" id="r07-Wf-Oao"/>
-                                                        <constraint firstAttribute="trailing" secondItem="V0b-dB-DX5" secondAttribute="trailing" constant="20" id="rZZ-Ev-z5U"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPS-l7-Vta">
+                                <rect key="frame" x="164.5" y="308" width="85" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQB-ja-jH9">
+                                <rect key="frame" x="333" y="305.5" width="61" height="30"/>
+                                <state key="normal" title="New Trip"/>
+                                <connections>
+                                    <segue destination="Z0w-LJ-P1k" kind="presentation" id="307-bX-AmT"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eSY-aE-t3Z">
+                                <rect key="frame" x="20" y="349" width="374" height="444"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="FYH-mB-gh7" secondAttribute="trailing" constant="8" id="45o-de-l8C"/>
-                                    <constraint firstAttribute="trailing" secondItem="fV0-dw-77B" secondAttribute="trailing" constant="8" id="ARj-uH-jPQ"/>
-                                    <constraint firstItem="FYH-mB-gh7" firstAttribute="leading" secondItem="4vg-hd-Xjf" secondAttribute="leading" constant="8" id="T3S-kB-gah"/>
-                                    <constraint firstItem="FYH-mB-gh7" firstAttribute="top" secondItem="fV0-dw-77B" secondAttribute="bottom" constant="16" id="dUb-b9-g5P"/>
-                                    <constraint firstItem="fV0-dw-77B" firstAttribute="leading" secondItem="4vg-hd-Xjf" secondAttribute="leading" constant="8" id="iO9-CU-Ykm"/>
-                                    <constraint firstAttribute="bottom" secondItem="FYH-mB-gh7" secondAttribute="bottom" constant="8" id="owW-A1-LnM"/>
-                                    <constraint firstItem="fV0-dw-77B" firstAttribute="top" secondItem="4vg-hd-Xjf" secondAttribute="top" constant="8" id="vfO-bH-YeH"/>
-                                </constraints>
-                            </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Llu-7b-hHT">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Llu-7b-hHT" id="qVb-9P-Xxz">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Awesome Trip Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-xS-6Ty">
+                                                    <rect key="frame" x="20" y="19.5" width="173" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Spend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abW-1N-kOL">
+                                                    <rect key="frame" x="263" y="19.5" width="91" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QUt-xS-6Ty" firstAttribute="centerY" secondItem="qVb-9P-Xxz" secondAttribute="centerY" id="Eou-rZ-CZg"/>
+                                                <constraint firstItem="abW-1N-kOL" firstAttribute="trailing" secondItem="qVb-9P-Xxz" secondAttribute="trailingMargin" id="GSD-ef-wlQ"/>
+                                                <constraint firstItem="abW-1N-kOL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QUt-xS-6Ty" secondAttribute="trailing" constant="8" id="gt4-hR-Vii"/>
+                                                <constraint firstItem="abW-1N-kOL" firstAttribute="centerY" secondItem="qVb-9P-Xxz" secondAttribute="centerY" id="kzL-Nv-PrP"/>
+                                                <constraint firstItem="QUt-xS-6Ty" firstAttribute="leading" secondItem="qVb-9P-Xxz" secondAttribute="leadingMargin" id="yI3-G4-G6K"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="sPS-l7-Vta" firstAttribute="top" secondItem="3dj-S9-Ikd" secondAttribute="bottom" constant="20" id="1ad-X0-9mx"/>
+                            <constraint firstItem="sOZ-lr-gqJ" firstAttribute="bottom" secondItem="eSY-aE-t3Z" secondAttribute="bottom" constant="20" id="3fD-RW-Tvk"/>
+                            <constraint firstItem="sOZ-lr-gqJ" firstAttribute="trailing" secondItem="eSY-aE-t3Z" secondAttribute="trailing" constant="20" id="6UD-LJ-uCj"/>
+                            <constraint firstItem="MQB-ja-jH9" firstAttribute="centerY" secondItem="sPS-l7-Vta" secondAttribute="centerY" id="92E-Nt-sBP"/>
                             <constraint firstItem="3dj-S9-Ikd" firstAttribute="top" secondItem="sOZ-lr-gqJ" secondAttribute="top" constant="20" id="9D4-39-RGg"/>
                             <constraint firstItem="3dj-S9-Ikd" firstAttribute="leading" secondItem="sOZ-lr-gqJ" secondAttribute="leading" constant="20" id="CEC-MF-hM1"/>
-                            <constraint firstItem="sOZ-lr-gqJ" firstAttribute="trailing" secondItem="4vg-hd-Xjf" secondAttribute="trailing" constant="20" id="Efo-Md-liK"/>
-                            <constraint firstItem="4vg-hd-Xjf" firstAttribute="top" secondItem="3dj-S9-Ikd" secondAttribute="bottom" constant="20" id="aFj-gx-xQe"/>
+                            <constraint firstItem="eSY-aE-t3Z" firstAttribute="top" secondItem="sPS-l7-Vta" secondAttribute="bottom" constant="16" id="DFy-Cx-RQs"/>
+                            <constraint firstItem="MQB-ja-jH9" firstAttribute="trailing" secondItem="3dj-S9-Ikd" secondAttribute="trailing" id="Mrq-hj-Pbm"/>
                             <constraint firstItem="sOZ-lr-gqJ" firstAttribute="trailing" secondItem="3dj-S9-Ikd" secondAttribute="trailing" constant="20" id="io9-DN-Rsa"/>
-                            <constraint firstItem="sOZ-lr-gqJ" firstAttribute="bottom" secondItem="4vg-hd-Xjf" secondAttribute="bottom" constant="20" id="j1L-Ka-fhs"/>
-                            <constraint firstItem="4vg-hd-Xjf" firstAttribute="leading" secondItem="sOZ-lr-gqJ" secondAttribute="leading" constant="20" id="yO2-Ce-W90"/>
+                            <constraint firstItem="sPS-l7-Vta" firstAttribute="centerX" secondItem="sOZ-lr-gqJ" secondAttribute="centerX" id="mBu-Fx-Htm"/>
+                            <constraint firstItem="eSY-aE-t3Z" firstAttribute="leading" secondItem="sOZ-lr-gqJ" secondAttribute="leading" constant="20" id="s7G-Xe-5Hh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sOZ-lr-gqJ"/>
                     </view>
@@ -105,10 +101,43 @@
                         <barButtonItem key="leftBarButtonItem" title="Account" image="person.circle" catalog="system" id="iMz-TM-KZL"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="wjD-qj-lMt"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="eSY-aE-t3Z" id="AQ2-Nj-d8L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X73-eR-Dku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2071.0144927536235" y="-666.29464285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fit-Js-CAe">
+            <objects>
+                <viewController id="Z0w-LJ-P1k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3cf-1z-40e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WiK-Z1-A7N">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add New Trip" id="0yx-qi-qjY">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jR0-X1-V7X"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="VYn-Rq-bl2"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Qp-pd-eLS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76T-mO-kqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2971" y="-666"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="q9N-kY-BhN">
@@ -123,13 +152,12 @@
                     <connections>
                         <segue destination="Ddf-ow-LRl" kind="relationship" relationship="viewControllers" id="NwX-pM-NMe"/>
                         <segue destination="Kd2-3q-55G" kind="relationship" relationship="viewControllers" id="e5g-0b-S0f"/>
-                        <segue destination="zHB-m0-CQt" kind="relationship" relationship="viewControllers" id="r8l-PN-1eh"/>
                         <segue destination="qT5-We-ndt" kind="relationship" relationship="viewControllers" id="JMm-2O-igi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPZ-Pc-oqv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-36" y="554"/>
+            <point key="canvasLocation" x="154" y="17"/>
         </scene>
         <!--Friends-->
         <scene sceneID="Uun-TG-Wh5">
@@ -145,23 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6k-Ps-mJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="143"/>
-        </scene>
-        <!--New Trip-->
-        <scene sceneID="a8G-be-hHC">
-            <objects>
-                <viewController id="zHB-m0-CQt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="g4p-O5-VRe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="xtQ-pW-d61"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="New Trip" image="plus.rectangle" catalog="system" id="fBa-vn-LcX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ivZ-cZ-Ru4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1161" y="875"/>
+            <point key="canvasLocation" x="1161" y="17"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="Jam-Yb-RkP">
@@ -177,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxH-76-8e0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="1574"/>
+            <point key="canvasLocation" x="1161" y="711"/>
         </scene>
         <!--Home-->
         <scene sceneID="Nab-8L-jKS">
@@ -204,6 +216,5 @@
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
-        <image name="plus.rectangle" catalog="system" width="64" height="46"/>
     </resources>
 </document>
