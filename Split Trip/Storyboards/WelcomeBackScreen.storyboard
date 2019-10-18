@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LAYOUT" translatesAutoresizingMaskIntoConstraints="NO" id="POS-aV-CmN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO PIC" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-IF-uRO">
                                 <rect key="frame" x="75" y="119" width="264" height="264"/>
                                 <constraints>
@@ -22,21 +25,24 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back, Username!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSb-FS-dBu">
-                                <rect key="frame" x="50" y="432" width="314" height="30"/>
+                                <rect key="frame" x="50" y="529.5" width="314" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="FRC-1E-YAD" firstAttribute="trailing" secondItem="LSb-FS-dBu" secondAttribute="trailing" constant="50" id="267-ae-Rtv"/>
+                            <constraint firstAttribute="trailing" secondItem="POS-aV-CmN" secondAttribute="trailing" id="6PQ-xG-wjs"/>
                             <constraint firstItem="UI6-IF-uRO" firstAttribute="leading" secondItem="FRC-1E-YAD" secondAttribute="leading" constant="75" id="Mte-ML-efK"/>
                             <constraint firstItem="UI6-IF-uRO" firstAttribute="top" secondItem="FRC-1E-YAD" secondAttribute="top" constant="75" id="UCI-vQ-lgn"/>
+                            <constraint firstAttribute="bottom" secondItem="POS-aV-CmN" secondAttribute="bottom" id="UHq-Do-VNw"/>
                             <constraint firstItem="FRC-1E-YAD" firstAttribute="trailing" secondItem="UI6-IF-uRO" secondAttribute="trailing" constant="75" id="dYA-mO-KnW"/>
-                            <constraint firstItem="LSb-FS-dBu" firstAttribute="top" secondItem="UI6-IF-uRO" secondAttribute="bottom" constant="49" id="oHy-sV-bF7"/>
+                            <constraint firstItem="POS-aV-CmN" firstAttribute="top" secondItem="3Ht-TA-nSu" secondAttribute="top" id="eiR-gO-BA0"/>
                             <constraint firstItem="LSb-FS-dBu" firstAttribute="leading" secondItem="FRC-1E-YAD" secondAttribute="leading" constant="50" id="s3l-ru-ml9"/>
-                            <constraint firstItem="FRC-1E-YAD" firstAttribute="bottom" secondItem="LSb-FS-dBu" secondAttribute="bottom" constant="400" id="uIt-oA-nUj"/>
+                            <constraint firstItem="POS-aV-CmN" firstAttribute="leading" secondItem="3Ht-TA-nSu" secondAttribute="leading" id="tCy-nB-9aU"/>
+                            <constraint firstItem="FRC-1E-YAD" firstAttribute="bottom" secondItem="LSb-FS-dBu" secondAttribute="bottom" constant="300" id="uIt-oA-nUj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FRC-1E-YAD"/>
                     </view>
@@ -62,6 +68,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LAYOUT" width="375" height="812"/>
         <image name="LOGO PIC" width="168" height="168"/>
     </resources>
 </document>
