@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    var showHideButton: UIButton!
+    private var showHideButton: UIButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +22,7 @@ class LoginViewController: UIViewController {
         updateViews()
 
  }
-    
-    
+   
 //    func doneBarBtn() {
 //        let toolBar = UIToolbar()
 //        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
@@ -39,33 +38,28 @@ class LoginViewController: UIViewController {
 //    }
     
     private func updateViews() {
-        
+
         emailAddressTextField.backgroundColor = .clear
         emailAddressTextField.layer.borderColor = UIColor.white.cgColor
         emailAddressTextField.layer.borderWidth = 2.0
         emailAddressTextField.layer.cornerRadius = 5.0
         emailAddressTextField.textColor = .white
 
-        
+
         passwordTextField.backgroundColor = .clear
         passwordTextField.layer.borderColor = UIColor.white.cgColor
         passwordTextField.layer.borderWidth = 2.0
         passwordTextField.layer.cornerRadius = 5.0
         passwordTextField.textColor = .white
+
         
-        
-//        passwordTextField.addSubview(showHideButton)
-//        showHideButton.titleLabel?.text = "●"
-//        showHideButton.translatesAutoresizingMaskIntoConstraints = false
-//        showHideButton.centerYAnchor.constraint(equalTo: passwordTextField.centerYAnchor).isActive = true
-//        showHideButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor, constant: -20.0).isActive = true
-//        showHideButton.heightAnchor.constraint(equalToConstant: 75.0).isActive = true
-//        showHideButton.widthAnchor.constraint(equalToConstant: 75.0).isActive = true
-        
-        
-        
+        passwordTextField.rightView = showHideButton
+        showHideButton.titleLabel?.text = "●"
+        showHideButton.translatesAutoresizingMaskIntoConstraints = false
+
+
+
     }
-    
 
     /*
     // MARK: - Navigation
