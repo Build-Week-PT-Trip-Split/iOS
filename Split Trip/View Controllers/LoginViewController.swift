@@ -23,9 +23,20 @@ class LoginViewController: UIViewController {
     
     private func updateViews() {
         
-        loginButton.layer.cornerRadius = 12
-        loginButton.backgroundColor = .purple
-        loginButton.titleLabel?.textColor = .white
+//        loginButton.layer.cornerRadius = 12
+//        loginButton.backgroundColor = .purple
+//        loginButton.titleLabel?.textColor = .white
+        
+        emailAddressTextField.backgroundColor = .clear
+        emailAddressTextField.layer.borderColor = UIColor.white.cgColor
+        emailAddressTextField.layer.borderWidth = 1.0
+        emailAddressTextField.layer.cornerRadius = 5.0
+
+        
+        passwordTextField.backgroundColor = .clear
+        passwordTextField.layer.borderColor = UIColor.white.cgColor
+        passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.cornerRadius = 5.0
         
     }
     
