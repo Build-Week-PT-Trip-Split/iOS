@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3748BAD92358DD360022C521 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3748BAD82358DD360022C521 /* Default-568h@2x.png */; };
+		3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADA2358E2B30022C521 /* LoginViewController.swift */; };
+		3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */; };
 		EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03724E2356B61D006161CA /* AppDelegate.swift */; };
 		EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0372502356B61D006161CA /* SceneDelegate.swift */; };
 		EF0372562356B61D006161CA /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372542356B61D006161CA /* LandingPage.storyboard */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3748BAD82358DD360022C521 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3748BADA2358E2B30022C521 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
 		EF03724B2356B61D006161CA /* Split Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF03724E2356B61D006161CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0372502356B61D006161CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,7 @@
 		EF0372422356B61D006161CA = {
 			isa = PBXGroup;
 			children = (
+				3748BAD82358DD360022C521 /* Default-568h@2x.png */,
 				EF03724D2356B61D006161CA /* Split Trip */,
 				EF03724C2356B61D006161CA /* Products */,
 			);
@@ -137,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				EF0372692356C4E9006161CA /* LandingPageVC.swift */,
+				3748BADA2358E2B30022C521 /* LoginViewController.swift */,
+				3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -202,6 +211,7 @@
 				EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */,
 				EF03725B2356B61E006161CA /* LaunchScreen.storyboard in Resources */,
 				EF0372582356B61E006161CA /* Assets.xcassets in Resources */,
+				3748BAD92358DD360022C521 /* Default-568h@2x.png in Resources */,
 				EF0372562356B61D006161CA /* LandingPage.storyboard in Resources */,
 				EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */,
 				EF03726C2356C536006161CA /* SignUpPage.storyboard in Resources */,
@@ -218,7 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
+				3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */,
 				EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */,
 				EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */,
 			);
@@ -366,7 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SBB8C9E36E;
-				INFOPLIST_FILE = "Split Trip/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Split Trip/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SBB8C9E36E;
-				INFOPLIST_FILE = "Split Trip/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Split Trip/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
