@@ -51,14 +51,6 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.borderWidth = 2.0
         passwordTextField.layer.cornerRadius = 5.0
         passwordTextField.textColor = .white
-
-        
-        passwordTextField.rightView = showHideButton
-        showHideButton.titleLabel?.text = "●"
-        showHideButton.translatesAutoresizingMaskIntoConstraints = false
-
-
-
     }
 
     /*
