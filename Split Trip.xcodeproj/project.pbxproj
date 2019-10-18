@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03724E2356B61D006161CA /* AppDelegate.swift */; };
 		EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0372502356B61D006161CA /* SceneDelegate.swift */; };
-		EF0372562356B61D006161CA /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372542356B61D006161CA /* LandingPage.storyboard */; };
 		EF0372582356B61E006161CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0372572356B61E006161CA /* Assets.xcassets */; };
 		EF03725B2356B61E006161CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372592356B61E006161CA /* LaunchScreen.storyboard */; };
 		EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0372692356C4E9006161CA /* LandingPageVC.swift */; };
@@ -19,6 +18,8 @@
 		EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */; };
 		EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */; };
 		EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */; };
+		EF61C4E52358040D009D3A45 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E42358040D009D3A45 /* Default-568h@2x.png */; };
+		EF61C4E623581040009D3A45 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372542356B61D006161CA /* LandingPage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUserWelcomeScreen.storyboard; sourceTree = "<group>"; };
 		EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeBackScreen.storyboard; sourceTree = "<group>"; };
 		EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
+		EF61C4E42358040D009D3A45 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		EF0372422356B61D006161CA = {
 			isa = PBXGroup;
 			children = (
+				EF61C4E42358040D009D3A45 /* Default-568h@2x.png */,
 				EF03724D2356B61D006161CA /* Split Trip */,
 				EF03724C2356B61D006161CA /* Products */,
 			);
@@ -200,9 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */,
+				EF61C4E623581040009D3A45 /* LandingPage.storyboard in Resources */,
 				EF03725B2356B61E006161CA /* LaunchScreen.storyboard in Resources */,
 				EF0372582356B61E006161CA /* Assets.xcassets in Resources */,
-				EF0372562356B61D006161CA /* LandingPage.storyboard in Resources */,
+				EF61C4E52358040D009D3A45 /* Default-568h@2x.png in Resources */,
 				EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */,
 				EF03726C2356C536006161CA /* SignUpPage.storyboard in Resources */,
 				EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */,
@@ -366,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SBB8C9E36E;
-				INFOPLIST_FILE = "Split Trip/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Split Trip/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SBB8C9E36E;
-				INFOPLIST_FILE = "Split Trip/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Split Trip/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
