@@ -9,15 +9,22 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    //MARK: - Outlets
 
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    
+    //MARK: - Properties
+    
     private var showHideButton: UIButton = UIButton()
     
     private let showImage = UIImage(named: "EyeShow")
     private let hideImage = UIImage(named: "EyeClose")
+    
+    //MARK: - Views
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +32,8 @@ class LoginViewController: UIViewController {
         updateViews()
 
  }
+    
+    //MARK: - Functions
    
     func doneBarBtn() {
         let toolBar = UIToolbar()
@@ -39,6 +48,18 @@ class LoginViewController: UIViewController {
     @objc func doneClicked() {
         view.endEditing(true)
     }
+    
+    
+    @objc func showHideTapped() {
+        if showHideButton.currentImage == showImage {
+            showHideButton.setImage(hideImage, for: .normal)
+            passwordTextField.isSecureTextEntry = false
+        } else {
+            showHideButton.setImage(showImage, for: .normal)
+            passwordTextField.isSecureTextEntry = true
+        }
+    }
+    
     
     private func updateViews() {
 
@@ -62,22 +83,12 @@ class LoginViewController: UIViewController {
         showHideButton.addTarget(self, action: #selector(showHideTapped), for: .touchUpInside)
         showHideButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         showHideButton.widthAnchor.constraint(equalToConstant: 30.0).isActive = true
-   
-        
         
         doneBarBtn()
     }
 
     
-    @objc func showHideTapped() {
-        if showHideButton.currentImage == showImage {
-            showHideButton.setImage(hideImage, for: .normal)
-            passwordTextField.isSecureTextEntry = false
-        } else {
-            showHideButton.setImage(showImage, for: .normal)
-            passwordTextField.isSecureTextEntry = true
-        }
-    }
+    
     
     /*
     // MARK: - Navigation
