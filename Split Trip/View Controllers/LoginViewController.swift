@@ -16,6 +16,9 @@ class LoginViewController: UIViewController {
     
     private var showHideButton: UIButton = UIButton()
     
+    private let showImage = UIImage(named: "EyeShow")
+    private let hideImage = UIImage(named: "EyeClose")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,19 +26,19 @@ class LoginViewController: UIViewController {
 
  }
    
-//    func doneBarBtn() {
-//        let toolBar = UIToolbar()
-//        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-//        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
-//        toolBar.setItems([flexibleSpace,doneButton], animated: false)
-//        toolBar.sizeToFit()
-//        passwordTextField.inputAccessoryView = toolBar
-//        
-//    }
-//    
-//    @objc func doneClicked() {
-//        view.endEditing(true)
-//    }
+    func doneBarBtn() {
+        let toolBar = UIToolbar()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
+        toolBar.setItems([flexibleSpace,doneButton], animated: false)
+        toolBar.sizeToFit()
+        passwordTextField.inputAccessoryView = toolBar
+        
+    }
+    
+    @objc func doneClicked() {
+        view.endEditing(true)
+    }
     
     private func updateViews() {
 
@@ -51,8 +54,31 @@ class LoginViewController: UIViewController {
         passwordTextField.layer.borderWidth = 2.0
         passwordTextField.layer.cornerRadius = 5.0
         passwordTextField.textColor = .white
+        passwordTextField.rightView = showHideButton
+        passwordTextField.rightViewMode = .always
+        
+        showHideButton.setImage(showImage, for: .normal)
+        showHideButton.translatesAutoresizingMaskIntoConstraints = false
+        showHideButton.addTarget(self, action: #selector(showHideTapped), for: .touchUpInside)
+        showHideButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+        showHideButton.widthAnchor.constraint(equalToConstant: 30.0).isActive = true
+   
+        
+        
+        doneBarBtn()
     }
 
+    
+    @objc func showHideTapped() {
+        if showHideButton.currentImage == showImage {
+            showHideButton.setImage(hideImage, for: .normal)
+            passwordTextField.isSecureTextEntry = false
+        } else {
+            showHideButton.setImage(showImage, for: .normal)
+            passwordTextField.isSecureTextEntry = true
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
