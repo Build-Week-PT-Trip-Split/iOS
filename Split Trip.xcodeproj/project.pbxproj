@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4103226235B9A35004C4426 /* ViewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4103225235B9A35004C4426 /* ViewTripVC.swift */; };
+		A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410F3ED2358207F00F96001 /* YourTripsVC.swift */; };
+		A425A278235A36CF0031820B /* ParticipantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */; };
+		A425A279235A36CF0031820B /* ParticipantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */; };
+		A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460EA3C23581A1200AB8E7A /* BalanceView.swift */; };
+		A46A47C12359F23500DBC01A /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C02359F23500DBC01A /* FriendsVC.swift */; };
+		A46A47C32359F25B00DBC01A /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C22359F25B00DBC01A /* NotificationsVC.swift */; };
+		A46A47C6235A00FA00DBC01A /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C4235A00FA00DBC01A /* TripTableViewCell.swift */; };
+		A46A47C7235A00FA00DBC01A /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A47C5235A00FA00DBC01A /* TripTableViewCell.xib */; };
+		A46A47C9235A0DC600DBC01A /* AddTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C8235A0DC600DBC01A /* AddTripVC.swift */; };
+		A46A47CB235A27B900DBC01A /* ChooseImagePlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A46A47CA235A27B900DBC01A /* ChooseImagePlaceholder.png */; };
+		A4ED169F235B8C8500C358E8 /* AddTripSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED169D235B8C8500C358E8 /* AddTripSettingsTableViewCell.swift */; };
+		A4ED16A0235B8C8500C358E8 /* AddTripSettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4ED169E235B8C8500C358E8 /* AddTripSettingsTableViewCell.xib */; };
+		A4ED16A2235B8EC600C358E8 /* TripSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED16A1235B8EC600C358E8 /* TripSettings.swift */; };
+		A4FB58AB2359DF79002A1A39 /* backgroundImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4FB58AA2359DF79002A1A39 /* backgroundImage@3x.png */; };
 		3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADA2358E2B30022C521 /* LoginViewController.swift */; };
 		3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */; };
 		EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03724E2356B61D006161CA /* AppDelegate.swift */; };
@@ -30,6 +45,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4103225235B9A35004C4426 /* ViewTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTripVC.swift; sourceTree = "<group>"; };
+		A410F3ED2358207F00F96001 /* YourTripsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsVC.swift; sourceTree = "<group>"; };
+		A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParticipantCollectionViewCell.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/ParticipantCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ParticipantCollectionViewCell.xib; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/ParticipantCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		A460EA3C23581A1200AB8E7A /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		A46A47C02359F23500DBC01A /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/FriendsVC.swift"; sourceTree = SOURCE_ROOT; };
+		A46A47C22359F25B00DBC01A /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/NotificationsVC.swift"; sourceTree = SOURCE_ROOT; };
+		A46A47C4235A00FA00DBC01A /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		A46A47C5235A00FA00DBC01A /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
+		A46A47C8235A0DC600DBC01A /* AddTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddTripVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/AddTripVC.swift"; sourceTree = SOURCE_ROOT; };
+		A46A47CA235A27B900DBC01A /* ChooseImagePlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChooseImagePlaceholder.png; sourceTree = "<group>"; };
+		A4ED169D235B8C8500C358E8 /* AddTripSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddTripSettingsTableViewCell.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/AddTripSettingsTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		A4ED169E235B8C8500C358E8 /* AddTripSettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddTripSettingsTableViewCell.xib; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/AddTripSettingsTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		A4ED16A1235B8EC600C358E8 /* TripSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripSettings.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/TripSettings.swift"; sourceTree = SOURCE_ROOT; };
+		A4FB58AA2359DF79002A1A39 /* backgroundImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundImage@3x.png"; sourceTree = "<group>"; };
 		3748BADA2358E2B30022C521 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
 		EF03724B2356B61D006161CA /* Split Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +95,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4103224235B9A15004C4426 /* TripView */ = {
+			isa = PBXGroup;
+			children = (
+				A4103225235B9A35004C4426 /* ViewTripVC.swift */,
+			);
+			path = TripView;
+			sourceTree = "<group>";
+		};
+		A460EA38235819A700AB8E7A /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A4103224235B9A15004C4426 /* TripView */,
+				A460EA4323581A7700AB8E7A /* AccountNavBarMenu */,
+				A460EA4223581A5000AB8E7A /* NotificationsTabBarMenu */,
+				A460EA4123581A3A00AB8E7A /* AddTripView */,
+				A460EA4023581A2D00AB8E7A /* FriendsTabBarMenu */,
+				A460EA3B235819EC00AB8E7A /* HomeTabBarMenu */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		A460EA3B235819EC00AB8E7A /* HomeTabBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A410F3ED2358207F00F96001 /* YourTripsVC.swift */,
+				A460EA3C23581A1200AB8E7A /* BalanceView.swift */,
+				A46A47C4235A00FA00DBC01A /* TripTableViewCell.swift */,
+				A46A47C5235A00FA00DBC01A /* TripTableViewCell.xib */,
+			);
+			path = HomeTabBarMenu;
+			sourceTree = "<group>";
+		};
+		A460EA4023581A2D00AB8E7A /* FriendsTabBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A46A47C02359F23500DBC01A /* FriendsVC.swift */,
+			);
+			path = FriendsTabBarMenu;
+			sourceTree = "<group>";
+		};
+		A460EA4123581A3A00AB8E7A /* AddTripView */ = {
+			isa = PBXGroup;
+			children = (
+				A46A47C8235A0DC600DBC01A /* AddTripVC.swift */,
+				A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */,
+				A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */,
+				A4ED169D235B8C8500C358E8 /* AddTripSettingsTableViewCell.swift */,
+				A4ED169E235B8C8500C358E8 /* AddTripSettingsTableViewCell.xib */,
+			);
+			path = AddTripView;
+			sourceTree = "<group>";
+		};
+		A460EA4223581A5000AB8E7A /* NotificationsTabBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A46A47C22359F25B00DBC01A /* NotificationsVC.swift */,
+			);
+			path = NotificationsTabBarMenu;
+			sourceTree = "<group>";
+		};
+		A460EA4323581A7700AB8E7A /* AccountNavBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccountNavBarMenu;
+			sourceTree = "<group>";
+		};
+		A4FB58A92359DF6A002A1A39 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A46A47CA235A27B900DBC01A /* ChooseImagePlaceholder.png */,
+				A4FB58AA2359DF79002A1A39 /* backgroundImage@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		EF0372422356B61D006161CA = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +207,7 @@
 		EF0372622356BE33006161CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4ED16A1235B8EC600C358E8 /* TripSettings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +244,7 @@
 		EF0372662356BF2D006161CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A4FB58A92359DF6A002A1A39 /* Images */,
 				EF0372572356B61E006161CA /* Assets.xcassets */,
 				EF03725C2356B61E006161CA /* Info.plist */,
 				EF03724E2356B61D006161CA /* AppDelegate.swift */,
@@ -154,6 +262,7 @@
 		EF0372682356BF6A006161CA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A460EA38235819A700AB8E7A /* HomeScreen */,
 				EF0372692356C4E9006161CA /* LandingPageVC.swift */,
 				EFF35262235962DD004B7386 /* SignUpVC.swift */,
 				EF08B992235AA1480027292E /* NewUserWelcomeVC.swift */,
@@ -231,14 +340,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46A47CB235A27B900DBC01A /* ChooseImagePlaceholder.png in Resources */,
 				EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */,
+				A4FB58AB2359DF79002A1A39 /* backgroundImage@3x.png in Resources */,
 				EF61C4E623581040009D3A45 /* LandingPage.storyboard in Resources */,
 				EF03725B2356B61E006161CA /* LaunchScreen.storyboard in Resources */,
 				EF0372582356B61E006161CA /* Assets.xcassets in Resources */,
 				EF61C4E52358040D009D3A45 /* Default-568h@2x.png in Resources */,
 				EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */,
 				EF03726C2356C536006161CA /* SignUpPage.storyboard in Resources */,
+				A4ED16A0235B8C8500C358E8 /* AddTripSettingsTableViewCell.xib in Resources */,
+				A46A47C7235A00FA00DBC01A /* TripTableViewCell.xib in Resources */,
 				EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */,
+				A425A279235A36CF0031820B /* ParticipantCollectionViewCell.xib in Resources */,
 				EF03726E2356C57C006161CA /* LogIn.storyboard in Resources */,
 				EF0372702356C652006161CA /* ResetPassword.storyboard in Resources */,
 			);
@@ -251,6 +365,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A425A278235A36CF0031820B /* ParticipantCollectionViewCell.swift in Sources */,
+				A46A47C12359F23500DBC01A /* FriendsVC.swift in Sources */,
+				A4103226235B9A35004C4426 /* ViewTripVC.swift in Sources */,
+				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
+				A4ED169F235B8C8500C358E8 /* AddTripSettingsTableViewCell.swift in Sources */,
+				A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */,
+				A46A47C6235A00FA00DBC01A /* TripTableViewCell.swift in Sources */,
+				A46A47C9235A0DC600DBC01A /* AddTripVC.swift in Sources */,
+				A46A47C32359F25B00DBC01A /* NotificationsVC.swift in Sources */,
+				A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */,
+				A4ED16A2235B8EC600C358E8 /* TripSettings.swift in Sources */,
 				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
 				3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */,
@@ -406,6 +531,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SBB8C9E36E;
+				INFOPLIST_FILE = "Split Trip/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				INFOPLIST_FILE = "$(SRCROOT)/Split Trip/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -424,6 +551,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SBB8C9E36E;
+				INFOPLIST_FILE = "Split Trip/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				INFOPLIST_FILE = "$(SRCROOT)/Split Trip/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
