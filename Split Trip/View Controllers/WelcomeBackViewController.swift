@@ -9,9 +9,13 @@
 import UIKit
 
 class WelcomeBackViewController: UIViewController {
+    
+    //MARK: - Outlets
 
     @IBOutlet weak var welcomeBackImageView: UIImageView!
     @IBOutlet weak var welcomeBackLabel: UILabel!
+    
+    //MARK: - Views
     
     override func viewDidLoad() {
         super.viewDidLoad()
