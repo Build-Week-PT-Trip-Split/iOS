@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3748BAD92358DD360022C521 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3748BAD82358DD360022C521 /* Default-568h@2x.png */; };
 		3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADA2358E2B30022C521 /* LoginViewController.swift */; };
 		3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */; };
 		EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03724E2356B61D006161CA /* AppDelegate.swift */; };
@@ -19,14 +18,18 @@
 		EF03726E2356C57C006161CA /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF03726D2356C57C006161CA /* LogIn.storyboard */; };
 		EF0372702356C652006161CA /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF03726F2356C652006161CA /* ResetPassword.storyboard */; };
 		EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */; };
+		EF08B993235AA1480027292E /* NewUserWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08B992235AA1480027292E /* NewUserWelcomeVC.swift */; };
 		EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */; };
 		EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */; };
 		EF61C4E52358040D009D3A45 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E42358040D009D3A45 /* Default-568h@2x.png */; };
 		EF61C4E623581040009D3A45 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372542356B61D006161CA /* LandingPage.storyboard */; };
+		EFF35263235962DD004B7386 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF35262235962DD004B7386 /* SignUpVC.swift */; };
+		EFF35266235968F7004B7386 /* TextFieldPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF35265235968F7004B7386 /* TextFieldPadding.swift */; };
+		EFF3526823596A3F004B7386 /* LoginSignupCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3526723596A3F004B7386 /* LoginSignupCustomButton.swift */; };
+		EFF3526A23596DEC004B7386 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3526923596DEC004B7386 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3748BAD82358DD360022C521 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3748BADA2358E2B30022C521 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
 		EF03724B2356B61D006161CA /* Split Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,9 +44,14 @@
 		EF03726D2356C57C006161CA /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		EF03726F2356C652006161CA /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUserWelcomeScreen.storyboard; sourceTree = "<group>"; };
+		EF08B992235AA1480027292E /* NewUserWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserWelcomeVC.swift; sourceTree = "<group>"; };
 		EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeBackScreen.storyboard; sourceTree = "<group>"; };
 		EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		EF61C4E42358040D009D3A45 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EFF35262235962DD004B7386 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		EFF35265235968F7004B7386 /* TextFieldPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPadding.swift; sourceTree = "<group>"; };
+		EFF3526723596A3F004B7386 /* LoginSignupCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupCustomButton.swift; sourceTree = "<group>"; };
+		EFF3526923596DEC004B7386 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		EF03724D2356B61D006161CA /* Split Trip */ = {
 			isa = PBXGroup;
 			children = (
+				EFF35264235968D6004B7386 /* Helpers */,
 				EF0372622356BE33006161CA /* Model */,
 				EF0372632356BE44006161CA /* Model Controller */,
 				EF0372652356BEA2006161CA /* Views */,
@@ -146,10 +155,22 @@
 			isa = PBXGroup;
 			children = (
 				EF0372692356C4E9006161CA /* LandingPageVC.swift */,
+				EFF35262235962DD004B7386 /* SignUpVC.swift */,
+				EF08B992235AA1480027292E /* NewUserWelcomeVC.swift */,
 				3748BADA2358E2B30022C521 /* LoginViewController.swift */,
 				3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EFF35264235968D6004B7386 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EFF35265235968F7004B7386 /* TextFieldPadding.swift */,
+				EFF3526723596A3F004B7386 /* LoginSignupCustomButton.swift */,
+				EFF3526923596DEC004B7386 /* CustomTextField.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +255,12 @@
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
 				3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */,
 				EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */,
+				EFF35263235962DD004B7386 /* SignUpVC.swift in Sources */,
+				EF08B993235AA1480027292E /* NewUserWelcomeVC.swift in Sources */,
 				EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */,
+				EFF3526823596A3F004B7386 /* LoginSignupCustomButton.swift in Sources */,
+				EFF35266235968F7004B7386 /* TextFieldPadding.swift in Sources */,
+				EFF3526A23596DEC004B7386 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
