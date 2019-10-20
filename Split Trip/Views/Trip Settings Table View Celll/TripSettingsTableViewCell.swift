@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddTripSettingsTableViewCell: UITableViewCell {
+class TripSettingsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var settingTypeImage: UIImageView!

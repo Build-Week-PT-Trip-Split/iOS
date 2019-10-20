@@ -90,7 +90,7 @@ class AddTripVC: UIViewController {
     
     func registerSettingTableViewCell() {
         //Registers custom UITableViewCell for use in TripSettingsTableView
-        let cell = UINib(nibName: "AddTripSettingsTableViewCell", bundle: nil)
+        let cell = UINib(nibName: "TripSettingsTableViewCell", bundle: nil)
         self.tripSettingsTableView.register(cell, forCellReuseIdentifier: "SettingCell")
     }
 
@@ -138,7 +138,7 @@ extension AddTripVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tripSettingsTableView.dequeueReusableCell(withIdentifier: "SettingCell") as? AddTripSettingsTableViewCell else { return UITableViewCell() }
+        guard let cell = tripSettingsTableView.dequeueReusableCell(withIdentifier: "SettingCell") as? TripSettingsTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         
         cell.selectedTripSetting = tripSettingsArray[indexPath.row]
