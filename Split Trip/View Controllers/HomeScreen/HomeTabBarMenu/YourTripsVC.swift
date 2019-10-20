@@ -18,10 +18,11 @@ class YourTripsVC: UIViewController {
     //MARK: - PROPERTIES
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     
+    let tripSettingConfiguration = TripSettingConfiguration()
+    
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViewBackgroundLayout()
         registerTripTableViewCells()
         setupViewProperties()
         tripsTableView.dataSource = self
@@ -47,15 +48,6 @@ class YourTripsVC: UIViewController {
         tripsTableView.separatorStyle = .none
     }
     
-    func setViewBackgroundLayout() {
-        //Sets the background image to supplied asset
-        if let backgroundImage = UIImage(named: "backgroundImage@3x.png") {
-            self.view.backgroundColor = UIColor(patternImage: backgroundImage)
-        } else {
-            self.view.backgroundColor = .white
-        }
-    }
-    
     func registerTripTableViewCells() {
         //Registers custom UITableViewCell for use in TripsTableView
         let cell = UINib(nibName: "TripTableViewCell", bundle: nil)
@@ -66,10 +58,12 @@ class YourTripsVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewTripSegue" {
             guard let viewTripVC = segue.destination as? ViewTripVC else { return }
+            viewTripVC.tripSettingConfiguration = tripSettingConfiguration
         }
         
         if segue.identifier == "AddTripSegue" {
             guard let addTripVC = segue.destination as? AddTripVC else { return }
+            addTripVC.tripSettingConfiguration = tripSettingConfiguration
         }
         
     }

@@ -24,13 +24,8 @@ class AddTripVC: UIViewController {
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     
     //TripSetting objects to populate tripSettingsTableView
-    let tripDateSetting = TripSetting(settingImage: nil, settingName: "Date", settingValueString: "")
-    let tripDestinationSetting = TripSetting(settingImage: nil, settingName: "Destination", settingValueString: "")
-    let tripExpensesSetting = TripSetting(settingImage: nil, settingName: "Trip Expenses", settingValueString: "")
-    let totalSpentSetting = TripSetting(settingImage: nil, settingName: "Total Spent", settingValueString: "")
-    
+    var tripSettingConfiguration: TripSettingConfiguration?
     var tripSettingsArray: [TripSetting] = []
- 
     
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
@@ -39,10 +34,9 @@ class AddTripVC: UIViewController {
         participantCollectionView.dataSource = self
         tripNameTextField.delegate = self
         setupViewProperties()
-        setViewBackgroundLayout()
         registerParticipantCollectionViewCells()
         registerSettingTableViewCell()
-        populateTripSettingsArray()
+        tripSettingsArray = unwrapTripSettings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,15 +67,6 @@ class AddTripVC: UIViewController {
         tripSettingsTableView.separatorStyle = .none
     }
     
-    func setViewBackgroundLayout() {
-        //Sets the background image to supplies asset
-        if let backgroundImage = UIImage(named: "backgroundImage@3x.png") {
-            self.view.backgroundColor = UIColor(patternImage: backgroundImage)
-        } else {
-            self.view.backgroundColor = .white
-        }
-    }
-    
     func registerParticipantCollectionViewCells() {
         //Registers custom UICollectionViewCell for use in ParticipantsCollectionView
         let cell = UINib(nibName: "ParticipantCollectionViewCell", bundle: nil)
@@ -93,12 +78,10 @@ class AddTripVC: UIViewController {
         let cell = UINib(nibName: "TripSettingsTableViewCell", bundle: nil)
         self.tripSettingsTableView.register(cell, forCellReuseIdentifier: "SettingCell")
     }
-
-    func populateTripSettingsArray() {
-        tripSettingsArray.append(tripDateSetting)
-        tripSettingsArray.append(tripDestinationSetting)
-        tripSettingsArray.append(tripExpensesSetting)
-        tripSettingsArray.append(totalSpentSetting)
+    
+    func unwrapTripSettings() -> [TripSetting] {
+        guard let tripSettings = tripSettingConfiguration?.tripSettings else { return [] }
+        return tripSettings
     }
     
 }

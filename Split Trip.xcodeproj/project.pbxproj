@@ -13,6 +13,8 @@
 		A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410F3ED2358207F00F96001 /* YourTripsVC.swift */; };
 		A425A278235A36CF0031820B /* ParticipantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */; };
 		A425A279235A36CF0031820B /* ParticipantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */; };
+		A440142C235D1CE60004DF9C /* navBarHeaderImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A440142A235D1CE60004DF9C /* navBarHeaderImage@3x.png */; };
+		A440142D235D1CE60004DF9C /* tabBarFooterImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A440142B235D1CE60004DF9C /* tabBarFooterImage@3x.png */; };
 		A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460EA3C23581A1200AB8E7A /* BalanceView.swift */; };
 		A46A47C12359F23500DBC01A /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C02359F23500DBC01A /* FriendsVC.swift */; };
 		A46A47C32359F25B00DBC01A /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C22359F25B00DBC01A /* NotificationsVC.swift */; };
@@ -51,6 +53,8 @@
 		A410F3ED2358207F00F96001 /* YourTripsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsVC.swift; sourceTree = "<group>"; };
 		A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParticipantCollectionViewCell.swift; path = "Split Trip/Views/Participant Collection View/ParticipantCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ParticipantCollectionViewCell.xib; path = "Split Trip/Views/Participant Collection View/ParticipantCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		A440142A235D1CE60004DF9C /* navBarHeaderImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBarHeaderImage@3x.png"; sourceTree = "<group>"; };
+		A440142B235D1CE60004DF9C /* tabBarFooterImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarFooterImage@3x.png"; sourceTree = "<group>"; };
 		A460EA3C23581A1200AB8E7A /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		A46A47C02359F23500DBC01A /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/FriendsVC.swift"; sourceTree = SOURCE_ROOT; };
 		A46A47C22359F25B00DBC01A /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/NotificationsVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -186,6 +190,8 @@
 		A4FB58A92359DF6A002A1A39 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A440142A235D1CE60004DF9C /* navBarHeaderImage@3x.png */,
+				A440142B235D1CE60004DF9C /* tabBarFooterImage@3x.png */,
 				A46A47CA235A27B900DBC01A /* ChooseImagePlaceholder.png */,
 				A4FB58AA2359DF79002A1A39 /* backgroundImage@3x.png */,
 			);
@@ -374,8 +380,10 @@
 				EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */,
 				EF03726C2356C536006161CA /* SignUpPage.storyboard in Resources */,
 				A4ED16A0235B8C8500C358E8 /* TripSettingsTableViewCell.xib in Resources */,
+				A440142D235D1CE60004DF9C /* tabBarFooterImage@3x.png in Resources */,
 				A46A47C7235A00FA00DBC01A /* TripTableViewCell.xib in Resources */,
 				EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */,
+				A440142C235D1CE60004DF9C /* navBarHeaderImage@3x.png in Resources */,
 				A425A279235A36CF0031820B /* ParticipantCollectionViewCell.xib in Resources */,
 				EF03726E2356C57C006161CA /* LogIn.storyboard in Resources */,
 				EF0372702356C652006161CA /* ResetPassword.storyboard in Resources */,
