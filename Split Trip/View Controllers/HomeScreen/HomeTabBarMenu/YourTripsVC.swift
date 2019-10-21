@@ -93,8 +93,7 @@ extension YourTripsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ViewTripSegue", sender: TripTableViewCell.self)
         tripsTableView.deselectRow(at: indexPath, animated: false)
-        let selectedCell = tripsTableView.cellForRow(at: indexPath) as? TripTableViewCell
-        selectedCell?.bgView.backgroundColor = .gray
+        let _ = tripsTableView.cellForRow(at: indexPath) as? TripTableViewCell
     }
     
 }

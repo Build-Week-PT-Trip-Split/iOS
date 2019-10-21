@@ -15,6 +15,8 @@
 		A425A279235A36CF0031820B /* ParticipantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */; };
 		A440142C235D1CE60004DF9C /* navBarHeaderImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A440142A235D1CE60004DF9C /* navBarHeaderImage@3x.png */; };
 		A440142D235D1CE60004DF9C /* tabBarFooterImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A440142B235D1CE60004DF9C /* tabBarFooterImage@3x.png */; };
+		A4401432235D2DFE0004DF9C /* ParticipantDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4401431235D2DFE0004DF9C /* ParticipantDetailVC.swift */; };
+		A4401435235D33E80004DF9C /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4401434235D33E80004DF9C /* PaymentVC.swift */; };
 		A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460EA3C23581A1200AB8E7A /* BalanceView.swift */; };
 		A46A47C12359F23500DBC01A /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C02359F23500DBC01A /* FriendsVC.swift */; };
 		A46A47C32359F25B00DBC01A /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C22359F25B00DBC01A /* NotificationsVC.swift */; };
@@ -55,6 +57,8 @@
 		A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ParticipantCollectionViewCell.xib; path = "Split Trip/Views/Participant Collection View/ParticipantCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		A440142A235D1CE60004DF9C /* navBarHeaderImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBarHeaderImage@3x.png"; sourceTree = "<group>"; };
 		A440142B235D1CE60004DF9C /* tabBarFooterImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarFooterImage@3x.png"; sourceTree = "<group>"; };
+		A4401431235D2DFE0004DF9C /* ParticipantDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantDetailVC.swift; sourceTree = "<group>"; };
+		A4401434235D33E80004DF9C /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 		A460EA3C23581A1200AB8E7A /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		A46A47C02359F23500DBC01A /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/FriendsVC.swift"; sourceTree = SOURCE_ROOT; };
 		A46A47C22359F25B00DBC01A /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/NotificationsVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -133,9 +137,36 @@
 			path = "Current Balance View";
 			sourceTree = "<group>";
 		};
+		A440142E235D293E0004DF9C /* Your Trips Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A46A47C4235A00FA00DBC01A /* TripTableViewCell.swift */,
+				A46A47C5235A00FA00DBC01A /* TripTableViewCell.xib */,
+			);
+			path = "Your Trips Table View Cell";
+			sourceTree = "<group>";
+		};
+		A440142F235D2DE20004DF9C /* ParticipantDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				A4401431235D2DFE0004DF9C /* ParticipantDetailVC.swift */,
+			);
+			path = ParticipantDetailView;
+			sourceTree = "<group>";
+		};
+		A4401433235D33C20004DF9C /* PaymentView */ = {
+			isa = PBXGroup;
+			children = (
+				A4401434235D33E80004DF9C /* PaymentVC.swift */,
+			);
+			path = PaymentView;
+			sourceTree = "<group>";
+		};
 		A460EA38235819A700AB8E7A /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A4401433235D33C20004DF9C /* PaymentView */,
+				A440142F235D2DE20004DF9C /* ParticipantDetailView */,
 				A4103224235B9A15004C4426 /* TripView */,
 				A460EA4323581A7700AB8E7A /* AccountNavBarMenu */,
 				A460EA4223581A5000AB8E7A /* NotificationsTabBarMenu */,
@@ -150,8 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				A410F3ED2358207F00F96001 /* YourTripsVC.swift */,
-				A46A47C4235A00FA00DBC01A /* TripTableViewCell.swift */,
-				A46A47C5235A00FA00DBC01A /* TripTableViewCell.xib */,
 			);
 			path = HomeTabBarMenu;
 			sourceTree = "<group>";
@@ -264,6 +293,7 @@
 		EF0372652356BEA2006161CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A440142E235D293E0004DF9C /* Your Trips Table View Cell */,
 				A4401429235C8C3B0004DF9C /* Current Balance View */,
 				A41C52DC235C7854002A08ED /* Trip Settings Table View Celll */,
 				A41C52DB235C783A002A08ED /* Participant Collection View */,
@@ -414,10 +444,12 @@
 				EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */,
 				EFF35263235962DD004B7386 /* SignUpVC.swift in Sources */,
 				EF08B993235AA1480027292E /* NewUserWelcomeVC.swift in Sources */,
+				A4401435235D33E80004DF9C /* PaymentVC.swift in Sources */,
 				EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */,
 				EFF3526823596A3F004B7386 /* LoginSignupCustomButton.swift in Sources */,
 				EFF35266235968F7004B7386 /* TextFieldPadding.swift in Sources */,
 				EFF3526A23596DEC004B7386 /* CustomTextField.swift in Sources */,
+				A4401432235D2DFE0004DF9C /* ParticipantDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
