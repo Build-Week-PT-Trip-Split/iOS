@@ -16,34 +16,43 @@ class AddTripVC: UIViewController {
     @IBOutlet weak var participantsLabel: UILabel!
     @IBOutlet weak var addParticipantButton: UIButton!
     @IBOutlet weak var participantCollectionView: UICollectionView!
-    @IBOutlet weak var tripSettingsTableView: UITableView!
     
+    @IBOutlet weak var dateItemImageView: UIImageView!
+    @IBOutlet weak var dateItemTitleLabel: UILabel!
+    @IBOutlet weak var dateItemButton: UIButton!
+    @IBOutlet weak var destinationItemImageView: UIImageView!
+    @IBOutlet weak var destinationItemTitleLabel: UILabel!
+    @IBOutlet weak var destinationItemButton: UIButton!
+    @IBOutlet weak var expensesItemImageView: UIImageView!
+    @IBOutlet weak var expensesItemTitleLabel: UILabel!
+    @IBOutlet weak var expensesItemButton: UIButton!
+    @IBOutlet weak var totalSpentItemImageView: UIImageView!
+    @IBOutlet weak var totalSpentTitleLabel: UILabel!
+    @IBOutlet weak var totalSpentButton: UIButton!
+    @IBOutlet weak var dateViewBG: UIView!
+    @IBOutlet weak var destinationViewBG: UIView!
+    @IBOutlet weak var expensesViewBG: UIView!
+    @IBOutlet weak var totalSpentBG: UIView!
     
     //MARK: - PROPERTIES
     //UIColors for use within UI
+    let lightGrayColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
+    let lightPurpleColor = UIColor(red:0.42, green:0.15, blue:1.00, alpha:1.0)
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
-    
-    //TripSetting objects to populate tripSettingsTableView
-    var tripSettingConfiguration: TripSettingConfiguration?
-    var tripSettingsArray: [TripSetting] = []
+    let greenColor = UIColor(red:0.07, green:0.96, blue:0.74, alpha:1.0)
     
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        tripSettingsTableView.dataSource = self
         participantCollectionView.dataSource = self
         tripNameTextField.delegate = self
         setupViewProperties()
         registerParticipantCollectionViewCells()
-        registerSettingTableViewCell()
-        tripSettingsArray = unwrapTripSettings()
+        configureTripItemViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //Determines if TripsTableView requires scrolling, and if not, scrolling is disabled
-        tripSettingsTableView.alwaysBounceVertical = false
     }
 
     //MARK: - PRIVATE FUNCTIONS
@@ -63,8 +72,6 @@ class AddTripVC: UIViewController {
         addParticipantButton.setTitleColor(darkPurpleColor, for: .normal)
         addParticipantButton.contentHorizontalAlignment = .right
         
-        //Removes line separator from tripSettingsTableView's cells
-        tripSettingsTableView.separatorStyle = .none
     }
     
     func registerParticipantCollectionViewCells() {
@@ -73,15 +80,35 @@ class AddTripVC: UIViewController {
         self.participantCollectionView.register(cell, forCellWithReuseIdentifier: "ParticipantCell")
     }
     
-    func registerSettingTableViewCell() {
-        //Registers custom UITableViewCell for use in TripSettingsTableView
-        let cell = UINib(nibName: "TripSettingsTableViewCell", bundle: nil)
-        self.tripSettingsTableView.register(cell, forCellReuseIdentifier: "SettingCell")
-    }
-    
-    func unwrapTripSettings() -> [TripSetting] {
-        guard let tripSettings = tripSettingConfiguration?.tripSettings else { return [] }
-        return tripSettings
+    func configureTripItemViews() {
+        let dateIcon = UIImage(systemName: "calendar.badge.plus")?.withTintColor(darkPurpleColor, renderingMode: .alwaysOriginal)
+        let destinationIcon = UIImage(systemName: "map")?.withTintColor(darkPurpleColor, renderingMode: .alwaysOriginal)
+        let expensesIcon = UIImage(systemName: "dollarsign.square")?.withTintColor(darkPurpleColor, renderingMode: .alwaysOriginal)
+        let totalSpentIcon = UIImage(systemName: "creditcard")?.withTintColor(darkPurpleColor, renderingMode: .alwaysOriginal)
+        
+        dateItemImageView.image = dateIcon
+        dateItemTitleLabel.textColor = darkPurpleColor
+        dateItemButton.setTitleColor(darkPurpleColor, for: .normal)
+        dateViewBG.backgroundColor = lightGrayColor
+        dateViewBG.layer.cornerRadius = 8
+        
+        destinationItemImageView.image = destinationIcon
+        destinationItemTitleLabel.textColor = darkPurpleColor
+        destinationItemButton.setTitleColor(darkPurpleColor, for: .normal)
+        destinationViewBG.backgroundColor = lightGrayColor
+        destinationViewBG.layer.cornerRadius = 8
+        
+        expensesItemImageView.image = expensesIcon
+        expensesItemTitleLabel.textColor = darkPurpleColor
+        expensesItemButton.setTitleColor(darkPurpleColor, for: .normal)
+        expensesViewBG.backgroundColor = lightGrayColor
+        expensesViewBG.layer.cornerRadius = 8
+        
+        totalSpentItemImageView.image = totalSpentIcon
+        totalSpentTitleLabel.textColor = darkPurpleColor
+        totalSpentButton.setTitleColor(darkPurpleColor, for: .normal)
+        totalSpentBG.backgroundColor = lightGrayColor
+        totalSpentBG.layer.cornerRadius = 8
     }
     
 }
@@ -110,24 +137,5 @@ extension AddTripVC: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
-}
-
-//MARK: - UITABLEVIEW DATA SOURCE
-extension AddTripVC: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tripSettingsArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tripSettingsTableView.dequeueReusableCell(withIdentifier: "SettingCell") as? TripSettingsTableViewCell else { return UITableViewCell() }
-        cell.selectionStyle = .none
-        
-        cell.selectedTripSetting = tripSettingsArray[indexPath.row]
-        
-        return cell
-    }
-    
     
 }
