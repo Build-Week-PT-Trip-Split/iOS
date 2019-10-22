@@ -24,6 +24,8 @@ class LoginViewController: UIViewController {
     private let showImage = UIImage(named: "EyeShow")
     private let hideImage = UIImage(named: "EyeClose")
     
+    var loginUserController : LoginUserController?
+    
     //MARK: - Views
     
     override func viewDidLoad() {
@@ -93,12 +95,18 @@ class LoginViewController: UIViewController {
         
         if let email = emailAddressTextField.text, !email.isEmpty,
             let password = passwordTextField.text, !password.isEmpty {
-            
-            
-            
+        
+            loginUserController?.login(withEmail: email, withPassword: password) { (error) in
+                if let error = error {
+                    NSLog("Error occured during login: \(error)")
+                } else {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "ShowWelcomeBackSegue", sender: self)
+                    }
+                }
+            }
         }
     }
-    
     
     
     

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADA2358E2B30022C521 /* LoginViewController.swift */; };
 		3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */; };
+		37C6321A235F5C50002B9138 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C63219235F5C50002B9138 /* Token.swift */; };
+		37C6321C235F5D06002B9138 /* LoginUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6321B235F5D06002B9138 /* LoginUserController.swift */; };
 		A4103226235B9A35004C4426 /* ViewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4103225235B9A35004C4426 /* ViewTripVC.swift */; };
 		A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410F3ED2358207F00F96001 /* YourTripsVC.swift */; };
 		A425A278235A36CF0031820B /* ParticipantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		3748BADA2358E2B30022C521 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
+		37C63219235F5C50002B9138 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		37C6321B235F5D06002B9138 /* LoginUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserController.swift; sourceTree = "<group>"; };
 		A4103225235B9A35004C4426 /* ViewTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTripVC.swift; sourceTree = "<group>"; };
 		A410F3ED2358207F00F96001 /* YourTripsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsVC.swift; sourceTree = "<group>"; };
 		A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParticipantCollectionViewCell.swift; path = "Split Trip/Views/Participant Collection View/ParticipantCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
@@ -234,6 +238,7 @@
 			children = (
 				A4ED16A1235B8EC600C358E8 /* TripSettings.swift */,
 				EF23CE1C235EB361003504FC /* CreateUser.swift */,
+				37C63219235F5C50002B9138 /* Token.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				EF23CE1E235EB452003504FC /* CreateUserController.swift */,
+				37C6321B235F5D06002B9138 /* LoginUserController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				A46A47C12359F23500DBC01A /* FriendsVC.swift in Sources */,
 				A4103226235B9A35004C4426 /* ViewTripVC.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
+				37C6321C235F5D06002B9138 /* LoginUserController.swift in Sources */,
 				A4ED169F235B8C8500C358E8 /* TripSettingsTableViewCell.swift in Sources */,
 				A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */,
 				A46A47C6235A00FA00DBC01A /* TripTableViewCell.swift in Sources */,
@@ -410,6 +417,7 @@
 				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
 				3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */,
+				37C6321A235F5C50002B9138 /* Token.swift in Sources */,
 				EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */,
 				EFF35263235962DD004B7386 /* SignUpVC.swift in Sources */,
 				EF08B993235AA1480027292E /* NewUserWelcomeVC.swift in Sources */,
