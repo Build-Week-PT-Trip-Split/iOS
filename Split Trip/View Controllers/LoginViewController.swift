@@ -93,12 +93,9 @@ class LoginViewController: UIViewController {
         
         if let email = emailAddressTextField.text, !email.isEmpty,
             let password = passwordTextField.text, !password.isEmpty {
-            
-            
-            
+        
         }
     }
-    
     
     
     
