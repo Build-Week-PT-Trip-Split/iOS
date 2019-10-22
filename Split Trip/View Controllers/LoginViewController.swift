@@ -83,10 +83,22 @@ class LoginViewController: UIViewController {
         showHideButton.addTarget(self, action: #selector(showHideTapped), for: .touchUpInside)
         showHideButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         showHideButton.widthAnchor.constraint(equalToConstant: 30.0).isActive = true
+       
         
         doneBarBtn()
     }
-
+    
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        
+        if let email = emailAddressTextField.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty {
+            
+            
+            
+        }
+    }
+    
     
     
     
