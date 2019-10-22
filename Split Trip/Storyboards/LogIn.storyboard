@@ -92,6 +92,7 @@
                                                 </constraints>
                                                 <state key="normal" image="LOG IN BTN"/>
                                                 <connections>
+                                                    <action selector="loginButtonTapped:" destination="a5v-bc-DbH" eventType="touchUpInside" id="SAW-OR-QnE"/>
                                                     <segue destination="cGw-Vd-283" kind="show" identifier="ShowWelcomeBackSegue" id="f2s-wZ-DoS"/>
                                                 </connections>
                                             </button>

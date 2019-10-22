@@ -87,7 +87,18 @@ class LoginViewController: UIViewController {
         
         doneBarBtn()
     }
-
+    
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        
+        if let email = emailAddressTextField.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty {
+            
+            
+            
+        }
+    }
+    
     
     
     

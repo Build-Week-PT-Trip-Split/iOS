@@ -36,18 +36,31 @@
                                     <constraint firstAttribute="width" secondItem="UI6-IF-uRO" secondAttribute="height" multiplier="1:1" id="jcc-Cd-1J4"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNU-Hc-kMG">
+                                <rect key="frame" x="145" y="626" width="124" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Tap to continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sCg-Af-rlo" kind="show" identifier="ShowHomeScreenSegue" id="sha-ls-Nth"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="FRC-1E-YAD" firstAttribute="trailing" secondItem="CNU-Hc-kMG" secondAttribute="trailing" constant="145" id="1eI-jg-Tgv"/>
                             <constraint firstItem="FRC-1E-YAD" firstAttribute="trailing" secondItem="LSb-FS-dBu" secondAttribute="trailing" constant="50" id="267-ae-Rtv"/>
                             <constraint firstAttribute="trailing" secondItem="POS-aV-CmN" secondAttribute="trailing" id="6PQ-xG-wjs"/>
                             <constraint firstItem="qa9-Rd-peS" firstAttribute="top" secondItem="LSb-FS-dBu" secondAttribute="bottom" constant="25" id="6sz-kh-ljR"/>
                             <constraint firstItem="FRC-1E-YAD" firstAttribute="trailing" secondItem="UI6-IF-uRO" secondAttribute="trailing" constant="107" id="Dd6-Kh-gEF"/>
+                            <constraint firstItem="CNU-Hc-kMG" firstAttribute="leading" secondItem="FRC-1E-YAD" secondAttribute="leading" constant="145" id="DdT-4o-jW9"/>
                             <constraint firstAttribute="bottom" secondItem="POS-aV-CmN" secondAttribute="bottom" id="UHq-Do-VNw"/>
                             <constraint firstItem="qa9-Rd-peS" firstAttribute="leading" secondItem="FRC-1E-YAD" secondAttribute="leading" constant="20" id="adM-ve-hR4"/>
                             <constraint firstAttribute="trailing" secondItem="qa9-Rd-peS" secondAttribute="trailing" constant="20" id="cO2-yc-lEg"/>
                             <constraint firstItem="POS-aV-CmN" firstAttribute="top" secondItem="3Ht-TA-nSu" secondAttribute="top" id="eiR-gO-BA0"/>
                             <constraint firstItem="UI6-IF-uRO" firstAttribute="leading" secondItem="FRC-1E-YAD" secondAttribute="leading" constant="107" id="l9f-My-mHd"/>
+                            <constraint firstItem="FRC-1E-YAD" firstAttribute="bottom" secondItem="CNU-Hc-kMG" secondAttribute="bottom" constant="200" id="qeL-55-dyy"/>
                             <constraint firstItem="LSb-FS-dBu" firstAttribute="leading" secondItem="FRC-1E-YAD" secondAttribute="leading" constant="50" id="s3l-ru-ml9"/>
                             <constraint firstItem="POS-aV-CmN" firstAttribute="leading" secondItem="3Ht-TA-nSu" secondAttribute="leading" id="tCy-nB-9aU"/>
                             <constraint firstItem="UI6-IF-uRO" firstAttribute="top" secondItem="FRC-1E-YAD" secondAttribute="top" constant="80" id="v5D-2C-Rtv"/>
@@ -58,7 +71,6 @@
                     <connections>
                         <outlet property="welcomeBackImageView" destination="UI6-IF-uRO" id="Jjt-CA-vVz"/>
                         <outlet property="welcomeBackLabel" destination="LSb-FS-dBu" id="uRO-IA-98V"/>
-                        <segue destination="sCg-Af-rlo" kind="show" identifier="ShowHomeScreenSegue" id="CTK-Xm-KcA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXN-ia-9KT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
