@@ -23,7 +23,7 @@ class LoginUserController {
        }
        
         func login(withEmail email: String, withPassword password: String, completion: @escaping CompletionHandler = { _ in }) {
-            let requestURL = LoginUserController.baseURL.appendingPathComponent("api/login")
+            let requestURL = LoginUserController.baseURL.appendingPathComponent("auth/login")
               
               var request = URLRequest(url: requestURL)
               request.httpMethod = HTTPMethod.post.rawValue
