@@ -50,7 +50,7 @@ class LoginUserController {
                   let decoder = JSONDecoder()
                   
                   do {
-                      createUserController.token = try decoder.decode(Token.self, from: data)
+                      //createUserController.token = try decoder.decode(Token.self, from: data)
                   } catch {
                       print("Error decoding bearer object: \(error)")
                       completion(error)
