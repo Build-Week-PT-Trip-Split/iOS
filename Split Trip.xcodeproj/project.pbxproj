@@ -16,6 +16,10 @@
 		A419D816235FCDF900552E43 /* ExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D815235FCDF900552E43 /* ExpensesVC.swift */; };
 		A419D818235FCE1C00552E43 /* ExpensePaymentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D817235FCE1C00552E43 /* ExpensePaymentsVC.swift */; };
 		A419D81A235FCE3C00552E43 /* AddExpensePaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D819235FCE3C00552E43 /* AddExpensePaymentVC.swift */; };
+		A419D81E235FD55E00552E43 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D81C235FD55E00552E43 /* ExpenseTableViewCell.swift */; };
+		A419D81F235FD55E00552E43 /* ExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A419D81D235FD55E00552E43 /* ExpenseTableViewCell.xib */; };
+		A419D825235FD66200552E43 /* ExpensePaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D823235FD66200552E43 /* ExpensePaymentTableViewCell.swift */; };
+		A419D826235FD66200552E43 /* ExpensePaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A419D824235FD66200552E43 /* ExpensePaymentTableViewCell.xib */; };
 		A425A278235A36CF0031820B /* ParticipantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */; };
 		A425A279235A36CF0031820B /* ParticipantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */; };
 		A440142C235D1CE60004DF9C /* navBarHeaderImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A440142A235D1CE60004DF9C /* navBarHeaderImage@3x.png */; };
@@ -65,6 +69,10 @@
 		A419D815235FCDF900552E43 /* ExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesVC.swift; sourceTree = "<group>"; };
 		A419D817235FCE1C00552E43 /* ExpensePaymentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePaymentsVC.swift; sourceTree = "<group>"; };
 		A419D819235FCE3C00552E43 /* AddExpensePaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensePaymentVC.swift; sourceTree = "<group>"; };
+		A419D81C235FD55E00552E43 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		A419D81D235FD55E00552E43 /* ExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseTableViewCell.xib; sourceTree = "<group>"; };
+		A419D823235FD66200552E43 /* ExpensePaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePaymentTableViewCell.swift; sourceTree = "<group>"; };
+		A419D824235FD66200552E43 /* ExpensePaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensePaymentTableViewCell.xib; sourceTree = "<group>"; };
 		A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParticipantCollectionViewCell.swift; path = "Split Trip/Views/Participant Collection View/ParticipantCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ParticipantCollectionViewCell.xib; path = "Split Trip/Views/Participant Collection View/ParticipantCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		A440142A235D1CE60004DF9C /* navBarHeaderImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBarHeaderImage@3x.png"; sourceTree = "<group>"; };
@@ -123,6 +131,24 @@
 				A4103225235B9A35004C4426 /* ViewTripVC.swift */,
 			);
 			path = TripView;
+			sourceTree = "<group>";
+		};
+		A419D81B235FD53800552E43 /* Expenses Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A419D81C235FD55E00552E43 /* ExpenseTableViewCell.swift */,
+				A419D81D235FD55E00552E43 /* ExpenseTableViewCell.xib */,
+			);
+			path = "Expenses Table View Cell";
+			sourceTree = "<group>";
+		};
+		A419D820235FD64100552E43 /* Expense Payment Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A419D823235FD66200552E43 /* ExpensePaymentTableViewCell.swift */,
+				A419D824235FD66200552E43 /* ExpensePaymentTableViewCell.xib */,
+			);
+			path = "Expense Payment Table View Cell";
 			sourceTree = "<group>";
 		};
 		A41C52DB235C783A002A08ED /* Participant Collection View */ = {
@@ -338,6 +364,8 @@
 		EF0372652356BEA2006161CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A419D820235FD64100552E43 /* Expense Payment Table View Cell */,
+				A419D81B235FD53800552E43 /* Expenses Table View Cell */,
 				A474C98F235FC43E00EE1B90 /* Contact Table View Cell */,
 				A440142E235D293E0004DF9C /* Your Trips Table View Cell */,
 				A4401429235C8C3B0004DF9C /* Current Balance View */,
@@ -449,6 +477,7 @@
 				EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */,
 				A4FB58AB2359DF79002A1A39 /* backgroundImage@3x.png in Resources */,
 				EF61C4E623581040009D3A45 /* LandingPage.storyboard in Resources */,
+				A419D826235FD66200552E43 /* ExpensePaymentTableViewCell.xib in Resources */,
 				EF03725B2356B61E006161CA /* LaunchScreen.storyboard in Resources */,
 				EF0372582356B61E006161CA /* Assets.xcassets in Resources */,
 				EF61C4E52358040D009D3A45 /* Default-568h@2x.png in Resources */,
@@ -459,6 +488,7 @@
 				A46A47C7235A00FA00DBC01A /* TripTableViewCell.xib in Resources */,
 				EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */,
 				A440142C235D1CE60004DF9C /* navBarHeaderImage@3x.png in Resources */,
+				A419D81F235FD55E00552E43 /* ExpenseTableViewCell.xib in Resources */,
 				A425A279235A36CF0031820B /* ParticipantCollectionViewCell.xib in Resources */,
 				EF03726E2356C57C006161CA /* LogIn.storyboard in Resources */,
 				EF0372702356C652006161CA /* ResetPassword.storyboard in Resources */,
@@ -482,6 +512,7 @@
 				A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */,
 				A419D816235FCDF900552E43 /* ExpensesVC.swift in Sources */,
 				A46A47C6235A00FA00DBC01A /* TripTableViewCell.swift in Sources */,
+				A419D81E235FD55E00552E43 /* ExpenseTableViewCell.swift in Sources */,
 				A419D818235FCE1C00552E43 /* ExpensePaymentsVC.swift in Sources */,
 				A46A47C9235A0DC600DBC01A /* AddTripVC.swift in Sources */,
 				A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */,
@@ -502,6 +533,7 @@
 				EFF35266235968F7004B7386 /* TextFieldPadding.swift in Sources */,
 				EFF3526A23596DEC004B7386 /* CustomTextField.swift in Sources */,
 				A4401432235D2DFE0004DF9C /* ParticipantDetailVC.swift in Sources */,
+				A419D825235FD66200552E43 /* ExpensePaymentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
