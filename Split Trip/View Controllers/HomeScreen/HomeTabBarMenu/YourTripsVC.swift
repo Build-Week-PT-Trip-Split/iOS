@@ -21,7 +21,6 @@ class YourTripsVC: UIViewController {
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViewBackgroundLayout()
         registerTripTableViewCells()
         setupViewProperties()
         tripsTableView.dataSource = self
@@ -45,15 +44,6 @@ class YourTripsVC: UIViewController {
         
         //Removes separation lines in UITableView
         tripsTableView.separatorStyle = .none
-    }
-    
-    func setViewBackgroundLayout() {
-        //Sets the background image to supplied asset
-        if let backgroundImage = UIImage(named: "backgroundImage@3x.png") {
-            self.view.backgroundColor = UIColor(patternImage: backgroundImage)
-        } else {
-            self.view.backgroundColor = .white
-        }
     }
     
     func registerTripTableViewCells() {
@@ -99,8 +89,7 @@ extension YourTripsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ViewTripSegue", sender: TripTableViewCell.self)
         tripsTableView.deselectRow(at: indexPath, animated: false)
-        let selectedCell = tripsTableView.cellForRow(at: indexPath) as? TripTableViewCell
-        selectedCell?.bgView.backgroundColor = .gray
+        let _ = tripsTableView.cellForRow(at: indexPath) as? TripTableViewCell
     }
     
 }
