@@ -24,6 +24,8 @@ class LoginViewController: UIViewController {
     private let showImage = UIImage(named: "EyeShow")
     private let hideImage = UIImage(named: "EyeClose")
     
+    var loginUserController : LoginUserController?
+    
     //MARK: - Views
     
     override func viewDidLoad() {
@@ -83,10 +85,28 @@ class LoginViewController: UIViewController {
         showHideButton.addTarget(self, action: #selector(showHideTapped), for: .touchUpInside)
         showHideButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
         showHideButton.widthAnchor.constraint(equalToConstant: 30.0).isActive = true
+       
         
         doneBarBtn()
     }
-
+    
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        
+        if let email = emailAddressTextField.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty {
+        
+            loginUserController?.login(withEmail: email, withPassword: password) { (error) in
+                if let error = error {
+                    NSLog("Error occured during login: \(error)")
+                } else {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "ShowWelcomeBackSegue", sender: self)
+                    }
+                }
+            }
+        }
+    }
     
     
     

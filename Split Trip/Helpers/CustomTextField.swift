@@ -10,7 +10,7 @@ import UIKit
 
 class CustomTextField: UITextField {
     
-    let placeholderTextArray = ["Full Name", "Phone Number", "Email Address", "Password"]
+    let placeholderTextArray = ["Full Name", "Email Address", "Username", "Password"]
     
 
     override init(frame: CGRect) {

@@ -37,11 +37,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DG-ZK-1SJ" customClass="LoginSignupCustomButton" customModule="Split_Trip" customModuleProvider="target">
+                                <rect key="frame" x="125" y="551.33333333333337" width="125" height="45"/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.96078431369999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="2Rl-jn-yb1"/>
+                                    <constraint firstAttribute="height" constant="45" id="Wtz-kV-dRE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" red="0.035294117649999998" green="0.0" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="j8p-9p-f9p" firstAttribute="leading" secondItem="dCJ-gy-yhV" secondAttribute="leading" id="3ob-WR-eow"/>
                             <constraint firstItem="SYE-XL-Ozk" firstAttribute="centerX" secondItem="0CY-im-xKH" secondAttribute="centerX" id="4dT-X5-Hzo"/>
+                            <constraint firstItem="0DG-ZK-1SJ" firstAttribute="centerX" secondItem="0CY-im-xKH" secondAttribute="centerX" id="90i-cp-mar"/>
                             <constraint firstItem="emD-RD-bRD" firstAttribute="centerY" secondItem="0CY-im-xKH" secondAttribute="centerY" id="FUJ-9V-byv"/>
                             <constraint firstItem="j8p-9p-f9p" firstAttribute="top" secondItem="0CY-im-xKH" secondAttribute="top" id="I7Z-kW-ni3"/>
                             <constraint firstItem="emD-RD-bRD" firstAttribute="leading" secondItem="0CY-im-xKH" secondAttribute="leading" constant="16" id="Rwf-nt-wia"/>
@@ -49,6 +62,7 @@
                             <constraint firstAttribute="bottom" secondItem="j8p-9p-f9p" secondAttribute="bottom" id="d09-be-NQf"/>
                             <constraint firstItem="SYE-XL-Ozk" firstAttribute="top" secondItem="c5m-Q9-Box" secondAttribute="bottom" constant="20" id="ebP-MZ-Wig"/>
                             <constraint firstAttribute="trailing" secondItem="emD-RD-bRD" secondAttribute="trailing" constant="16" id="guE-0c-M1h"/>
+                            <constraint firstItem="0DG-ZK-1SJ" firstAttribute="top" secondItem="emD-RD-bRD" secondAttribute="bottom" constant="100" id="s4C-V1-pPt"/>
                             <constraint firstItem="c5m-Q9-Box" firstAttribute="centerX" secondItem="0CY-im-xKH" secondAttribute="centerX" id="xZZ-h0-xoi"/>
                             <constraint firstItem="emD-RD-bRD" firstAttribute="top" secondItem="SYE-XL-Ozk" secondAttribute="bottom" constant="20" id="yUm-nk-E8V"/>
                         </constraints>

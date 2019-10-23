@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADA2358E2B30022C521 /* LoginViewController.swift */; };
 		3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */; };
+		37C6321A235F5C50002B9138 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C63219235F5C50002B9138 /* Token.swift */; };
+		37C6321C235F5D06002B9138 /* LoginUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6321B235F5D06002B9138 /* LoginUserController.swift */; };
 		A4103226235B9A35004C4426 /* ViewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4103225235B9A35004C4426 /* ViewTripVC.swift */; };
 		A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410F3ED2358207F00F96001 /* YourTripsVC.swift */; };
 		A419D812235FCBB100552E43 /* AddParticipantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D811235FCBB100552E43 /* AddParticipantVC.swift */; };
@@ -49,6 +51,8 @@
 		EF0372702356C652006161CA /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF03726F2356C652006161CA /* ResetPassword.storyboard */; };
 		EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */; };
 		EF08B993235AA1480027292E /* NewUserWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08B992235AA1480027292E /* NewUserWelcomeVC.swift */; };
+		EF23CE1D235EB361003504FC /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23CE1C235EB361003504FC /* CreateUser.swift */; };
+		EF23CE1F235EB452003504FC /* CreateUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23CE1E235EB452003504FC /* CreateUserController.swift */; };
 		EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */; };
 		EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */; };
 		EF61C4E52358040D009D3A45 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E42358040D009D3A45 /* Default-568h@2x.png */; };
@@ -62,6 +66,8 @@
 /* Begin PBXFileReference section */
 		3748BADA2358E2B30022C521 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
+		37C63219235F5C50002B9138 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		37C6321B235F5D06002B9138 /* LoginUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserController.swift; sourceTree = "<group>"; };
 		A4103225235B9A35004C4426 /* ViewTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTripVC.swift; sourceTree = "<group>"; };
 		A410F3ED2358207F00F96001 /* YourTripsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsVC.swift; sourceTree = "<group>"; };
 		A419D811235FCBB100552E43 /* AddParticipantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantVC.swift; sourceTree = "<group>"; };
@@ -105,6 +111,8 @@
 		EF03726F2356C652006161CA /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUserWelcomeScreen.storyboard; sourceTree = "<group>"; };
 		EF08B992235AA1480027292E /* NewUserWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserWelcomeVC.swift; sourceTree = "<group>"; };
+		EF23CE1C235EB361003504FC /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
+		EF23CE1E235EB452003504FC /* CreateUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserController.swift; sourceTree = "<group>"; };
 		EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeBackScreen.storyboard; sourceTree = "<group>"; };
 		EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		EF61C4E42358040D009D3A45 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -335,6 +343,9 @@
 		EF0372622356BE33006161CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4ED16A1235B8EC600C358E8 /* TripSettings.swift */,
+				EF23CE1C235EB361003504FC /* CreateUser.swift */,
+				37C63219235F5C50002B9138 /* Token.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +353,8 @@
 		EF0372632356BE44006161CA /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EF23CE1E235EB452003504FC /* CreateUserController.swift */,
+				37C6321B235F5D06002B9138 /* LoginUserController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -509,6 +522,8 @@
 				A4103226235B9A35004C4426 /* ViewTripVC.swift in Sources */,
 				A419D81A235FCE3C00552E43 /* AddExpensePaymentVC.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
+				37C6321C235F5D06002B9138 /* LoginUserController.swift in Sources */,
+				A4ED169F235B8C8500C358E8 /* TripSettingsTableViewCell.swift in Sources */,
 				A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */,
 				A419D816235FCDF900552E43 /* ExpensesVC.swift in Sources */,
 				A46A47C6235A00FA00DBC01A /* TripTableViewCell.swift in Sources */,
@@ -519,9 +534,12 @@
 				A474C99F235FC94000EE1B90 /* SettingsVC.swift in Sources */,
 				A419D812235FCBB100552E43 /* AddParticipantVC.swift in Sources */,
 				A474C995235FC83C00EE1B90 /* SetDateVC.swift in Sources */,
+				EF23CE1D235EB361003504FC /* CreateUser.swift in Sources */,
+				A4ED16A2235B8EC600C358E8 /* TripSettings.swift in Sources */,
 				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
 				3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */,
+				37C6321A235F5C50002B9138 /* Token.swift in Sources */,
 				EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */,
 				A474C999235FC8D100EE1B90 /* AddExpenseVC.swift in Sources */,
 				EFF35263235962DD004B7386 /* SignUpVC.swift in Sources */,
@@ -530,6 +548,7 @@
 				A474C9A1235FC94F00EE1B90 /* AccountVC.swift in Sources */,
 				EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */,
 				EFF3526823596A3F004B7386 /* LoginSignupCustomButton.swift in Sources */,
+				EF23CE1F235EB452003504FC /* CreateUserController.swift in Sources */,
 				EFF35266235968F7004B7386 /* TextFieldPadding.swift in Sources */,
 				EFF3526A23596DEC004B7386 /* CustomTextField.swift in Sources */,
 				A4401432235D2DFE0004DF9C /* ParticipantDetailVC.swift in Sources */,
