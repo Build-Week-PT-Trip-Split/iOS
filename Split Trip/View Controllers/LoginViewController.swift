@@ -55,10 +55,10 @@ class LoginViewController: UIViewController {
     @objc func showHideTapped() {
         if showHideButton.currentImage == showImage {
             showHideButton.setImage(hideImage, for: .normal)
-            passwordTextField.isSecureTextEntry = false
+            passwordTextField.isSecureTextEntry = true
         } else {
             showHideButton.setImage(showImage, for: .normal)
-            passwordTextField.isSecureTextEntry = true
+            passwordTextField.isSecureTextEntry = false
         }
     }
     
@@ -80,7 +80,7 @@ class LoginViewController: UIViewController {
         passwordTextField.rightView = showHideButton
         passwordTextField.rightViewMode = .always
         
-        showHideButton.setImage(showImage, for: .normal)
+        showHideButton.setImage(hideImage, for: .normal)
         showHideButton.translatesAutoresizingMaskIntoConstraints = false
         showHideButton.addTarget(self, action: #selector(showHideTapped), for: .touchUpInside)
         showHideButton.heightAnchor.constraint(equalToConstant: 20.0).isActive = true

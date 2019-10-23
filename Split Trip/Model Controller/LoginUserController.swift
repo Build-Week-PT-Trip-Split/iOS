@@ -45,12 +45,16 @@ class LoginUserController {
                   }
                   
                   if let error = error { completion(error); return }
+                
                   guard let data = data else { completion(NSError()); return }
                   
                   let decoder = JSONDecoder()
                   
                   do {
-                      createUserController.token = try decoder.decode(Token.self, from: data)
+                    
+                      let token = try decoder.decode(Token.self, from: data)
+                    UserDefaults.standard.set(token, forKey: "Token")
+                    
                   } catch {
                       print("Error decoding bearer object: \(error)")
                       completion(error)
