@@ -11,6 +11,11 @@
 		3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */; };
 		A4103226235B9A35004C4426 /* ViewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4103225235B9A35004C4426 /* ViewTripVC.swift */; };
 		A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410F3ED2358207F00F96001 /* YourTripsVC.swift */; };
+		A419D812235FCBB100552E43 /* AddParticipantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D811235FCBB100552E43 /* AddParticipantVC.swift */; };
+		A419D814235FCDB500552E43 /* AddFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D813235FCDB500552E43 /* AddFriendVC.swift */; };
+		A419D816235FCDF900552E43 /* ExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D815235FCDF900552E43 /* ExpensesVC.swift */; };
+		A419D818235FCE1C00552E43 /* ExpensePaymentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D817235FCE1C00552E43 /* ExpensePaymentsVC.swift */; };
+		A419D81A235FCE3C00552E43 /* AddExpensePaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419D819235FCE3C00552E43 /* AddExpensePaymentVC.swift */; };
 		A425A278235A36CF0031820B /* ParticipantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */; };
 		A425A279235A36CF0031820B /* ParticipantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */; };
 		A440142C235D1CE60004DF9C /* navBarHeaderImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A440142A235D1CE60004DF9C /* navBarHeaderImage@3x.png */; };
@@ -19,11 +24,16 @@
 		A4401435235D33E80004DF9C /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4401434235D33E80004DF9C /* PaymentVC.swift */; };
 		A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460EA3C23581A1200AB8E7A /* BalanceView.swift */; };
 		A46A47C12359F23500DBC01A /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C02359F23500DBC01A /* FriendsVC.swift */; };
-		A46A47C32359F25B00DBC01A /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C22359F25B00DBC01A /* NotificationsVC.swift */; };
 		A46A47C6235A00FA00DBC01A /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C4235A00FA00DBC01A /* TripTableViewCell.swift */; };
 		A46A47C7235A00FA00DBC01A /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46A47C5235A00FA00DBC01A /* TripTableViewCell.xib */; };
 		A46A47C9235A0DC600DBC01A /* AddTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46A47C8235A0DC600DBC01A /* AddTripVC.swift */; };
 		A46A47CB235A27B900DBC01A /* ChooseImagePlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A46A47CA235A27B900DBC01A /* ChooseImagePlaceholder.png */; };
+		A474C992235FC45C00EE1B90 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474C990235FC45C00EE1B90 /* ContactTableViewCell.swift */; };
+		A474C993235FC45C00EE1B90 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A474C991235FC45C00EE1B90 /* ContactTableViewCell.xib */; };
+		A474C995235FC83C00EE1B90 /* SetDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474C994235FC83C00EE1B90 /* SetDateVC.swift */; };
+		A474C999235FC8D100EE1B90 /* AddExpenseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474C998235FC8D100EE1B90 /* AddExpenseVC.swift */; };
+		A474C99F235FC94000EE1B90 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474C99E235FC94000EE1B90 /* SettingsVC.swift */; };
+		A474C9A1235FC94F00EE1B90 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474C9A0235FC94F00EE1B90 /* AccountVC.swift */; };
 		A4FB58AB2359DF79002A1A39 /* backgroundImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4FB58AA2359DF79002A1A39 /* backgroundImage@3x.png */; };
 		EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03724E2356B61D006161CA /* AppDelegate.swift */; };
 		EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0372502356B61D006161CA /* SceneDelegate.swift */; };
@@ -50,6 +60,11 @@
 		3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
 		A4103225235B9A35004C4426 /* ViewTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTripVC.swift; sourceTree = "<group>"; };
 		A410F3ED2358207F00F96001 /* YourTripsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsVC.swift; sourceTree = "<group>"; };
+		A419D811235FCBB100552E43 /* AddParticipantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParticipantVC.swift; sourceTree = "<group>"; };
+		A419D813235FCDB500552E43 /* AddFriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddFriendVC.swift; path = "Split Trip/View Controllers/HomeScreen/AddParticipantView/AddFriendVC.swift"; sourceTree = SOURCE_ROOT; };
+		A419D815235FCDF900552E43 /* ExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesVC.swift; sourceTree = "<group>"; };
+		A419D817235FCE1C00552E43 /* ExpensePaymentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensePaymentsVC.swift; sourceTree = "<group>"; };
+		A419D819235FCE3C00552E43 /* AddExpensePaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensePaymentVC.swift; sourceTree = "<group>"; };
 		A425A276235A36CF0031820B /* ParticipantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParticipantCollectionViewCell.swift; path = "Split Trip/Views/Participant Collection View/ParticipantCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		A425A277235A36CF0031820B /* ParticipantCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ParticipantCollectionViewCell.xib; path = "Split Trip/Views/Participant Collection View/ParticipantCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		A440142A235D1CE60004DF9C /* navBarHeaderImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBarHeaderImage@3x.png"; sourceTree = "<group>"; };
@@ -58,11 +73,16 @@
 		A4401434235D33E80004DF9C /* PaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 		A460EA3C23581A1200AB8E7A /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		A46A47C02359F23500DBC01A /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/FriendsVC.swift"; sourceTree = SOURCE_ROOT; };
-		A46A47C22359F25B00DBC01A /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/NotificationsVC.swift"; sourceTree = SOURCE_ROOT; };
 		A46A47C4235A00FA00DBC01A /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		A46A47C5235A00FA00DBC01A /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
 		A46A47C8235A0DC600DBC01A /* AddTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddTripVC.swift; path = "Split Trip/View Controllers/HomeScreen/HomeTabBarMenu/AddTripVC.swift"; sourceTree = SOURCE_ROOT; };
 		A46A47CA235A27B900DBC01A /* ChooseImagePlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChooseImagePlaceholder.png; sourceTree = "<group>"; };
+		A474C990235FC45C00EE1B90 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		A474C991235FC45C00EE1B90 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
+		A474C994235FC83C00EE1B90 /* SetDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateVC.swift; sourceTree = "<group>"; };
+		A474C998235FC8D100EE1B90 /* AddExpenseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseVC.swift; sourceTree = "<group>"; };
+		A474C99E235FC94000EE1B90 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		A474C9A0235FC94F00EE1B90 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountVC.swift; path = "Split Trip/View Controllers/HomeScreen/SettingsNavBarMenu/AccountVC.swift"; sourceTree = SOURCE_ROOT; };
 		A4FB58AA2359DF79002A1A39 /* backgroundImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundImage@3x.png"; sourceTree = "<group>"; };
 		EF03724B2356B61D006161CA /* Split Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF03724E2356B61D006161CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,11 +170,14 @@
 		A460EA38235819A700AB8E7A /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A474C99D235FC92300EE1B90 /* SettingsNavBarMenu */,
+				A474C99A235FC8E500EE1B90 /* AddParticipantView */,
+				A474C997235FC8C300EE1B90 /* Expenses */,
+				A474C996235FC89B00EE1B90 /* SetDateView */,
 				A4401433235D33C20004DF9C /* PaymentView */,
 				A440142F235D2DE20004DF9C /* ParticipantDetailView */,
 				A4103224235B9A15004C4426 /* TripView */,
 				A460EA4323581A7700AB8E7A /* AccountNavBarMenu */,
-				A460EA4223581A5000AB8E7A /* NotificationsTabBarMenu */,
 				A460EA4123581A3A00AB8E7A /* AddTripView */,
 				A460EA4023581A2D00AB8E7A /* FriendsTabBarMenu */,
 				A460EA3B235819EC00AB8E7A /* HomeTabBarMenu */,
@@ -174,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				A46A47C02359F23500DBC01A /* FriendsVC.swift */,
+				A419D813235FCDB500552E43 /* AddFriendVC.swift */,
 			);
 			path = FriendsTabBarMenu;
 			sourceTree = "<group>";
@@ -186,19 +210,56 @@
 			path = AddTripView;
 			sourceTree = "<group>";
 		};
-		A460EA4223581A5000AB8E7A /* NotificationsTabBarMenu */ = {
-			isa = PBXGroup;
-			children = (
-				A46A47C22359F25B00DBC01A /* NotificationsVC.swift */,
-			);
-			path = NotificationsTabBarMenu;
-			sourceTree = "<group>";
-		};
 		A460EA4323581A7700AB8E7A /* AccountNavBarMenu */ = {
 			isa = PBXGroup;
 			children = (
+				A474C9A0235FC94F00EE1B90 /* AccountVC.swift */,
 			);
 			path = AccountNavBarMenu;
+			sourceTree = "<group>";
+		};
+		A474C98F235FC43E00EE1B90 /* Contact Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A474C990235FC45C00EE1B90 /* ContactTableViewCell.swift */,
+				A474C991235FC45C00EE1B90 /* ContactTableViewCell.xib */,
+			);
+			path = "Contact Table View Cell";
+			sourceTree = "<group>";
+		};
+		A474C996235FC89B00EE1B90 /* SetDateView */ = {
+			isa = PBXGroup;
+			children = (
+				A474C994235FC83C00EE1B90 /* SetDateVC.swift */,
+			);
+			path = SetDateView;
+			sourceTree = "<group>";
+		};
+		A474C997235FC8C300EE1B90 /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				A474C998235FC8D100EE1B90 /* AddExpenseVC.swift */,
+				A419D815235FCDF900552E43 /* ExpensesVC.swift */,
+				A419D817235FCE1C00552E43 /* ExpensePaymentsVC.swift */,
+				A419D819235FCE3C00552E43 /* AddExpensePaymentVC.swift */,
+			);
+			path = Expenses;
+			sourceTree = "<group>";
+		};
+		A474C99A235FC8E500EE1B90 /* AddParticipantView */ = {
+			isa = PBXGroup;
+			children = (
+				A419D811235FCBB100552E43 /* AddParticipantVC.swift */,
+			);
+			path = AddParticipantView;
+			sourceTree = "<group>";
+		};
+		A474C99D235FC92300EE1B90 /* SettingsNavBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A474C99E235FC94000EE1B90 /* SettingsVC.swift */,
+			);
+			path = SettingsNavBarMenu;
 			sourceTree = "<group>";
 		};
 		A4FB58A92359DF6A002A1A39 /* Images */ = {
@@ -277,6 +338,7 @@
 		EF0372652356BEA2006161CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A474C98F235FC43E00EE1B90 /* Contact Table View Cell */,
 				A440142E235D293E0004DF9C /* Your Trips Table View Cell */,
 				A4401429235C8C3B0004DF9C /* Current Balance View */,
 				A41C52DB235C783A002A08ED /* Participant Collection View */,
@@ -392,6 +454,7 @@
 				EF61C4E52358040D009D3A45 /* Default-568h@2x.png in Resources */,
 				EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */,
 				EF03726C2356C536006161CA /* SignUpPage.storyboard in Resources */,
+				A474C993235FC45C00EE1B90 /* ContactTableViewCell.xib in Resources */,
 				A440142D235D1CE60004DF9C /* tabBarFooterImage@3x.png in Resources */,
 				A46A47C7235A00FA00DBC01A /* TripTableViewCell.xib in Resources */,
 				EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */,
@@ -411,20 +474,29 @@
 			files = (
 				A425A278235A36CF0031820B /* ParticipantCollectionViewCell.swift in Sources */,
 				A46A47C12359F23500DBC01A /* FriendsVC.swift in Sources */,
+				A474C992235FC45C00EE1B90 /* ContactTableViewCell.swift in Sources */,
+				A419D814235FCDB500552E43 /* AddFriendVC.swift in Sources */,
 				A4103226235B9A35004C4426 /* ViewTripVC.swift in Sources */,
+				A419D81A235FCE3C00552E43 /* AddExpensePaymentVC.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
 				A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */,
+				A419D816235FCDF900552E43 /* ExpensesVC.swift in Sources */,
 				A46A47C6235A00FA00DBC01A /* TripTableViewCell.swift in Sources */,
+				A419D818235FCE1C00552E43 /* ExpensePaymentsVC.swift in Sources */,
 				A46A47C9235A0DC600DBC01A /* AddTripVC.swift in Sources */,
-				A46A47C32359F25B00DBC01A /* NotificationsVC.swift in Sources */,
 				A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */,
+				A474C99F235FC94000EE1B90 /* SettingsVC.swift in Sources */,
+				A419D812235FCBB100552E43 /* AddParticipantVC.swift in Sources */,
+				A474C995235FC83C00EE1B90 /* SetDateVC.swift in Sources */,
 				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
 				3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */,
 				EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */,
+				A474C999235FC8D100EE1B90 /* AddExpenseVC.swift in Sources */,
 				EFF35263235962DD004B7386 /* SignUpVC.swift in Sources */,
 				EF08B993235AA1480027292E /* NewUserWelcomeVC.swift in Sources */,
 				A4401435235D33E80004DF9C /* PaymentVC.swift in Sources */,
+				A474C9A1235FC94F00EE1B90 /* AccountVC.swift in Sources */,
 				EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */,
 				EFF3526823596A3F004B7386 /* LoginSignupCustomButton.swift in Sources */,
 				EFF35266235968F7004B7386 /* TextFieldPadding.swift in Sources */,

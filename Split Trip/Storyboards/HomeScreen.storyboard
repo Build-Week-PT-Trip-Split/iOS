@@ -151,9 +151,6 @@
                                                         <rect key="frame" x="271" y="14.666666666666686" width="52" height="37"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
-                                                        <connections>
-                                                            <segue destination="LPE-dl-hvk" kind="presentation" identifier="SetDestinationSegue" id="UM7-Qd-Ea8"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -189,7 +186,7 @@
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
                                                         <connections>
-                                                            <segue destination="Xnb-i3-gaj" kind="presentation" identifier="SetExpensesSegue" id="mcJ-nd-tWH"/>
+                                                            <segue destination="Xnb-i3-gaj" kind="show" identifier="SetExpensesSegue" id="mcJ-nd-tWH"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -225,11 +222,6 @@
                                                         <rect key="frame" x="271" y="14.666666666666742" width="52" height="37"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
-                                                        <connections>
-                                                            <segue destination="X35-ry-Jbs" kind="popoverPresentation" identifier="SetTotalSpendSegue" popoverAnchorView="fgS-k8-Yg5" id="Qdq-X7-kfe">
-                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                            </segue>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -416,10 +408,10 @@
             </objects>
             <point key="canvasLocation" x="1718" y="-1467"/>
         </scene>
-        <!--View Controller-->
+        <!--AccountVC-->
         <scene sceneID="e2r-v8-uuY">
             <objects>
-                <viewController id="NqS-bM-nLe" sceneMemberID="viewController">
+                <viewController id="NqS-bM-nLe" customClass="AccountVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sQ4-rF-Jtq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -442,10 +434,10 @@
             </objects>
             <point key="canvasLocation" x="2750" y="-2599"/>
         </scene>
-        <!--View Controller-->
+        <!--SettingsVC-->
         <scene sceneID="e4N-Bc-eV7">
             <objects>
-                <viewController id="hYV-Dv-Bza" sceneMemberID="viewController">
+                <viewController id="hYV-Dv-Bza" customClass="SettingsVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nbo-PB-LNb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -470,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vi4-5M-tsm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="-1891"/>
+            <point key="canvasLocation" x="2750" y="-1913"/>
         </scene>
         <!--ADD NEW TRIP-->
         <scene sceneID="fit-Js-CAe">
@@ -598,9 +590,6 @@
                                                         <rect key="frame" x="271" y="14.666666666666686" width="52" height="37"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
-                                                        <connections>
-                                                            <segue destination="LPE-dl-hvk" kind="presentation" identifier="SetDestinationSegue" id="HiX-nb-o0z"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -636,9 +625,7 @@
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
                                                         <connections>
-                                                            <segue destination="Xnb-i3-gaj" kind="popoverPresentation" identifier="SetExpensesSegue" popoverAnchorView="MgH-cL-1pk" id="OSp-fd-9XT">
-                                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                            </segue>
+                                                            <segue destination="Xnb-i3-gaj" kind="show" identifier="SetExpensesSegue" id="OSp-fd-9XT"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -674,9 +661,6 @@
                                                         <rect key="frame" x="271" y="14.666666666666629" width="52" height="37"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
-                                                        <connections>
-                                                            <segue destination="X35-ry-Jbs" kind="presentation" identifier="SetTotalSpendSegue" id="hvg-gu-28R"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -752,10 +736,10 @@
             </objects>
             <point key="canvasLocation" x="2750" y="-1224"/>
         </scene>
-        <!--View Controller-->
+        <!--Set DateVC-->
         <scene sceneID="9mg-JG-VWA">
             <objects>
-                <viewController id="TB5-y0-Bgc" sceneMemberID="viewController">
+                <viewController id="TB5-y0-Bgc" customClass="SetDateVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VbP-mg-tjm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -820,38 +804,12 @@
             </objects>
             <point key="canvasLocation" x="3689" y="-1224"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="NaZ-ou-H5h">
-            <objects>
-                <viewController id="LPE-dl-hvk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zDB-xP-5SQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wrw-hu-aXg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="SET DESTINATION" id="sTw-g0-pdd">
-                                        <barButtonItem key="rightBarButtonItem" title="SAVE" id="MUG-vM-dIA"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="fWd-Sb-ArG"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rfe-Mk-rJp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4673" y="-1224"/>
-        </scene>
-        <!--View Controller-->
+        <!--EXPENSES-->
         <scene sceneID="unA-cQ-zLk">
             <objects>
-                <viewController id="Xnb-i3-gaj" sceneMemberID="viewController">
+                <viewController id="Xnb-i3-gaj" customClass="ExpensesVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DdF-AH-ejZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lRB-qU-8cp">
@@ -863,45 +821,162 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZy-KX-fPo">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="W8j-1Z-8cE">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W8j-1Z-8cE" id="b40-z1-wn5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nTo-2E-TJu" kind="show" identifier="ExpenseDetailShowSegue" id="bsz-ci-lSQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AZy-KX-fPo" firstAttribute="leading" secondItem="odt-nW-U5x" secondAttribute="leading" id="CIj-9e-FWA"/>
+                            <constraint firstItem="AZy-KX-fPo" firstAttribute="top" secondItem="odt-nW-U5x" secondAttribute="top" id="Fse-U8-7dN"/>
+                            <constraint firstItem="odt-nW-U5x" firstAttribute="bottom" secondItem="AZy-KX-fPo" secondAttribute="bottom" id="j1m-2E-tC6"/>
+                            <constraint firstItem="odt-nW-U5x" firstAttribute="trailing" secondItem="AZy-KX-fPo" secondAttribute="trailing" id="lPN-FT-1fH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="odt-nW-U5x"/>
                     </view>
+                    <navigationItem key="navigationItem" title="EXPENSES" id="cs4-KZ-ISK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fbH-vS-fRX">
+                            <connections>
+                                <segue destination="pHn-7H-xet" kind="presentation" identifier="AddExpenseSegue" id="oKx-ht-saL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDZ-xh-sii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5606" y="-1224"/>
+            <point key="canvasLocation" x="5510" y="-1224"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Fvk-hh-BFG">
+        <!--Add ExpenseVC-->
+        <scene sceneID="6vV-2B-soz">
             <objects>
-                <viewController id="X35-ry-Jbs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S0T-cR-1Ma">
+                <viewController id="pHn-7H-xet" customClass="AddExpenseVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jcy-3m-ouN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rt5-h9-TvU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S47-rS-pBw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <items>
-                                    <navigationItem title="SET TOTAL SPEND" id="i6Y-hU-79w">
-                                        <barButtonItem key="rightBarButtonItem" title="SAVE" id="VhE-P2-cNS"/>
+                                    <navigationItem title="ADD EXPENSE" id="GBt-06-ebn">
+                                        <barButtonItem key="rightBarButtonItem" title="SAVE" id="Nvn-kH-BER"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="jR5-y2-ZB8"/>
+                        <constraints>
+                            <constraint firstItem="S47-rS-pBw" firstAttribute="leading" secondItem="j5x-s1-ObQ" secondAttribute="leading" id="68r-kv-WSx"/>
+                            <constraint firstItem="S47-rS-pBw" firstAttribute="top" secondItem="j5x-s1-ObQ" secondAttribute="top" id="NCP-c6-wYS"/>
+                            <constraint firstItem="S47-rS-pBw" firstAttribute="trailing" secondItem="j5x-s1-ObQ" secondAttribute="trailing" id="aJU-mQ-bwa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j5x-s1-ObQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Un5-Rs-Sfk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3rh-2m-c8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6302" y="-1900"/>
+        </scene>
+        <!--Expense PaymentsVC-->
+        <scene sceneID="XHP-3k-9xI">
+            <objects>
+                <viewController id="nTo-2E-TJu" customClass="ExpensePaymentsVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YMe-u6-di4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments on expense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiT-Be-UnI">
+                                <rect key="frame" x="20" y="108" width="179" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LRH-c8-Tks">
+                                <rect key="frame" x="20" y="140" width="335" height="569"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="BKE-Y4-GCg">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BKE-Y4-GCg" id="jMG-xJ-pbV">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tiT-Be-UnI" firstAttribute="leading" secondItem="wXd-v8-ndu" secondAttribute="leading" constant="20" id="IZa-St-Una"/>
+                            <constraint firstItem="wXd-v8-ndu" firstAttribute="bottom" secondItem="LRH-c8-Tks" secondAttribute="bottom" constant="20" id="Mqv-AV-mPf"/>
+                            <constraint firstItem="wXd-v8-ndu" firstAttribute="trailing" secondItem="LRH-c8-Tks" secondAttribute="trailing" constant="20" id="Tw2-aT-6D6"/>
+                            <constraint firstItem="LRH-c8-Tks" firstAttribute="leading" secondItem="wXd-v8-ndu" secondAttribute="leading" constant="20" id="mU4-Ig-S6v"/>
+                            <constraint firstItem="tiT-Be-UnI" firstAttribute="top" secondItem="wXd-v8-ndu" secondAttribute="top" constant="20" id="oL3-30-pXb"/>
+                            <constraint firstItem="LRH-c8-Tks" firstAttribute="top" secondItem="tiT-Be-UnI" secondAttribute="bottom" constant="8" id="vCb-lb-po9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wXd-v8-ndu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iSd-Fl-dcc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WzX-8K-sT9">
+                            <connections>
+                                <segue destination="xEj-f2-aZN" kind="presentation" id="rF5-dY-clo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Jz-st-810" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6302" y="-1224"/>
+        </scene>
+        <!--Add Expense PaymentVC-->
+        <scene sceneID="WPe-Lt-qS2">
+            <objects>
+                <viewController id="xEj-f2-aZN" customClass="AddExpensePaymentVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w2i-IO-862">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1g-j2-KdL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <items>
+                                    <navigationItem title="ADD PAYMENT" id="mph-ho-U3E">
+                                        <barButtonItem key="rightBarButtonItem" title="SAVE" id="H5y-cB-OOk"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="P1g-j2-KdL" firstAttribute="trailing" secondItem="PS0-rn-H9B" secondAttribute="trailing" id="LCL-6c-GoP"/>
+                            <constraint firstItem="P1g-j2-KdL" firstAttribute="leading" secondItem="PS0-rn-H9B" secondAttribute="leading" id="ZYb-8T-IZf"/>
+                            <constraint firstItem="P1g-j2-KdL" firstAttribute="top" secondItem="PS0-rn-H9B" secondAttribute="top" id="aGL-5U-seS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PS0-rn-H9B"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7j3-mc-AnE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29G-fw-FVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6409" y="-1224"/>
+            <point key="canvasLocation" x="7087" y="-1900"/>
         </scene>
-        <!--View Controller-->
+        <!--Add ParticipantVC-->
         <scene sceneID="hb5-lP-bEx">
             <objects>
-                <viewController id="PJ9-39-e6s" sceneMemberID="viewController">
+                <viewController id="PJ9-39-e6s" customClass="AddParticipantVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Erq-Pw-jxL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -962,7 +1037,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GP-X3-iVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7278" y="-1224"/>
+            <point key="canvasLocation" x="4602" y="-1224"/>
         </scene>
         <!--Participant DetailVC-->
         <scene sceneID="obN-or-984">
@@ -1237,10 +1312,10 @@
             </objects>
             <point key="canvasLocation" x="1718" y="171"/>
         </scene>
-        <!--View Controller-->
+        <!--Add FriendVC-->
         <scene sceneID="32E-BA-N00">
             <objects>
-                <viewController id="UBk-Uw-Y7E" sceneMemberID="viewController">
+                <viewController id="UBk-Uw-Y7E" customClass="AddFriendVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZkE-lb-3bm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1316,9 +1391,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="tSD-NC-fZK"/>
         <segue reference="NML-VV-85b"/>
-        <segue reference="Qdq-X7-kfe"/>
         <segue reference="mcJ-nd-tWH"/>
-        <segue reference="UM7-Qd-Ea8"/>
         <segue reference="6sn-DW-iXp"/>
     </inferredMetricsTieBreakers>
 </document>
