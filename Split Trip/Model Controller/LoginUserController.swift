@@ -51,8 +51,7 @@ class LoginUserController {
                   let decoder = JSONDecoder()
                   
                   do {
-                    
-                      let token = try decoder.decode(Token.self, from: data)
+                    let token = try decoder.decode(Token.self, from: data)
                     UserDefaults.standard.set(token, forKey: "Token")
                     
                   } catch {
