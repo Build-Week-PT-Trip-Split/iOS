@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //Creates Transparent UINavigationBar
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        if let headerImage = UIImage(named: "navBarHeaderImage@3x") {
+            UINavigationBar.appearance().setBackgroundImage(headerImage, for: .default)
+        }
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().isTranslucent = true
@@ -26,7 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = .white
         
         //Creates Transparent UITabBar
-        UITabBar.appearance().backgroundImage = UIImage()
+        if let footerImage = UIImage(named: "tabBarFooterImage@3x") {
+            UITabBar.appearance().backgroundImage = footerImage
+        }
         UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().isTranslucent = true
         return true
