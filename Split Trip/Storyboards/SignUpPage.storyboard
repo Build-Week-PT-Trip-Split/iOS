@@ -117,7 +117,7 @@
                         <outlet property="emailTextField" destination="BRQ-S6-U4c" id="fjb-EL-yrV"/>
                         <outlet property="nameTextField" destination="K1d-ku-Twd" id="9RW-w3-RBb"/>
                         <outlet property="passwordTextField" destination="ygK-nQ-ALc" id="1ow-w9-hXA"/>
-                        <outlet property="phoneTextField" destination="cgt-ii-avh" id="UaA-4z-ub0"/>
+                        <outlet property="usernameTextField" destination="cgt-ii-avh" id="UaA-4z-ub0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJm-DX-dzD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

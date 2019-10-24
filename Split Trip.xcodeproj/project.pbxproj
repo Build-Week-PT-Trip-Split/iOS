@@ -34,7 +34,7 @@
 		EF0372702356C652006161CA /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF03726F2356C652006161CA /* ResetPassword.storyboard */; };
 		EF0372722356C7EC006161CA /* NewUserWelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */; };
 		EF08B993235AA1480027292E /* NewUserWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08B992235AA1480027292E /* NewUserWelcomeVC.swift */; };
-		EF23CE1D235EB361003504FC /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23CE1C235EB361003504FC /* CreateUser.swift */; };
+		EF23CE1D235EB361003504FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23CE1C235EB361003504FC /* User.swift */; };
 		EF23CE1F235EB452003504FC /* CreateUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23CE1E235EB452003504FC /* CreateUserController.swift */; };
 		EF61C4E12357FA35009D3A45 /* WelcomeBackScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */; };
 		EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */; };
@@ -77,7 +77,7 @@
 		EF03726F2356C652006161CA /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		EF0372712356C7EC006161CA /* NewUserWelcomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewUserWelcomeScreen.storyboard; sourceTree = "<group>"; };
 		EF08B992235AA1480027292E /* NewUserWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserWelcomeVC.swift; sourceTree = "<group>"; };
-		EF23CE1C235EB361003504FC /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
+		EF23CE1C235EB361003504FC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EF23CE1E235EB452003504FC /* CreateUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserController.swift; sourceTree = "<group>"; };
 		EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeBackScreen.storyboard; sourceTree = "<group>"; };
 		EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				A4ED16A1235B8EC600C358E8 /* TripSettings.swift */,
-				EF23CE1C235EB361003504FC /* CreateUser.swift */,
+				EF23CE1C235EB361003504FC /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 				A46A47C9235A0DC600DBC01A /* AddTripVC.swift in Sources */,
 				A46A47C32359F25B00DBC01A /* NotificationsVC.swift in Sources */,
 				A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */,
-				EF23CE1D235EB361003504FC /* CreateUser.swift in Sources */,
+				EF23CE1D235EB361003504FC /* User.swift in Sources */,
 				A4ED16A2235B8EC600C358E8 /* TripSettings.swift in Sources */,
 				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
