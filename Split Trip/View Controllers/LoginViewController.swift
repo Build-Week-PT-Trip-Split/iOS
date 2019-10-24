@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     private let showImage = UIImage(named: "EyeShow")
     private let hideImage = UIImage(named: "EyeClose")
     
-    var loginUserController : LoginUserController?
+    var loginUserController = LoginUserController()
     
     //MARK: - Views
     
@@ -92,14 +92,14 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-        guard let LoginUC = self.loginUserController else { return }
+//        guard let LoginUC = self.loginUserController else { return }
         
         if let email = UsernameTextField.text, !email.isEmpty,
             let password = passwordTextField.text, !password.isEmpty {
         
-            LoginUC.login(withEmail: email, withPassword: password) { (error) in
+            loginUserController.login(withEmail: email, withPassword: password) { (error) in
                 if let error = error {
-                    NSLog("Error occured during login: \(error)")
+                    print("Error occured during login: \(error)")
                 } else {
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "ShowWelcomeBackSegue", sender: self)
