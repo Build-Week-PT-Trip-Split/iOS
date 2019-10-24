@@ -344,12 +344,12 @@
 			isa = PBXGroup;
 			children = (
 				A4ED16A1235B8EC600C358E8 /* TripSettings.swift */,
-<<<<<<< HEAD
+
 				EF23CE1C235EB361003504FC /* User.swift */,
-=======
+
 				EF23CE1C235EB361003504FC /* CreateUser.swift */,
 				37C63219235F5C50002B9138 /* Token.swift */,
->>>>>>> master
+
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -535,14 +535,14 @@
 				A419D818235FCE1C00552E43 /* ExpensePaymentsVC.swift in Sources */,
 				A46A47C9235A0DC600DBC01A /* AddTripVC.swift in Sources */,
 				A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */,
-<<<<<<< HEAD
+
 				EF23CE1D235EB361003504FC /* User.swift in Sources */,
-=======
+
 				A474C99F235FC94000EE1B90 /* SettingsVC.swift in Sources */,
 				A419D812235FCBB100552E43 /* AddParticipantVC.swift in Sources */,
 				A474C995235FC83C00EE1B90 /* SetDateVC.swift in Sources */,
 				EF23CE1D235EB361003504FC /* CreateUser.swift in Sources */,
->>>>>>> master
+
 				A4ED16A2235B8EC600C358E8 /* TripSettings.swift in Sources */,
 				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
