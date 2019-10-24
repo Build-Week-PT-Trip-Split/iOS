@@ -16,10 +16,7 @@ class LoginUserController {
     var createUserController = CreateUserController()
        
        enum HTTPMethod: String {
-           case get    = "GET"
-           case put    = "PUT"
            case post   = "POST"
-           case delete = "DELETE"
        }
        
         func login(withEmail email: String, withPassword password: String, completion: @escaping CompletionHandler = { _ in }) {

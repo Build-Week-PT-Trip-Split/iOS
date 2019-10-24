@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     
     //MARK: - Outlets
 
-    @IBOutlet weak var emailAddressTextField: UITextField!
+    @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
@@ -65,11 +65,11 @@ class LoginViewController: UIViewController {
     
     private func updateViews() {
 
-        emailAddressTextField.backgroundColor = .clear
-        emailAddressTextField.layer.borderColor = UIColor.white.cgColor
-        emailAddressTextField.layer.borderWidth = 2.0
-        emailAddressTextField.layer.cornerRadius = 5.0
-        emailAddressTextField.textColor = .white
+        UsernameTextField.backgroundColor = .clear
+        UsernameTextField.layer.borderColor = UIColor.white.cgColor
+        UsernameTextField.layer.borderWidth = 2.0
+        UsernameTextField.layer.cornerRadius = 5.0
+        UsernameTextField.textColor = .white
 
 
         passwordTextField.backgroundColor = .clear
@@ -92,11 +92,12 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        guard let LoginUC = self.loginUserController else { return }
         
-        if let email = emailAddressTextField.text, !email.isEmpty,
+        if let email = UsernameTextField.text, !email.isEmpty,
             let password = passwordTextField.text, !password.isEmpty {
         
-            loginUserController?.login(withEmail: email, withPassword: password) { (error) in
+            LoginUC.login(withEmail: email, withPassword: password) { (error) in
                 if let error = error {
                     NSLog("Error occured during login: \(error)")
                 } else {
