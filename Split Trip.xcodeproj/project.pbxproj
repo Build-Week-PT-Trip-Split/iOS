@@ -40,6 +40,11 @@
 		A474C999235FC8D100EE1B90 /* AddExpenseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474C998235FC8D100EE1B90 /* AddExpenseVC.swift */; };
 		A474C99F235FC94000EE1B90 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474C99E235FC94000EE1B90 /* SettingsVC.swift */; };
 		A474C9A1235FC94F00EE1B90 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474C9A0235FC94F00EE1B90 /* AccountVC.swift */; };
+		A49FCFBE236245B00086BDE6 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FCFBD236245B00086BDE6 /* Trip.swift */; };
+		A49FCFC0236247B90086BDE6 /* TripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FCFBF236247B90086BDE6 /* TripController.swift */; };
+		A49FCFC2236248150086BDE6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FCFC1236248150086BDE6 /* HTTPMethod.swift */; };
+		A49FCFC42362692F0086BDE6 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FCFC32362692F0086BDE6 /* Expense.swift */; };
+		A49FCFC6236269D10086BDE6 /* ExpenseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49FCFC5236269D10086BDE6 /* ExpenseController.swift */; };
 		A4FB58AB2359DF79002A1A39 /* backgroundImage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4FB58AA2359DF79002A1A39 /* backgroundImage@3x.png */; };
 		EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03724E2356B61D006161CA /* AppDelegate.swift */; };
 		EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0372502356B61D006161CA /* SceneDelegate.swift */; };
@@ -97,6 +102,11 @@
 		A474C998235FC8D100EE1B90 /* AddExpenseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseVC.swift; sourceTree = "<group>"; };
 		A474C99E235FC94000EE1B90 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		A474C9A0235FC94F00EE1B90 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountVC.swift; path = "Split Trip/View Controllers/HomeScreen/SettingsNavBarMenu/AccountVC.swift"; sourceTree = SOURCE_ROOT; };
+		A49FCFBD236245B00086BDE6 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		A49FCFBF236247B90086BDE6 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
+		A49FCFC1236248150086BDE6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		A49FCFC32362692F0086BDE6 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		A49FCFC5236269D10086BDE6 /* ExpenseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseController.swift; sourceTree = "<group>"; };
 		A4FB58AA2359DF79002A1A39 /* backgroundImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundImage@3x.png"; sourceTree = "<group>"; };
 		EF03724B2356B61D006161CA /* Split Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF03724E2356B61D006161CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -343,13 +353,10 @@
 		EF0372622356BE33006161CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A4ED16A1235B8EC600C358E8 /* TripSettings.swift */,
-
 				EF23CE1C235EB361003504FC /* User.swift */,
-
-				EF23CE1C235EB361003504FC /* CreateUser.swift */,
 				37C63219235F5C50002B9138 /* Token.swift */,
-
+				A49FCFBD236245B00086BDE6 /* Trip.swift */,
+				A49FCFC32362692F0086BDE6 /* Expense.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,6 +366,9 @@
 			children = (
 				EF23CE1E235EB452003504FC /* CreateUserController.swift */,
 				37C6321B235F5D06002B9138 /* LoginUserController.swift */,
+				A49FCFBF236247B90086BDE6 /* TripController.swift */,
+				A49FCFC1236248150086BDE6 /* HTTPMethod.swift */,
+				A49FCFC5236269D10086BDE6 /* ExpenseController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -520,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A425A278235A36CF0031820B /* ParticipantCollectionViewCell.swift in Sources */,
+				A49FCFC42362692F0086BDE6 /* Expense.swift in Sources */,
 				A46A47C12359F23500DBC01A /* FriendsVC.swift in Sources */,
 				A474C992235FC45C00EE1B90 /* ContactTableViewCell.swift in Sources */,
 				A419D814235FCDB500552E43 /* AddFriendVC.swift in Sources */,
@@ -527,29 +538,28 @@
 				A419D81A235FCE3C00552E43 /* AddExpensePaymentVC.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
 				37C6321C235F5D06002B9138 /* LoginUserController.swift in Sources */,
-				A4ED169F235B8C8500C358E8 /* TripSettingsTableViewCell.swift in Sources */,
 				A410F3EE2358207F00F96001 /* YourTripsVC.swift in Sources */,
 				A419D816235FCDF900552E43 /* ExpensesVC.swift in Sources */,
+				A49FCFBE236245B00086BDE6 /* Trip.swift in Sources */,
 				A46A47C6235A00FA00DBC01A /* TripTableViewCell.swift in Sources */,
 				A419D81E235FD55E00552E43 /* ExpenseTableViewCell.swift in Sources */,
 				A419D818235FCE1C00552E43 /* ExpensePaymentsVC.swift in Sources */,
 				A46A47C9235A0DC600DBC01A /* AddTripVC.swift in Sources */,
 				A460EA3D23581A1200AB8E7A /* BalanceView.swift in Sources */,
-
 				EF23CE1D235EB361003504FC /* User.swift in Sources */,
-
+				A49FCFC6236269D10086BDE6 /* ExpenseController.swift in Sources */,
 				A474C99F235FC94000EE1B90 /* SettingsVC.swift in Sources */,
 				A419D812235FCBB100552E43 /* AddParticipantVC.swift in Sources */,
 				A474C995235FC83C00EE1B90 /* SetDateVC.swift in Sources */,
-				EF23CE1D235EB361003504FC /* CreateUser.swift in Sources */,
-
-				A4ED16A2235B8EC600C358E8 /* TripSettings.swift in Sources */,
+				EF23CE1D235EB361003504FC /* User.swift in Sources */,
 				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
 				EF03726A2356C4E9006161CA /* LandingPageVC.swift in Sources */,
 				3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */,
 				37C6321A235F5C50002B9138 /* Token.swift in Sources */,
 				EF03724F2356B61D006161CA /* AppDelegate.swift in Sources */,
 				A474C999235FC8D100EE1B90 /* AddExpenseVC.swift in Sources */,
+				A49FCFC0236247B90086BDE6 /* TripController.swift in Sources */,
+				A49FCFC2236248150086BDE6 /* HTTPMethod.swift in Sources */,
 				EFF35263235962DD004B7386 /* SignUpVC.swift in Sources */,
 				EF08B993235AA1480027292E /* NewUserWelcomeVC.swift in Sources */,
 				A4401435235D33E80004DF9C /* PaymentVC.swift in Sources */,

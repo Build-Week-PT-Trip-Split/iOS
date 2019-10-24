@@ -273,7 +273,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kqI-iZ-0Zf"/>
                     <connections>
-                        <outlet property="addParticipantButton" destination="9kA-Mg-nsc" id="dfR-AD-8qz"/>
+                        <outlet property="addParticipantButton" destination="9kA-Mg-nsc" id="dqv-as-xK4"/>
                         <outlet property="dateItemButton" destination="fOP-tD-NI3" id="SP2-jG-iea"/>
                         <outlet property="dateItemImageView" destination="jW2-yj-3eZ" id="Jze-7o-Gxc"/>
                         <outlet property="dateItemTitleLabel" destination="2TO-HK-SVh" id="PmB-Gm-Sxf"/>
@@ -286,15 +286,15 @@
                         <outlet property="expensesItemImageView" destination="gyf-AT-uFT" id="SPa-6L-fRj"/>
                         <outlet property="expensesItemTitleLabel" destination="za3-3x-2aD" id="Uyq-iN-Ct8"/>
                         <outlet property="expensesViewBG" destination="Ngb-uA-DcL" id="ju2-kM-Alk"/>
-                        <outlet property="participantCollectionView" destination="7YM-Nt-Qrn" id="3N9-ha-7Zr"/>
-                        <outlet property="participantsLabel" destination="Q9k-Uq-JUC" id="1WJ-Cv-qDa"/>
+                        <outlet property="participantCollectionView" destination="7YM-Nt-Qrn" id="WZ7-Wl-txI"/>
+                        <outlet property="participantsLabel" destination="Q9k-Uq-JUC" id="HK8-7Z-bR3"/>
                         <outlet property="totalSpentBG" destination="kAE-YV-zhV" id="R5P-XU-Jc2"/>
                         <outlet property="totalSpentButton" destination="fgS-k8-Yg5" id="eyl-eu-2pA"/>
                         <outlet property="totalSpentItemImageView" destination="M0T-pg-ViZ" id="kcl-gb-s47"/>
                         <outlet property="totalSpentTitleLabel" destination="JBC-DA-biy" id="Tbo-zx-cOy"/>
-                        <outlet property="tripHeaderImageView" destination="GI3-z9-WsG" id="YDa-cn-Ip3"/>
-                        <outlet property="tripNameLabel" destination="xmj-1y-HhB" id="cIb-4U-PWb"/>
-                        <outlet property="withLabel" destination="37v-t5-55b" id="8k2-sk-5L9"/>
+                        <outlet property="tripHeaderImageView" destination="GI3-z9-WsG" id="oA2-9z-BLS"/>
+                        <outlet property="tripNameLabel" destination="xmj-1y-HhB" id="3fQ-sE-Fpd"/>
+                        <outlet property="withLabel" destination="37v-t5-55b" id="ITo-M3-gYu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMZ-iX-Gif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -341,7 +341,7 @@
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
                                 <state key="normal" title="New Trip"/>
                                 <connections>
-                                    <segue destination="Z0w-LJ-P1k" kind="show" identifier="AddTripSegue" id="VrR-3e-3xt"/>
+                                    <segue destination="Z0w-LJ-P1k" kind="presentation" identifier="AddTripSegue" id="VrR-3e-3xt"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eSY-aE-t3Z">
@@ -469,26 +469,26 @@
             <objects>
                 <viewController id="Z0w-LJ-P1k" customClass="AddTripVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3cf-1z-40e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4J-fj-Oru">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TeO-D8-1nF">
-                                        <rect key="frame" x="30" y="24" width="315" height="119"/>
+                                        <rect key="frame" x="30" y="20" width="315" height="119"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="119" id="3gw-bo-SRl"/>
                                             <constraint firstAttribute="width" constant="315" id="ot5-1c-Egc"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Trip Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jJO-4r-faX">
-                                        <rect key="frame" x="20" y="151" width="335" height="34"/>
+                                        <rect key="frame" x="20" y="147" width="335" height="34"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-7z-8ZG">
-                                        <rect key="frame" x="20" y="193" width="335" height="32"/>
+                                        <rect key="frame" x="20" y="189" width="335" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PARTICIPANTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLZ-Mz-P5L">
                                                 <rect key="frame" x="0.0" y="0.0" width="178" height="32"/>
@@ -507,7 +507,7 @@
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YwD-27-gof">
-                                        <rect key="frame" x="20" y="233" width="335" height="80"/>
+                                        <rect key="frame" x="20" y="229" width="335" height="80"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="fqf-Hd-nkr"/>
@@ -532,7 +532,7 @@
                                         </cells>
                                     </collectionView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gIi-dR-7QI">
-                                        <rect key="frame" x="20" y="321" width="335" height="300"/>
+                                        <rect key="frame" x="20" y="329" width="335" height="300"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkf-0A-i6q">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="66"/>
@@ -615,13 +615,13 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Expenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHf-Y3-Y6K">
-                                                        <rect key="frame" x="70" y="20.666666666666629" width="116.33333333333331" height="24.666666666666671"/>
+                                                        <rect key="frame" x="70" y="20.666666666666686" width="116.33333333333331" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgH-cL-1pk">
-                                                        <rect key="frame" x="271" y="14.666666666666629" width="52" height="37"/>
+                                                        <rect key="frame" x="271" y="14.666666666666686" width="52" height="37"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
                                                         <connections>
@@ -684,15 +684,15 @@
                                     <constraint firstItem="6Yd-7z-8ZG" firstAttribute="leading" secondItem="O4J-fj-Oru" secondAttribute="leading" constant="20" id="0ub-AD-inu"/>
                                     <constraint firstAttribute="trailing" secondItem="gIi-dR-7QI" secondAttribute="trailing" constant="20" id="3VH-og-sIa"/>
                                     <constraint firstAttribute="trailing" secondItem="YwD-27-gof" secondAttribute="trailing" constant="20" id="3w0-JJ-0KD"/>
-                                    <constraint firstItem="YwD-27-gof" firstAttribute="top" secondItem="6Yd-7z-8ZG" secondAttribute="bottom" constant="8" id="B6w-NG-CAk"/>
-                                    <constraint firstItem="jJO-4r-faX" firstAttribute="top" secondItem="TeO-D8-1nF" secondAttribute="bottom" constant="8" id="BRh-TC-ISh"/>
+                                    <constraint firstItem="6Yd-7z-8ZG" firstAttribute="top" secondItem="jJO-4r-faX" secondAttribute="bottom" constant="8" id="9ZF-J4-CRz"/>
+                                    <constraint firstItem="TeO-D8-1nF" firstAttribute="top" secondItem="O4J-fj-Oru" secondAttribute="top" constant="20" id="9di-e9-Ceg"/>
                                     <constraint firstItem="TeO-D8-1nF" firstAttribute="centerX" secondItem="O4J-fj-Oru" secondAttribute="centerX" id="INs-Qj-jdF"/>
                                     <constraint firstItem="YwD-27-gof" firstAttribute="leading" secondItem="O4J-fj-Oru" secondAttribute="leading" constant="20" id="RVy-mZ-YHM"/>
-                                    <constraint firstItem="6Yd-7z-8ZG" firstAttribute="top" secondItem="jJO-4r-faX" secondAttribute="bottom" constant="8" id="Rye-ud-NDR"/>
                                     <constraint firstAttribute="trailing" secondItem="6Yd-7z-8ZG" secondAttribute="trailing" constant="20" id="UG4-Er-wda"/>
                                     <constraint firstItem="jJO-4r-faX" firstAttribute="leading" secondItem="O4J-fj-Oru" secondAttribute="leading" constant="20" id="d81-jp-LC0"/>
-                                    <constraint firstItem="gIi-dR-7QI" firstAttribute="top" secondItem="YwD-27-gof" secondAttribute="bottom" constant="8" id="w2X-Wp-AXi"/>
-                                    <constraint firstAttribute="bottom" secondItem="gIi-dR-7QI" secondAttribute="bottom" constant="20" id="w7k-rf-1EO"/>
+                                    <constraint firstItem="gIi-dR-7QI" firstAttribute="top" secondItem="YwD-27-gof" secondAttribute="bottom" constant="20" id="mqB-3h-VkP"/>
+                                    <constraint firstItem="YwD-27-gof" firstAttribute="top" secondItem="6Yd-7z-8ZG" secondAttribute="bottom" constant="8" id="tdG-ej-MSi"/>
+                                    <constraint firstItem="jJO-4r-faX" firstAttribute="top" secondItem="TeO-D8-1nF" secondAttribute="bottom" constant="8" id="vnL-d9-rQN"/>
                                     <constraint firstAttribute="trailing" secondItem="jJO-4r-faX" secondAttribute="trailing" constant="20" id="www-Sm-RTT"/>
                                     <constraint firstItem="gIi-dR-7QI" firstAttribute="leading" secondItem="O4J-fj-Oru" secondAttribute="leading" constant="20" id="z6C-30-9a6"/>
                                 </constraints>
@@ -821,11 +821,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZy-KX-fPo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZy-KX-fPo">
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="W8j-1Z-8cE" customClass="ExpenseTableViewCell" customModule="Split_Trip" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseCell" rowHeight="70" id="W8j-1Z-8cE" customClass="ExpenseTableViewCell" customModule="Split_Trip" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W8j-1Z-8cE" id="b40-z1-wn5">
@@ -855,6 +855,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="expensesTableView" destination="AZy-KX-fPo" id="BrF-zS-Hug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDZ-xh-sii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1320,23 +1323,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEg-MV-wkP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEg-MV-wkP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <items>
                                     <navigationItem title="ADD NEW FRIEND" id="imI-iH-129">
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="3YO-mr-X9o"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lJ5-dR-VNu">
+                                <rect key="frame" x="0.0" y="56" width="375" height="668"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="70" id="Snh-EH-bOL" customClass="ContactTableViewCell" customModule="Split_Trip" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Snh-EH-bOL" id="HHn-o9-Swe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BEg-MV-wkP" firstAttribute="trailing" secondItem="FOh-o2-U0N" secondAttribute="trailing" id="BAj-oH-mBD"/>
+                            <constraint firstItem="lJ5-dR-VNu" firstAttribute="bottom" secondItem="FOh-o2-U0N" secondAttribute="bottom" id="H6y-E0-GnJ"/>
+                            <constraint firstItem="lJ5-dR-VNu" firstAttribute="top" secondItem="BEg-MV-wkP" secondAttribute="bottom" id="LtE-BJ-bnA"/>
+                            <constraint firstItem="lJ5-dR-VNu" firstAttribute="leading" secondItem="FOh-o2-U0N" secondAttribute="leading" id="kW8-7K-Pjs"/>
+                            <constraint firstItem="BEg-MV-wkP" firstAttribute="top" secondItem="FOh-o2-U0N" secondAttribute="top" id="mCV-P9-m3O"/>
+                            <constraint firstItem="lJ5-dR-VNu" firstAttribute="trailing" secondItem="FOh-o2-U0N" secondAttribute="trailing" id="vly-Ya-N0F"/>
+                            <constraint firstItem="BEg-MV-wkP" firstAttribute="leading" secondItem="FOh-o2-U0N" secondAttribute="leading" id="xDt-vc-H4O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FOh-o2-U0N"/>
                     </view>
+                    <connections>
+                        <outlet property="contactTableView" destination="lJ5-dR-VNu" id="XwP-50-4D5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Cc-el-UPZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2623" y="171"/>
+            <point key="canvasLocation" x="2580" y="170.68965517241381"/>
         </scene>
         <!--Home-->
         <scene sceneID="Nab-8L-jKS">

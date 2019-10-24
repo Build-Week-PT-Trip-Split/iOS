@@ -41,6 +41,8 @@ class ViewTripVC: UIViewController {
     let lightPurpleColor = UIColor(red:0.42, green:0.15, blue:1.00, alpha:1.0)
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     
+    var trip: Trip?
+    
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,7 @@ class ViewTripVC: UIViewController {
         setupViewProperties()
         registerParticipantCollectionViewCells()
         configureTripItemViews()
+        updateViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +58,15 @@ class ViewTripVC: UIViewController {
     }
 
     //MARK: - PRIVATE FUNCTIONS
+    
+    func updateViews() {
+        guard let trip = trip else { return }
+        tripNameLabel.text = trip.name
+        dateItemButton.setTitle(trip.date, for: .normal)
+        destinationItemButton.setTitle(trip.name, for: .normal)
+        totalSpentButton.setTitle(String(describing: trip.base_cost), for: .normal)
+    }
+    
     func setupViewProperties() {
         //Configure tripHeaderImageView Layout
         tripHeaderImageView.layer.borderColor = darkPurpleColor.cgColor
@@ -107,6 +119,16 @@ class ViewTripVC: UIViewController {
         totalSpentButton.setTitleColor(darkPurpleColor, for: .normal)
         totalSpentBG.backgroundColor = lightGrayColor
         totalSpentBG.layer.cornerRadius = 8
+    }
+    
+    //MARK: - NAVIGATION
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SetExpensesSegue" {
+            guard let expensesVC = segue.destination as? ExpensesVC,
+                let trip = trip else { return }
+            expensesVC.trip = trip
+        }
+        
     }
     
 }

@@ -13,7 +13,13 @@ class TripTableViewCell: UITableViewCell {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var tripTypeImage: UIImageView!
     @IBOutlet weak var tripTitleLabel: UILabel!
-    @IBOutlet weak var tripOwedLabel: UILabel!
+    @IBOutlet weak var tripDateLabel: UILabel!
+    
+    var trip: Trip? {
+        didSet {
+            updateViews()
+        }
+    }
     
     let cellBackgroundGrayColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
     let cellTextColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
@@ -24,7 +30,13 @@ class TripTableViewCell: UITableViewCell {
         bgView.backgroundColor = cellBackgroundGrayColor
         bgView.layer.cornerRadius = 8
         tripTitleLabel.textColor = cellTextColor
-        tripOwedLabel.textColor = cellValueColor
+        tripDateLabel.textColor = cellValueColor
+    }
+    
+    func updateViews() {
+        guard let trip = trip else { return }
+        tripTitleLabel.text = trip.name
+        tripDateLabel.text = trip.date
     }
     
 }

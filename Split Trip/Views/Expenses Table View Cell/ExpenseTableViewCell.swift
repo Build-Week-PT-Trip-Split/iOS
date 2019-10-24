@@ -13,6 +13,12 @@ class ExpenseTableViewCell: UITableViewCell {
     @IBOutlet weak var expenseNameLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     
+    var expense: Expense? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,6 +28,12 @@ class ExpenseTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func updateViews() {
+        guard let expense = expense else { return }
+        expenseNameLabel.text = expense.expense_name
+        costLabel.text = String(expense.total_expense_price)
     }
     
 }
