@@ -29,8 +29,6 @@ class CustomTextField: UITextField {
         layer.borderWidth = 1.0
         layer.borderColor = UIColor.white.cgColor
         layer.cornerRadius = 5
-        
-        
     }
     
     func setupPlaceholderText() {

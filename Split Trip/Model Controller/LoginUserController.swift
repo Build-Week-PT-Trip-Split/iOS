@@ -16,10 +16,7 @@ class LoginUserController {
     var createUserController = CreateUserController()
        
        enum HTTPMethod: String {
-           case get    = "GET"
-           case put    = "PUT"
            case post   = "POST"
-           case delete = "DELETE"
        }
        
         func login(withEmail email: String, withPassword password: String, completion: @escaping CompletionHandler = { _ in }) {
@@ -45,12 +42,15 @@ class LoginUserController {
                   }
                   
                   if let error = error { completion(error); return }
+                
                   guard let data = data else { completion(NSError()); return }
                   
                   let decoder = JSONDecoder()
                   
                   do {
-                      //createUserController.token = try decoder.decode(Token.self, from: data)
+                    let token = try decoder.decode(Token.self, from: data)
+                    UserDefaults.standard.set(token, forKey: "Token")
+                    
                   } catch {
                       print("Error decoding bearer object: \(error)")
                       completion(error)
