@@ -21,10 +21,10 @@ class YourTripsVC: UIViewController {
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViewBackgroundLayout()
         registerTripTableViewCells()
         setupViewProperties()
         tripsTableView.dataSource = self
+        tripsTableView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,19 +46,22 @@ class YourTripsVC: UIViewController {
         tripsTableView.separatorStyle = .none
     }
     
-    func setViewBackgroundLayout() {
-        //Sets the background image to supplied asset
-        if let backgroundImage = UIImage(named: "backgroundImage@3x.png") {
-            self.view.backgroundColor = UIColor(patternImage: backgroundImage)
-        } else {
-            self.view.backgroundColor = .white
-        }
-    }
-    
     func registerTripTableViewCells() {
         //Registers custom UITableViewCell for use in TripsTableView
         let cell = UINib(nibName: "TripTableViewCell", bundle: nil)
         self.tripsTableView.register(cell, forCellReuseIdentifier: "TripCell")
+    }
+    
+    //MARK: - NAVIGATION
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ViewTripSegue" {
+            guard let viewTripVC = segue.destination as? ViewTripVC else { return }
+        }
+        
+        if segue.identifier == "AddTripSegue" {
+            guard let addTripVC = segue.destination as? AddTripVC else { return }
+        }
+        
     }
     
 }
@@ -73,11 +76,20 @@ extension YourTripsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tripsTableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as? TripTableViewCell else { return UITableViewCell()}
         cell.selectionStyle = .none
-        
         cell.tripTitleLabel.text = "My First Trip"
         
         return cell
     }
     
+}
+
+//MARK: - UITABLEVIEW DELEGATE
+extension YourTripsVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ViewTripSegue", sender: TripTableViewCell.self)
+        tripsTableView.deselectRow(at: indexPath, animated: false)
+        let _ = tripsTableView.cellForRow(at: indexPath) as? TripTableViewCell
+    }
     
 }
