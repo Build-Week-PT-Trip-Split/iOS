@@ -65,4 +65,12 @@ class TripController {
         }
     }
     
+    func editTrip(with trip: Trip) {
+        
+    }
+    
+    func deleteTrip(with trip: Trip) {
+        
+    }
+    
 }

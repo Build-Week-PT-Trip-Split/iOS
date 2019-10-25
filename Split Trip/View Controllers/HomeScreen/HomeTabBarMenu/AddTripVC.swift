@@ -124,9 +124,10 @@ class AddTripVC: UIViewController {
             let date = tripDate,
             let baseCost = baseCost,
             let userId = user?.id,
+            let destination = destinationItemButton.titleLabel?.text,
             name.isEmpty == false {
             
-            let newTrip = Trip(id: nil, name: name, date: date, base_cost: baseCost, complete: nil, user_id: Int(userId), img: nil, created_at: nil, updated_at: nil)
+            let newTrip = Trip(id: nil, name: name, destination: destination, date: date, base_cost: Int16(baseCost), complete: nil, user_id: userId, img: nil, created_at: nil, updated_at: nil)
             
             dismissViewController(withTrip: newTrip)
         }
