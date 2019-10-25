@@ -71,7 +71,7 @@ extension LoginUserController {
         let moc = CoreDataStack.shared.mainContext
             do {
                 user = try moc.fetch(fetchRequest).first
-                print(user?.username)
+                print(user)
             } catch {
                 NSLog("There was an error getting the User from CoreData")
             }

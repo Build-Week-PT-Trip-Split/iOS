@@ -38,4 +38,17 @@ class CoreDataStack {
         }
         if let error = error { throw error }
     }
+    
+    func deleteFromPersistentStore() {
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            if let user = try moc.fetch(fetchRequest).first {
+            moc.delete(user)
+            print("User was deleted: \(user)")
+            }
+        } catch {
+            NSLog("There was an error getting the User from CoreData")
+        }
+    }
 }

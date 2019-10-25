@@ -14,14 +14,14 @@ class SignUpVC: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = nil
+        
 
         // Do any additional setup after loading the view.
     }
@@ -46,8 +46,13 @@ class SignUpVC: UIViewController {
             if let error = error {
                 NSLog("Error creating a new user: \(error)")
                 return
+            } else {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "ToNewUserWelcomeScreen", sender: self)
+                }
             }
         })
+        
         
     }
     
