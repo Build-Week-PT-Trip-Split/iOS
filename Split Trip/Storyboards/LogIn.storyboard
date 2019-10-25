@@ -93,7 +93,6 @@
                                                 <state key="normal" image="LOG IN BTN"/>
                                                 <connections>
                                                     <action selector="loginButtonTapped:" destination="a5v-bc-DbH" eventType="touchUpInside" id="SAW-OR-QnE"/>
-                                                    <segue destination="cGw-Vd-283" kind="presentation" identifier="ShowWelcomeBackSegue" modalPresentationStyle="fullScreen" id="f2s-wZ-DoS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yi-gn-jHH">
@@ -138,6 +137,7 @@
                         <outlet property="UsernameTextField" destination="ILr-aw-wYw" id="ehY-Xt-zok"/>
                         <outlet property="loginButton" destination="iMh-Je-Xxt" id="naa-jX-CUs"/>
                         <outlet property="passwordTextField" destination="X5Z-Yk-YtH" id="EDg-BQ-a3p"/>
+                        <segue destination="cGw-Vd-283" kind="show" identifier="ShowWelcomeBackSegue" id="Sfc-dh-i9q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syf-Y7-Z4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -152,7 +152,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYT-DW-Unn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="134"/>
+            <point key="canvasLocation" x="728" y="99"/>
         </scene>
         <!--SignUpPage-->
         <scene sceneID="Ipk-J2-35s">
@@ -172,7 +172,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GL-3q-BAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="100"/>
+            <point key="canvasLocation" x="699" y="134"/>
         </scene>
     </scenes>
     <resources>
