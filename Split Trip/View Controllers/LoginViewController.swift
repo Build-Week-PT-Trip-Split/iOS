@@ -101,7 +101,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-        if let email = UsernameTextField.text, !email.isEmpty,
+        if let username = UsernameTextField.text, !username.isEmpty,
             let password = passwordTextField.text, !password.isEmpty {
         
             // Saving to CoreData
@@ -111,7 +111,7 @@ class LoginViewController: UIViewController {
                 NSLog("There was an error saving the User: \(error)")
             }
             
-            loginUserController.login(withEmail: email, withPassword: password) { (error) in
+            loginUserController.login(withEmail: username, withPassword: password) { (error) in
                 if let error = error {
                     print("Error occured during login: \(error)")
                 } else {

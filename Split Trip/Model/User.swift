@@ -13,5 +13,9 @@ struct UserRepresentation: Codable {
     var username: String
     var password: String
     var email: String
+}
 
+struct UserLogin: Codable {
+    var username: String
+    var password: String
 }

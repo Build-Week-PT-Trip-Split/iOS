@@ -27,9 +27,11 @@ class LoginUserController {
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
+        let userLoginObject = UserLogin(username: email, password: password)
+        let jsonEncoder = JSONEncoder()
+        
         do {
-            let userParams = ["email": email, "password": password] as [String: Any]
-            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+            let json = try jsonEncoder.encode(userLoginObject)
             request.httpBody = json
         } catch {
             print("Error encoding user object: \(error)")
@@ -48,15 +50,15 @@ class LoginUserController {
             
             let decoder = JSONDecoder()
             
-            do {
-                let token = try decoder.decode(Token.self, from: data)
-                UserDefaults.standard.set(token, forKey: "Token")
-                
-            } catch {
-                print("Error decoding bearer object: \(error)")
-                completion(error)
-                return
-            }
+//            do {
+//                let token = try decoder.decode(Token.self, from: data)
+//                UserDefaults.standard.set(token, forKey: "Token")
+//                
+//            } catch {
+//                print("Error decoding bearer object: \(error)")
+//                completion(error)
+//                return
+//            }
             completion(nil)
         }.resume()
     }
