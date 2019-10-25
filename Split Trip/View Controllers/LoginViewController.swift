@@ -92,7 +92,6 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-//        guard let LoginUC = self.loginUserController else { return }
         
         if let email = UsernameTextField.text, !email.isEmpty,
             let password = passwordTextField.text, !password.isEmpty {
