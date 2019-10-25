@@ -31,7 +31,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpBtnPressed:" destination="KZe-lW-qDO" eventType="touchUpInside" id="J1i-xN-tyW"/>
-                                    <segue destination="Tcp-1d-9Zp" kind="show" id="Ra7-zB-RPW"/>
+                                    <segue destination="Tcp-1d-9Zp" kind="presentation" modalPresentationStyle="fullScreen" id="Ra7-zB-RPW"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="K1d-ku-Twd" customClass="CustomTextField" customModule="Split_Trip" customModuleProvider="target">

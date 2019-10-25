@@ -17,6 +17,8 @@ class YourTripsVC: UIViewController {
     
     //MARK: - PROPERTIES
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
+    let tripController = TripController()
+    var tripSearchResults: [Trip] = []
     
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
@@ -25,6 +27,7 @@ class YourTripsVC: UIViewController {
         setupViewProperties()
         tripsTableView.dataSource = self
         tripsTableView.delegate = self
+        loadTrips()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +38,20 @@ class YourTripsVC: UIViewController {
     }
 
     //MARK: - PRIVATE FUNCTIONS
+    
+    func loadTrips() {
+        tripController.loadTripsFromOnlineStore(completion: { error in
+            if let error = error {
+                print("Unable to request trips: \(error)")
+            } else {
+                DispatchQueue.main.async {
+                    self.tripSearchResults = self.tripController.tripsResults
+                    self.tripsTableView.reloadData()
+                }
+            }
+        })
+    }
+    
     func setupViewProperties() {
         //Configures "Your Trips" label text color
         yourTripsLabel.textColor = darkPurpleColor
@@ -55,7 +72,9 @@ class YourTripsVC: UIViewController {
     //MARK: - NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ViewTripSegue" {
-            guard let viewTripVC = segue.destination as? ViewTripVC else { return }
+            guard let viewTripVC = segue.destination as? ViewTripVC,
+                let selectedIndexPath = tripsTableView.indexPathForSelectedRow else { return }
+            viewTripVC.trip = tripSearchResults[selectedIndexPath.row]
         }
         
         if segue.identifier == "AddTripSegue" {
@@ -70,13 +89,14 @@ class YourTripsVC: UIViewController {
 extension YourTripsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return tripSearchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tripsTableView.dequeueReusableCell(withIdentifier: "TripCell", for: indexPath) as? TripTableViewCell else { return UITableViewCell()}
         cell.selectionStyle = .none
-        cell.tripTitleLabel.text = "My First Trip"
+        
+        cell.trip = tripSearchResults[indexPath.row]
         
         return cell
     }

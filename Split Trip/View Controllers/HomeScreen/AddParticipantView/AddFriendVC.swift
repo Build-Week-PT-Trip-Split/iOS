@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Contacts
+import ContactsUI
 
 class AddFriendVC: UIViewController {
 
+    @IBOutlet weak var contactTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

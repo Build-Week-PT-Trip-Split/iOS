@@ -10,13 +10,40 @@ import UIKit
 
 class ExpensesVC: UIViewController {
 
+    @IBOutlet weak var expensesTableView: UITableView!
+    
+    let expenseController = ExpenseController()
+    var expensesList: [Expense] = []
+    var trip: Trip?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        registerExpenseTableViewCells()
+        loadExpenses()
+        expensesTableView.dataSource = self
     }
     
-
+    func loadExpenses() {
+        guard let trip = trip,
+            let tripId = trip.id else { return }
+        expenseController.loadExpensesFromOnlineStore(tripId: tripId, completion: { error in
+            if let error = error {
+                print("Unable to request expenses: \(error)")
+            } else {
+                DispatchQueue.main.async {
+                    self.expensesList = self.expenseController.expenseResults
+                    self.expensesTableView.reloadData()
+                }
+            }
+        })
+    }
+    
+    func registerExpenseTableViewCells() {
+        //Registers custom UITableViewCell for use in TripsTableView
+        let cell = UINib(nibName: "ExpenseTableViewCell", bundle: nil)
+        self.expensesTableView.register(cell, forCellReuseIdentifier: "ExpenseCell")
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -27,4 +54,20 @@ class ExpensesVC: UIViewController {
     }
     */
 
+}
+
+extension ExpensesVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return expenseController.tripExpenseResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = expensesTableView.dequeueReusableCell(withIdentifier: "ExpenseCell") as? ExpenseTableViewCell else { return UITableViewCell() }
+        
+        cell.expense = expenseController.tripExpenseResults[indexPath.row]
+        
+        return cell
+    }
+    
+    
 }
