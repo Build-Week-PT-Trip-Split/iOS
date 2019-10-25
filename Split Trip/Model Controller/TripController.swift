@@ -66,11 +66,21 @@ class TripController {
     }
     
     func editTrip(with trip: Trip) {
-        
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.save()
+        } catch {
+            print("Error Editing trip: \(error)")
+        }
     }
     
     func deleteTrip(with trip: Trip) {
-        
+        let moc = CoreDataStack.shared.mainContext
+        do {
+            try moc.delete(trip)
+        } catch {
+            print("Error Deleting trip: \(error)")
+        }
     }
     
 }
