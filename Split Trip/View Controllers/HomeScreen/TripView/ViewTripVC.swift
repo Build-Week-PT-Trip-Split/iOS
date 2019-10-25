@@ -146,6 +146,15 @@ class ViewTripVC: UIViewController {
         totalSpentBG.layer.cornerRadius = 8
     }
     
+    @IBAction func saveTripTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func deleteTripTapped(_ sender: Any) {
+        
+    }
+    
+    
     //MARK: - NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SetExpensesSegue" {
@@ -155,6 +164,8 @@ class ViewTripVC: UIViewController {
         }
         
     }
+    
+    
     
 }
 

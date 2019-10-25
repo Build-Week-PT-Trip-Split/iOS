@@ -16,7 +16,9 @@ class SetDateVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func saveDateTapped(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
