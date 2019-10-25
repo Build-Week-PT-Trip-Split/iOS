@@ -65,4 +65,42 @@ class TripController {
         }
     }
     
+    func editTrip(with trip: Trip, completion: @escaping (Error?) -> Void = { _ in }) {
+        guard let id = trip.id, let baseUrl = baseURL?.appendingPathComponent("trips/\(id)") else { return }
+        
+        var request = URLRequest(url: baseUrl)
+        request.httpMethod = HTTPMethod.put.rawValue
+        
+        do {
+            request.httpBody = try JSONEncoder().encode(trip)
+        } catch {
+            print("Error encoding edited trip: \(error)")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
+                   
+            if let error = error {
+                print("Error PUTting trip to server: \(error)")
+                completion(error)
+                return
+            }
+                   
+            completion(nil)
+        }.resume()
+    }
+    
+    func deleteTrip(with trip: Trip, completion: @escaping (Error?) -> Void = { _ in }) {
+        guard let id = trip.id, let baseUrl = baseURL?.appendingPathComponent("trips/\(id)") else { return }
+        
+        var request = URLRequest(url: baseUrl)
+        request.httpMethod = HTTPMethod.delete.rawValue
+        
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
+            print("Deleted entry with ID: \(id)")
+            
+            completion(error)
+        }.resume()
+    }
+    
 }

@@ -42,6 +42,7 @@ class ViewTripVC: UIViewController {
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     
     let expenseController = ExpenseController()
+    let tripController = TripController()
     var tripExpenses: [Expense] = []
     var trip: Trip?
     var totalTripCost: Int = 0
@@ -73,13 +74,13 @@ class ViewTripVC: UIViewController {
     func getTotalTripCosts(){
         guard let trip = trip, let tripId = trip.id else { return }
         
-        expenseController.loadExpensesFromOnlineStore(tripId: tripId, completion: { error in
+        expenseController.loadExpensesFromOnlineStore(tripId: Int(tripId), completion: { error in
             if let error = error {
                 print("Error getting Trip Expenses: \(error)")
             }
             
             self.tripExpenses = self.expenseController.tripExpenseResults
-            self.totalTripCost = trip.base_cost
+            self.totalTripCost = Int(trip.base_cost)
             
             for expense in self.tripExpenses {
                 self.totalTripCost += expense.total_expense_price
@@ -147,11 +148,36 @@ class ViewTripVC: UIViewController {
     }
     
     @IBAction func saveTripTapped(_ sender: Any) {
+        guard var trip = trip, let name = tripNameLabel.text, let date = dateItemButton.titleLabel?.text, let destination = destinationItemButton.titleLabel?.text, let baseCost = Int16(totalSpentButton.titleLabel!.text!) else { return }
         
+        trip.name = name
+        trip.date = date
+        trip.base_cost = baseCost
+        trip.destination = destination
+        
+        self.tripController.editTrip(with: trip)
+        
+        let savedAlert = UIAlertController(title: "Trip Updated", message: "Your trip was updated!", preferredStyle: .alert)
+        savedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+            self.dismiss(animated: true, completion: nil)
+        }))
     }
     
     @IBAction func deleteTripTapped(_ sender: Any) {
         
+        guard let trip = trip else { return }
+        
+        let deleteAlert = UIAlertController(title: "Delete Trip", message: "Are you sure you want to delete this trip?", preferredStyle: .alert)
+
+        deleteAlert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (action: UIAlertAction!) in
+            self.tripController.deleteTrip(with: trip)
+        }))
+
+        deleteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
+            self.dismiss(animated: true, completion: nil) // NOT SURE ABOUT THIS
+        }))
+
+        present(deleteAlert, animated: true, completion: nil)
     }
     
     

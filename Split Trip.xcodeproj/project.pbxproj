@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3707823623636A73002C683A /* Trip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3707823423636A73002C683A /* Trip.xcdatamodeld */; };
 		3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADA2358E2B30022C521 /* LoginViewController.swift */; };
 		3748BADD2358E78C0022C521 /* WelcomeBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */; };
 		37C6321A235F5C50002B9138 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C63219235F5C50002B9138 /* Token.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3707823523636A73002C683A /* Trip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trip.xcdatamodel; sourceTree = "<group>"; };
 		3748BADA2358E2B30022C521 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackViewController.swift; sourceTree = "<group>"; };
 		37C63219235F5C50002B9138 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				EFCC5CBE2362996F005E4B90 /* User.xcdatamodeld */,
+				3707823423636A73002C683A /* Trip.xcdatamodeld */,
 				EFCC5CC123629A15005E4B90 /* CoreDataStack.swift */,
 				EFCC5CC323629A58005E4B90 /* User+Convenience.swift */,
 			);
@@ -596,6 +599,7 @@
 				A4401432235D2DFE0004DF9C /* ParticipantDetailVC.swift in Sources */,
 				A419D825235FD66200552E43 /* ExpensePaymentTableViewCell.swift in Sources */,
 				EFCC5CC423629A58005E4B90 /* User+Convenience.swift in Sources */,
+				3707823623636A73002C683A /* Trip.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,6 +801,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		3707823423636A73002C683A /* Trip.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3707823523636A73002C683A /* Trip.xcdatamodel */,
+			);
+			currentVersion = 3707823523636A73002C683A /* Trip.xcdatamodel */;
+			path = Trip.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		EFCC5CBE2362996F005E4B90 /* User.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

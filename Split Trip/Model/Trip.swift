@@ -9,12 +9,13 @@
 import Foundation
 
 struct Trip: Codable {
-    var id: Int?
+    var id: Int16?
     var name: String
+    var destination: String
     var date: String
-    var base_cost: Int
-    var complete: Int?
-    var user_id: Int
+    var base_cost: Int16
+    var complete: Int16?
+    var user_id: Int16
     var img: String?
     var created_at: String?
     var updated_at: String?

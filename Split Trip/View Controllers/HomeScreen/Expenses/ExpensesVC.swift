@@ -26,7 +26,7 @@ class ExpensesVC: UIViewController {
     func loadExpenses() {
         guard let trip = trip,
             let tripId = trip.id else { return }
-        expenseController.loadExpensesFromOnlineStore(tripId: tripId, completion: { error in
+        expenseController.loadExpensesFromOnlineStore(tripId: Int(tripId), completion: { error in
             if let error = error {
                 print("Unable to request expenses: \(error)")
             } else {
