@@ -271,7 +271,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Xz-aZ-gTK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kqI-iZ-0Zf"/>
+                    <navigationItem key="navigationItem" id="kqI-iZ-0Zf">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="uqg-p5-MTH">
+                                <connections>
+                                    <action selector="deleteTripTapped:" destination="RyY-s5-mIF" id="NX9-OB-coU"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="save" id="kvi-U9-1L9">
+                                <connections>
+                                    <action selector="saveTripTapped:" destination="RyY-s5-mIF" id="Zed-jQ-4cm"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="addParticipantButton" destination="9kA-Mg-nsc" id="dqv-as-xK4"/>
                         <outlet property="dateItemButton" destination="fOP-tD-NI3" id="SP2-jG-iea"/>
