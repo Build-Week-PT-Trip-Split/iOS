@@ -13,11 +13,11 @@ struct Trip: Codable {
     var name: String
     var date: String
     var base_cost: Int
-    var complete: Int
+    var complete: Int?
     var user_id: Int
     var img: String?
-    var created_at: String
-    var updated_at: String
+    var created_at: String?
+    var updated_at: String?
 }
 
 struct TripSearch: Codable {

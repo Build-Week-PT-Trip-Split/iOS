@@ -114,10 +114,6 @@ class LoginViewController: UIViewController {
             loginUserController.login(withEmail: username, withPassword: password) { (error) in
                 if let error = error {
                     print("Error occured during login: \(error)")
-                } else {
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "ShowWelcomeBackSegue", sender: self)
-                    }
                 }
             }
         }
@@ -136,16 +132,14 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
-    
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+         if segue.identifier == "ShowWelcomeBackSegue" {
+            if let destinationVC = segue.destination as? WelcomeBackViewController,
+                let user = loginUserController.fetchUser() {
+                destinationVC.user = user
+            }
+         }
+     }
 
 }
