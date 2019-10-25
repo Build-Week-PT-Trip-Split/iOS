@@ -317,7 +317,7 @@
         <!--HOME-->
         <scene sceneID="zTs-7f-r9I">
             <objects>
-                <viewController id="cu8-ap-O8l" customClass="YourTripsVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="YourTripsVC" id="cu8-ap-O8l" customClass="YourTripsVC" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wA7-Ot-TFJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,6 +374,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get started by adding a trip." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-me-Wmw">
+                                <rect key="frame" x="20" y="392" width="335" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -412,6 +419,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="getStartedLabel" destination="ehj-me-Wmw" id="lA4-KF-fjk"/>
                         <outlet property="newTripButton" destination="MQB-ja-jH9" id="MWK-CI-8N6"/>
                         <outlet property="tripsTableView" destination="eSY-aE-t3Z" id="NZv-EC-zzR"/>
                         <outlet property="yourTripsLabel" destination="sPS-l7-Vta" id="qFX-CZ-t66"/>
@@ -489,19 +497,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TeO-D8-1nF">
-                                        <rect key="frame" x="30" y="20" width="315" height="119"/>
+                                        <rect key="frame" x="30" y="64" width="315" height="119"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="119" id="3gw-bo-SRl"/>
                                             <constraint firstAttribute="width" constant="315" id="ot5-1c-Egc"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Trip Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jJO-4r-faX">
-                                        <rect key="frame" x="20" y="147" width="335" height="34"/>
+                                        <rect key="frame" x="20" y="191" width="335" height="34"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-7z-8ZG">
-                                        <rect key="frame" x="20" y="189" width="335" height="32"/>
+                                        <rect key="frame" x="20" y="245" width="335" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PARTICIPANTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLZ-Mz-P5L">
                                                 <rect key="frame" x="0.0" y="0.0" width="178" height="32"/>
@@ -520,7 +528,7 @@
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YwD-27-gof">
-                                        <rect key="frame" x="20" y="229" width="335" height="80"/>
+                                        <rect key="frame" x="20" y="285" width="335" height="80"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="fqf-Hd-nkr"/>
@@ -544,8 +552,20 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZq-sx-Bzk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                        <items>
+                                            <navigationItem title="ADD NEW TRIP" id="qxB-m1-zhs">
+                                                <barButtonItem key="rightBarButtonItem" title="ADD" id="BDe-cq-Ea6">
+                                                    <connections>
+                                                        <action selector="addButtonTapped:" destination="Z0w-LJ-P1k" id="MXv-CU-bWJ"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gIi-dR-7QI">
-                                        <rect key="frame" x="20" y="329" width="335" height="300"/>
+                                        <rect key="frame" x="20" y="373" width="335" height="300"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkf-0A-i6q">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="66"/>
@@ -603,6 +623,9 @@
                                                         <rect key="frame" x="271" y="14.666666666666686" width="52" height="37"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
+                                                        <connections>
+                                                            <action selector="setDestinationTapped:" destination="Z0w-LJ-P1k" eventType="touchUpInside" id="o26-Mm-sRD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -628,13 +651,13 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Expenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHf-Y3-Y6K">
-                                                        <rect key="frame" x="70" y="20.666666666666686" width="116.33333333333331" height="24.666666666666671"/>
+                                                        <rect key="frame" x="70" y="20.666666666666629" width="116.33333333333331" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgH-cL-1pk">
-                                                        <rect key="frame" x="271" y="14.666666666666686" width="52" height="37"/>
+                                                        <rect key="frame" x="271" y="14.666666666666629" width="52" height="37"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
                                                         <connections>
@@ -664,8 +687,8 @@
                                                             <constraint firstAttribute="width" secondItem="36A-1p-2iT" secondAttribute="height" multiplier="1:1" id="XPn-7h-y9b"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Spent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dan-Lf-18d">
-                                                        <rect key="frame" x="70" y="20.666666666666629" width="95.333333333333314" height="24.666666666666671"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dan-Lf-18d">
+                                                        <rect key="frame" x="70" y="20.666666666666629" width="83.333333333333314" height="24.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -674,6 +697,9 @@
                                                         <rect key="frame" x="271" y="14.666666666666629" width="52" height="37"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                         <state key="normal" title="Select"/>
+                                                        <connections>
+                                                            <action selector="setBaseCostTapped:" destination="Z0w-LJ-P1k" eventType="touchUpInside" id="M4v-4u-XRy"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -695,17 +721,20 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="6Yd-7z-8ZG" firstAttribute="leading" secondItem="O4J-fj-Oru" secondAttribute="leading" constant="20" id="0ub-AD-inu"/>
+                                    <constraint firstItem="tZq-sx-Bzk" firstAttribute="top" secondItem="O4J-fj-Oru" secondAttribute="top" id="1pk-Rc-KRi"/>
                                     <constraint firstAttribute="trailing" secondItem="gIi-dR-7QI" secondAttribute="trailing" constant="20" id="3VH-og-sIa"/>
                                     <constraint firstAttribute="trailing" secondItem="YwD-27-gof" secondAttribute="trailing" constant="20" id="3w0-JJ-0KD"/>
-                                    <constraint firstItem="6Yd-7z-8ZG" firstAttribute="top" secondItem="jJO-4r-faX" secondAttribute="bottom" constant="8" id="9ZF-J4-CRz"/>
-                                    <constraint firstItem="TeO-D8-1nF" firstAttribute="top" secondItem="O4J-fj-Oru" secondAttribute="top" constant="20" id="9di-e9-Ceg"/>
+                                    <constraint firstItem="jJO-4r-faX" firstAttribute="top" secondItem="TeO-D8-1nF" secondAttribute="bottom" constant="8" id="57v-cZ-twF"/>
+                                    <constraint firstItem="6Yd-7z-8ZG" firstAttribute="top" secondItem="jJO-4r-faX" secondAttribute="bottom" constant="20" id="66Y-do-wqn"/>
+                                    <constraint firstItem="gIi-dR-7QI" firstAttribute="top" secondItem="YwD-27-gof" secondAttribute="bottom" constant="8" id="6h5-ui-UDn"/>
+                                    <constraint firstItem="YwD-27-gof" firstAttribute="top" secondItem="6Yd-7z-8ZG" secondAttribute="bottom" constant="8" id="AQO-1n-W9w"/>
                                     <constraint firstItem="TeO-D8-1nF" firstAttribute="centerX" secondItem="O4J-fj-Oru" secondAttribute="centerX" id="INs-Qj-jdF"/>
                                     <constraint firstItem="YwD-27-gof" firstAttribute="leading" secondItem="O4J-fj-Oru" secondAttribute="leading" constant="20" id="RVy-mZ-YHM"/>
                                     <constraint firstAttribute="trailing" secondItem="6Yd-7z-8ZG" secondAttribute="trailing" constant="20" id="UG4-Er-wda"/>
+                                    <constraint firstAttribute="trailing" secondItem="tZq-sx-Bzk" secondAttribute="trailing" id="VOZ-bx-pD0"/>
                                     <constraint firstItem="jJO-4r-faX" firstAttribute="leading" secondItem="O4J-fj-Oru" secondAttribute="leading" constant="20" id="d81-jp-LC0"/>
-                                    <constraint firstItem="gIi-dR-7QI" firstAttribute="top" secondItem="YwD-27-gof" secondAttribute="bottom" constant="20" id="mqB-3h-VkP"/>
-                                    <constraint firstItem="YwD-27-gof" firstAttribute="top" secondItem="6Yd-7z-8ZG" secondAttribute="bottom" constant="8" id="tdG-ej-MSi"/>
-                                    <constraint firstItem="jJO-4r-faX" firstAttribute="top" secondItem="TeO-D8-1nF" secondAttribute="bottom" constant="8" id="vnL-d9-rQN"/>
+                                    <constraint firstItem="tZq-sx-Bzk" firstAttribute="leading" secondItem="O4J-fj-Oru" secondAttribute="leading" id="mIj-Wd-r5M"/>
+                                    <constraint firstItem="TeO-D8-1nF" firstAttribute="top" secondItem="tZq-sx-Bzk" secondAttribute="bottom" constant="8" id="wme-g4-dsA"/>
                                     <constraint firstAttribute="trailing" secondItem="jJO-4r-faX" secondAttribute="trailing" constant="20" id="www-Sm-RTT"/>
                                     <constraint firstItem="gIi-dR-7QI" firstAttribute="leading" secondItem="O4J-fj-Oru" secondAttribute="leading" constant="20" id="z6C-30-9a6"/>
                                 </constraints>
@@ -758,19 +787,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCM-Vd-VXB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="217.66666666666666"/>
                                 <items>
                                     <navigationItem title="SET DATE" id="gfF-mh-PGF">
                                         <barButtonItem key="rightBarButtonItem" title="SAVE" id="mNZ-f4-Iat">
                                             <connections>
-                                                <action selector="saveDateTapped:" destination="TB5-y0-Bgc" id="t1G-4s-Vqb"/>
+                                                <action selector="saveButtonTapped:" destination="TB5-y0-Bgc" id="TWH-JU-Y3S"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="alT-mQ-KAx">
-                                <rect key="frame" x="20" y="76" width="335" height="513.33333333333337"/>
+                                <rect key="frame" x="20" y="237.66666666666669" width="335" height="248.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pwc-AG-cyy">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="248.66666666666666"/>
@@ -782,21 +811,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="qhW-7x-aeJ">
-                                                <rect key="frame" x="0.0" y="32.666666666666686" width="320" height="216"/>
-                                            </datePicker>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tRI-UP-tC8">
-                                        <rect key="frame" x="0.0" y="264.66666666666669" width="335" height="248.66666666666669"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-zf-yYc">
-                                                <rect key="frame" x="0.0" y="0.0" width="84" height="24.666666666666668"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="862-8l-5Q8">
-                                                <rect key="frame" x="0.0" y="32.666666666666629" width="320" height="216"/>
+                                                <rect key="frame" x="0.0" y="32.666666666666657" width="320" height="216"/>
+                                                <connections>
+                                                    <action selector="dateChanged:" destination="TB5-y0-Bgc" eventType="valueChanged" id="KDp-t0-LFH"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
@@ -806,16 +824,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gCM-Vd-VXB" firstAttribute="leading" secondItem="3lD-c1-gev" secondAttribute="leading" id="04Y-Sa-ztv"/>
+                            <constraint firstItem="pwc-AG-cyy" firstAttribute="centerX" secondItem="3lD-c1-gev" secondAttribute="centerX" id="2GL-gW-6eJ"/>
                             <constraint firstItem="alT-mQ-KAx" firstAttribute="leading" secondItem="3lD-c1-gev" secondAttribute="leading" constant="20" id="8X9-dn-fOu"/>
                             <constraint firstItem="alT-mQ-KAx" firstAttribute="centerX" secondItem="3lD-c1-gev" secondAttribute="centerX" id="Dxv-ML-KuW"/>
                             <constraint firstItem="3lD-c1-gev" firstAttribute="trailing" secondItem="alT-mQ-KAx" secondAttribute="trailing" constant="20" id="EGm-B5-L10"/>
                             <constraint firstItem="alT-mQ-KAx" firstAttribute="top" secondItem="gCM-Vd-VXB" secondAttribute="bottom" constant="20" id="R58-N0-ecw"/>
                             <constraint firstItem="gCM-Vd-VXB" firstAttribute="top" secondItem="3lD-c1-gev" secondAttribute="top" id="V3y-cp-Aap"/>
                             <constraint firstItem="gCM-Vd-VXB" firstAttribute="trailing" secondItem="3lD-c1-gev" secondAttribute="trailing" id="jUC-Sl-8im"/>
+                            <constraint firstItem="pwc-AG-cyy" firstAttribute="centerY" secondItem="3lD-c1-gev" secondAttribute="centerY" id="wnV-JB-YTx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3lD-c1-gev"/>
                     </view>
                     <navigationItem key="navigationItem" id="XFU-HR-Jsv"/>
+                    <connections>
+                        <outlet property="setDatePicker" destination="qhW-7x-aeJ" id="sxs-pO-i0h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qqw-LZ-4Mo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1263,7 +1286,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="q9N-kY-BhN">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0cN-t5-dHy" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="EntryPoint" automaticallyAdjustsScrollViewInsets="NO" id="0cN-t5-dHy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yAA-rR-hrO">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1437,6 +1460,6 @@
         <segue reference="tSD-NC-fZK"/>
         <segue reference="tzy-pb-SSq"/>
         <segue reference="OSp-fd-9XT"/>
-        <segue reference="6sn-DW-iXp"/>
+        <segue reference="QHd-26-SOe"/>
     </inferredMetricsTieBreakers>
 </document>

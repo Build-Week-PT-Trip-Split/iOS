@@ -13,9 +13,10 @@ class TripController {
     //MARK: - PROPERTIES
     let baseURL = URL(string: "https://tripsplitr.herokuapp.com")
     var tripsResults: [Trip] = []
+    var tripsForUser: [Trip] = []
     
     //MARK: - PUBLIC FUNCTIONS
-    func loadTripsFromOnlineStore(completion: @escaping (Error?) -> Void) {
+    func loadTripsFromOnlineStore(userId: Int, completion: @escaping (Error?) -> Void) {
      
         guard let baseURL = baseURL?.appendingPathComponent("/trips") else {
             completion(nil)
@@ -43,8 +44,8 @@ class TripController {
             do {
                 let trips = try jsonDecoder.decode([Trip].self, from: data)
                 self.tripsResults = trips
+                self.sortTripsForUser(userId: userId)
                 completion(nil)
-                print("Trips Found")
             } catch {
                 print("Error decoding Trips data: \(error)")
                 completion(error)
@@ -54,6 +55,14 @@ class TripController {
             completion(nil)
         }.resume()
         
+    }
+    
+    func sortTripsForUser(userId: Int){
+        for trip in tripsResults {
+            if trip.user_id == userId {
+                tripsForUser.append(trip)
+            }
+        }
     }
     
 }

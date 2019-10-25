@@ -32,24 +32,32 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         updateViews()
+        checkUsername()
 
  }
     
-    //MARK: - Functions
-   
-    func doneBarBtn() {
-        let toolBar = UIToolbar()
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
-        toolBar.setItems([flexibleSpace,doneButton], animated: false)
-        toolBar.sizeToFit()
-        passwordTextField.inputAccessoryView = toolBar
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkUsername()
     }
     
-    @objc func doneClicked() {
-        view.endEditing(true)
-    }
+    //MARK: - Functions
+   
+    // I added this functionality to the `CustomTextField.swift` file so we don't need it here anymore.
+    
+//    func doneBarBtn() {
+//        let toolBar = UIToolbar()
+//        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+//        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
+//        toolBar.setItems([flexibleSpace,doneButton], animated: false)
+//        toolBar.sizeToFit()
+//        passwordTextField.inputAccessoryView = toolBar
+//
+//    }
+//
+//    @objc func doneClicked() {
+//        view.endEditing(true)
+//    }
     
     
     @objc func showHideTapped() {
@@ -87,37 +95,51 @@ class LoginViewController: UIViewController {
         showHideButton.widthAnchor.constraint(equalToConstant: 30.0).isActive = true
        
         
-        doneBarBtn()
+        //doneBarBtn()
     }
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-        if let email = UsernameTextField.text, !email.isEmpty,
+        if let username = UsernameTextField.text, !username.isEmpty,
             let password = passwordTextField.text, !password.isEmpty {
         
-            loginUserController.login(withEmail: email, withPassword: password) { (error) in
+            // Saving to CoreData
+            do {
+                try CoreDataStack.shared.save()
+            } catch {
+                NSLog("There was an error saving the User: \(error)")
+            }
+            
+            loginUserController.login(withEmail: username, withPassword: password) { (error) in
                 if let error = error {
                     print("Error occured during login: \(error)")
-                } else {
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "ShowWelcomeBackSegue", sender: self)
-                    }
                 }
             }
         }
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Checking CoreData to see if there is a Username and Password
+    func checkUsername() {
+        if let userName = loginUserController.fetchUser()?.username,
+            let password = loginUserController.fetchUser()?.password {
+            
+            UsernameTextField.text = userName
+            passwordTextField.text = password
+        } else {
+            UsernameTextField.text = ""
+            passwordTextField.text = ""
+        }
     }
-    */
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "ShowWelcomeBackSegue" {
+            if let destinationVC = segue.destination as? WelcomeBackViewController,
+                let user = loginUserController.fetchUser() {
+                destinationVC.user = user
+            }
+         }
+     }
 
 }

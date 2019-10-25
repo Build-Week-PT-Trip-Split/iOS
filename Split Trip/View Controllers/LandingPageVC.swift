@@ -18,7 +18,7 @@ class LandingPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(CoreDataStack.shared.mainContext)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 
         // Do any additional setup after loading the view.

@@ -40,6 +40,15 @@ class AddTripVC: UIViewController {
     let lightPurpleColor = UIColor(red:0.42, green:0.15, blue:1.00, alpha:1.0)
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     let greenColor = UIColor(red:0.07, green:0.96, blue:0.74, alpha:1.0)
+    var user: User?
+    
+    var tripDate: String? {
+        didSet {
+            dateItemButton.setTitle(self.tripDate, for: .normal)
+        }
+    }
+    
+    var baseCost: Int?
     
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
@@ -54,7 +63,7 @@ class AddTripVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-
+    
     //MARK: - PRIVATE FUNCTIONS
     func setupViewProperties() {
         //Configure tripHeaderImageView Layout
@@ -71,7 +80,6 @@ class AddTripVC: UIViewController {
         participantsLabel.textColor = darkPurpleColor
         addParticipantButton.setTitleColor(darkPurpleColor, for: .normal)
         addParticipantButton.contentHorizontalAlignment = .right
-        
     }
     
     func registerParticipantCollectionViewCells() {
@@ -109,6 +117,75 @@ class AddTripVC: UIViewController {
         totalSpentButton.setTitleColor(darkPurpleColor, for: .normal)
         totalSpentBG.backgroundColor = lightGrayColor
         totalSpentBG.layer.cornerRadius = 8
+    }
+    
+    @IBAction func addButtonTapped(_ sender: Any) {
+        if let name = tripNameTextField.text,
+            let date = tripDate,
+            let baseCost = baseCost,
+            let userId = user?.id,
+            name.isEmpty == false {
+            
+            let newTrip = Trip(id: nil, name: name, date: date, base_cost: baseCost, complete: nil, user_id: Int(userId), img: nil, created_at: nil, updated_at: nil)
+            
+            dismissViewController(withTrip: newTrip)
+        }
+    }
+    
+    func dismissViewController(withTrip trip: Trip) {
+        if let presentingVC = presentingViewController as? YourTripsVC {
+            presentingVC.tripSearchResults.append(trip)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func promptForDestination() {
+        let destinationAlert = UIAlertController(title: "Enter Destination", message: nil, preferredStyle: .alert)
+        destinationAlert.addTextField()
+        
+        let submit = UIAlertAction(title: "Confirm", style: .default) { __ in
+            guard let destinationString = destinationAlert.textFields![0].text else { return }
+            if destinationString != "" {
+                self.destinationItemButton.setTitle(destinationString, for: .normal)
+            } else {
+                self.destinationItemButton.setTitle("Select", for: .normal)
+            }
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        destinationAlert.addAction(submit)
+        destinationAlert.addAction(cancel)
+        present(destinationAlert, animated: true)
+    }
+    
+    func promptForBaseCost() {
+        let baseCostAlert = UIAlertController(title: "Enter Base Cost", message: nil, preferredStyle: .alert)
+        baseCostAlert.addTextField()
+        
+        let submit = UIAlertAction(title: "Confirm ", style: .default) { __ in
+            guard let baseCostString = baseCostAlert.textFields![0].text else { return }
+            if baseCostString != "" {
+                self.totalSpentButton.setTitle(baseCostString, for: .normal)
+                self.baseCost = Int(baseCostString)
+            } else {
+                self.totalSpentButton.setTitle("Select", for: .normal)
+            }
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        baseCostAlert.addAction(submit)
+        baseCostAlert.addAction(cancel)
+        present(baseCostAlert, animated: true)
+    }
+    
+    @IBAction func setDestinationTapped(_ sender: Any) {
+        promptForDestination()
+    }
+    
+    @IBAction func setBaseCostTapped(_ sender: Any) {
+        promptForBaseCost()
     }
     
 }
