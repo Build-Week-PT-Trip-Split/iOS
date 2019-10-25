@@ -29,12 +29,18 @@ class SignUpVC: UIViewController {
     
     @IBAction func signUpBtnPressed(_ sender: LoginSignupCustomButton) {
         // Need to create a new user here and check for the values in the text boxes.
-        guard let name = nameTextField.text,
-            let username = usernameTextField.text,
-            let email = emailTextField.text,
-            let password = passwordTextField.text else { return }
+        guard let name = nameTextField.text, !name.isEmpty,
+            let username = usernameTextField.text, !username.isEmpty,
+            let email = emailTextField.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty else { return }
         
         let user = createUserController.createUser(name: name, username: username, password: password, email: email)
+        
+        do {
+            try CoreDataStack.shared.save()
+        } catch {
+            NSLog("There was an error saving the User: \(error)")
+        }
         
         createUserController.signUpNewUser(user: user, completion: { (error) in
             if let error = error {
