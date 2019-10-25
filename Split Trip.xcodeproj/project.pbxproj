@@ -328,7 +328,6 @@
 		EF0372422356B61D006161CA = {
 			isa = PBXGroup;
 			children = (
-				EFCC5CBD2362994D005E4B90 /* CoreData */,
 				EF61C4E42358040D009D3A45 /* Default-568h@2x.png */,
 				EF03724D2356B61D006161CA /* Split Trip */,
 				EF03724C2356B61D006161CA /* Products */,
@@ -346,6 +345,7 @@
 		EF03724D2356B61D006161CA /* Split Trip */ = {
 			isa = PBXGroup;
 			children = (
+				EFCC5CBD2362994D005E4B90 /* CoreData */,
 				EFF35264235968D6004B7386 /* Helpers */,
 				EF0372622356BE33006161CA /* Model */,
 				EF0372632356BE44006161CA /* Model Controller */,
@@ -450,6 +450,7 @@
 				EFCC5CC323629A58005E4B90 /* User+Convenience.swift */,
 			);
 			name = CoreData;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EFF35264235968D6004B7386 /* Helpers */ = {
