@@ -33,9 +33,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().isTranslucent = true
+        
+        
+//        let cTrip = CreateTripController()
+//
+//        let testTrip = cTrip.createTrip(name: "TestTrip", date: "10/10/10", baseCost: 123, complete: 1, userID: 1, img: "Test", createdAt: "Test", updatedAt: "Test")
+//        cTrip.createTrip(trip: testTrip, completion: { (error) in
+//            if let error = error {
+//                NSLog("There was an error creating the Trip: \(error) ")
+//            } else {
+//                print("The test Trip was created")
+//            }
+//        })
+        
+        
         return true
         
         
+    
+     
     }
 
     // MARK: UISceneSession Lifecycle

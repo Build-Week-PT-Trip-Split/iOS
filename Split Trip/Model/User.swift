@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct User: Codable {
+struct UserRepresentation: Codable {
     var name: String
     var username: String
     var password: String
     var email: String
-    
+
 }

@@ -24,13 +24,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TBV-j5-pdg">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sg-rA-egt">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sg-rA-egt">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="12"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-aw-wYw">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-aw-wYw" customClass="CustomTextField" customModule="Split_Trip" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="20" width="334" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="POU-i1-45r"/>
@@ -55,7 +55,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5Z-Yk-YtH">
+                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5Z-Yk-YtH" customClass="CustomTextField" customModule="Split_Trip" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="23" width="334" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="evB-RI-Z9O"/>
@@ -93,7 +93,6 @@
                                                 <state key="normal" image="LOG IN BTN"/>
                                                 <connections>
                                                     <action selector="loginButtonTapped:" destination="a5v-bc-DbH" eventType="touchUpInside" id="SAW-OR-QnE"/>
-                                                    <segue destination="cGw-Vd-283" kind="presentation" identifier="ShowWelcomeBackSegue" modalPresentationStyle="fullScreen" id="f2s-wZ-DoS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yi-gn-jHH">
@@ -138,6 +137,7 @@
                         <outlet property="UsernameTextField" destination="ILr-aw-wYw" id="ehY-Xt-zok"/>
                         <outlet property="loginButton" destination="iMh-Je-Xxt" id="naa-jX-CUs"/>
                         <outlet property="passwordTextField" destination="X5Z-Yk-YtH" id="EDg-BQ-a3p"/>
+                        <segue destination="cGw-Vd-283" kind="show" identifier="ShowWelcomeBackSegue" id="Sfc-dh-i9q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syf-Y7-Z4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -152,7 +152,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYT-DW-Unn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="134"/>
+            <point key="canvasLocation" x="728" y="99"/>
         </scene>
         <!--SignUpPage-->
         <scene sceneID="Ipk-J2-35s">
@@ -172,7 +172,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GL-3q-BAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="100"/>
+            <point key="canvasLocation" x="699" y="134"/>
         </scene>
     </scenes>
     <resources>
