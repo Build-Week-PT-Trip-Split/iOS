@@ -36,6 +36,11 @@ class LoginViewController: UIViewController {
 
  }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkUsername()
+    }
+    
     //MARK: - Functions
    
     // I added this functionality to the `CustomTextField.swift` file so we don't need it here anymore.
