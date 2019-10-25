@@ -114,10 +114,10 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="emailTextField" destination="BRQ-S6-U4c" id="fjb-EL-yrV"/>
+                        <outlet property="emailTextField" destination="cgt-ii-avh" id="WbQ-8Y-wnq"/>
                         <outlet property="nameTextField" destination="K1d-ku-Twd" id="9RW-w3-RBb"/>
                         <outlet property="passwordTextField" destination="ygK-nQ-ALc" id="1ow-w9-hXA"/>
-                        <outlet property="usernameTextField" destination="cgt-ii-avh" id="UaA-4z-ub0"/>
+                        <outlet property="usernameTextField" destination="BRQ-S6-U4c" id="UaQ-a8-cMk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJm-DX-dzD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
