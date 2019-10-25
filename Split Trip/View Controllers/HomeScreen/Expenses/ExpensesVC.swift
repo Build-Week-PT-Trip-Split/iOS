@@ -14,7 +14,6 @@ class ExpensesVC: UIViewController {
     
     let expenseController = ExpenseController()
     var expensesList: [Expense] = []
-    var expensesForTripList: [Expense] = []
     var trip: Trip?
     
     override func viewDidLoad() {
@@ -24,29 +23,15 @@ class ExpensesVC: UIViewController {
         expensesTableView.dataSource = self
     }
     
-    private func sortExpensesForSelectedTrip(tripId: Int) -> [Expense]{
-        guard let trip = trip else { return [] }
-        var expenseArray: [Expense] = []
-        
-        for expense in expensesList {
-            if expense.trip_id == trip.id {
-                expenseArray.append(expense)
-            }
-        }
-        
-        return expenseArray
-    }
-    
     func loadExpenses() {
         guard let trip = trip,
             let tripId = trip.id else { return }
-        expenseController.loadExpensesFromOnlineStore(completion: { error in
+        expenseController.loadExpensesFromOnlineStore(tripId: tripId, completion: { error in
             if let error = error {
                 print("Unable to request expenses: \(error)")
             } else {
                 DispatchQueue.main.async {
                     self.expensesList = self.expenseController.expenseResults
-                    self.expensesForTripList = self.sortExpensesForSelectedTrip(tripId: tripId)
                     self.expensesTableView.reloadData()
                 }
             }
@@ -73,13 +58,13 @@ class ExpensesVC: UIViewController {
 
 extension ExpensesVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return expensesForTripList.count
+        return expenseController.tripExpenseResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = expensesTableView.dequeueReusableCell(withIdentifier: "ExpenseCell") as? ExpenseTableViewCell else { return UITableViewCell() }
         
-        cell.expense = expensesForTripList[indexPath.row]
+        cell.expense = expenseController.tripExpenseResults[indexPath.row]
         
         return cell
     }

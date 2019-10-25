@@ -41,7 +41,10 @@ class ViewTripVC: UIViewController {
     let lightPurpleColor = UIColor(red:0.42, green:0.15, blue:1.00, alpha:1.0)
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     
+    let expenseController = ExpenseController()
+    var tripExpenses: [Expense] = []
     var trip: Trip?
+    var totalTripCost: Int = 0
     
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
@@ -50,6 +53,7 @@ class ViewTripVC: UIViewController {
         setupViewProperties()
         registerParticipantCollectionViewCells()
         configureTripItemViews()
+        getTotalTripCosts()
         updateViews()
     }
     
@@ -64,7 +68,28 @@ class ViewTripVC: UIViewController {
         tripNameLabel.text = trip.name
         dateItemButton.setTitle(trip.date, for: .normal)
         destinationItemButton.setTitle(trip.name, for: .normal)
-        totalSpentButton.setTitle(String(describing: trip.base_cost), for: .normal)
+    }
+    
+    func getTotalTripCosts(){
+        guard let trip = trip, let tripId = trip.id else { return }
+        
+        expenseController.loadExpensesFromOnlineStore(tripId: tripId, completion: { error in
+            if let error = error {
+                print("Error getting Trip Expenses: \(error)")
+            }
+            
+            self.tripExpenses = self.expenseController.tripExpenseResults
+            self.totalTripCost = trip.base_cost
+            
+            for expense in self.tripExpenses {
+                self.totalTripCost += expense.total_expense_price
+            }
+            
+            DispatchQueue.main.async {
+                self.totalSpentButton.setTitle(String(self.totalTripCost), for: .normal)
+            }
+            
+        })
     }
     
     func setupViewProperties() {
