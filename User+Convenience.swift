@@ -15,13 +15,14 @@ extension User {
         guard let name = self.name,
             let username = self.username,
             let password = self.password,
-            let email = self.email else { return nil }
-        return UserRepresentation(name: name, username: username, password: password, email: email)
+            let email = self.email else {return nil }
+        return UserRepresentation(id: Int(id), name: name, username: username, password: password, email: email)
     }
     
     convenience init(name: String, username: String, password: String, email: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext)
     {
         self.init(context: context)
+        self.id = id
         self.name = name
         self.username = username
         self.password = password

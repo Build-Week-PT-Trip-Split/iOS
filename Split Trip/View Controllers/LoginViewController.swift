@@ -101,7 +101,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-        if let email = UsernameTextField.text, !email.isEmpty,
+        if let username = UsernameTextField.text, !username.isEmpty,
             let password = passwordTextField.text, !password.isEmpty {
         
             // Saving to CoreData
@@ -111,13 +111,9 @@ class LoginViewController: UIViewController {
                 NSLog("There was an error saving the User: \(error)")
             }
             
-            loginUserController.login(withEmail: email, withPassword: password) { (error) in
+            loginUserController.login(withEmail: username, withPassword: password) { (error) in
                 if let error = error {
                     print("Error occured during login: \(error)")
-                } else {
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "ShowWelcomeBackSegue", sender: self)
-                    }
                 }
             }
         }
@@ -136,16 +132,14 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
-    
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+         if segue.identifier == "ShowWelcomeBackSegue" {
+            if let destinationVC = segue.destination as? WelcomeBackViewController,
+                let user = loginUserController.fetchUser() {
+                destinationVC.user = user
+            }
+         }
+     }
 
 }

@@ -9,9 +9,14 @@
 import Foundation
 
 struct UserRepresentation: Codable {
+    var id: Int
     var name: String
     var username: String
     var password: String
     var email: String
+}
 
+struct UserLogin: Codable {
+    var username: String
+    var password: String
 }

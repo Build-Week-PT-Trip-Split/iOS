@@ -31,6 +31,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpBtnPressed:" destination="KZe-lW-qDO" eventType="touchUpInside" id="J1i-xN-tyW"/>
+                                    <segue destination="Tcp-1d-9Zp" kind="presentation" modalPresentationStyle="fullScreen" id="Ra7-zB-RPW"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="K1d-ku-Twd" customClass="CustomTextField" customModule="Split_Trip" customModuleProvider="target">
@@ -106,17 +107,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PoK-ZM-Eb0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wy9-wS-RVp"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                             <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="emailTextField" destination="cgt-ii-avh" id="FQG-rg-PZv"/>
+                        <outlet property="emailTextField" destination="cgt-ii-avh" id="WbQ-8Y-wnq"/>
                         <outlet property="nameTextField" destination="K1d-ku-Twd" id="9RW-w3-RBb"/>
                         <outlet property="passwordTextField" destination="ygK-nQ-ALc" id="1ow-w9-hXA"/>
-                        <outlet property="usernameTextField" destination="BRQ-S6-U4c" id="SJI-pp-hhn"/>
-                        <segue destination="Tcp-1d-9Zp" kind="presentation" identifier="ToNewUserWelcomeScreen" modalPresentationStyle="fullScreen" id="EX9-CP-lm6"/>
+                        <outlet property="usernameTextField" destination="BRQ-S6-U4c" id="UaQ-a8-cMk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJm-DX-dzD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

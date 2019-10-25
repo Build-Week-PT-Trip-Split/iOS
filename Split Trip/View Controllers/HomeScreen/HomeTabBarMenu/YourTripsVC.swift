@@ -14,11 +14,14 @@ class YourTripsVC: UIViewController {
     @IBOutlet weak var tripsTableView: UITableView!
     @IBOutlet weak var yourTripsLabel: UILabel!
     @IBOutlet weak var newTripButton: UIButton!
+    @IBOutlet weak var getStartedLabel: UILabel!
     
     //MARK: - PROPERTIES
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     let tripController = TripController()
     var tripSearchResults: [Trip] = []
+    var user: User?
+    
     
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
@@ -32,21 +35,27 @@ class YourTripsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //Determines if TripsTableView requires scrolling, and if not, scrolling is disabled
         tripsTableView.alwaysBounceVertical = false
+        tripsTableView.reloadData()
+        
     }
 
     //MARK: - PRIVATE FUNCTIONS
     
     func loadTrips() {
-        tripController.loadTripsFromOnlineStore(completion: { error in
+        guard let user = user else { return }
+        tripController.loadTripsFromOnlineStore(userId: Int(user.id), completion: { error in
             if let error = error {
                 print("Unable to request trips: \(error)")
             } else {
                 DispatchQueue.main.async {
-                    self.tripSearchResults = self.tripController.tripsResults
+                    self.tripSearchResults = self.tripController.tripsForUser
                     self.tripsTableView.reloadData()
+                    if self.tripSearchResults.count == 0 {
+                        self.getStartedLabel.isHidden = false
+                    } else {
+                        self.getStartedLabel.isHidden = true
+                    }
                 }
             }
         })
@@ -55,6 +64,7 @@ class YourTripsVC: UIViewController {
     func setupViewProperties() {
         //Configures "Your Trips" label text color
         yourTripsLabel.textColor = darkPurpleColor
+        getStartedLabel.textColor = darkPurpleColor
         
         //Configures "New Trip" button text color
         newTripButton.setTitleColor(darkPurpleColor, for: .normal)
@@ -78,7 +88,9 @@ class YourTripsVC: UIViewController {
         }
         
         if segue.identifier == "AddTripSegue" {
-            guard let addTripVC = segue.destination as? AddTripVC else { return }
+            guard let addTripVC = segue.destination as? AddTripVC,
+                let user = user else { return }
+            addTripVC.user = user
         }
         
     }
