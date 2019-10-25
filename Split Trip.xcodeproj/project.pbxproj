@@ -62,6 +62,10 @@
 		EF61C4E32357FDB3009D3A45 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */; };
 		EF61C4E52358040D009D3A45 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF61C4E42358040D009D3A45 /* Default-568h@2x.png */; };
 		EF61C4E623581040009D3A45 /* LandingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0372542356B61D006161CA /* LandingPage.storyboard */; };
+		EFCC5CC02362996F005E4B90 /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFCC5CBE2362996F005E4B90 /* User.xcdatamodeld */; };
+		EFCC5CC223629A15005E4B90 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC5CC123629A15005E4B90 /* CoreDataStack.swift */; };
+		EFCC5CC423629A58005E4B90 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC5CC323629A58005E4B90 /* User+Convenience.swift */; };
+		EFCC5CC62362A715005E4B90 /* CreateTripController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC5CC52362A715005E4B90 /* CreateTripController.swift */; };
 		EFF35263235962DD004B7386 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF35262235962DD004B7386 /* SignUpVC.swift */; };
 		EFF35266235968F7004B7386 /* TextFieldPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF35265235968F7004B7386 /* TextFieldPadding.swift */; };
 		EFF3526823596A3F004B7386 /* LoginSignupCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3526723596A3F004B7386 /* LoginSignupCustomButton.swift */; };
@@ -126,6 +130,10 @@
 		EF61C4E02357FA35009D3A45 /* WelcomeBackScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeBackScreen.storyboard; sourceTree = "<group>"; };
 		EF61C4E22357FDB3009D3A45 /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		EF61C4E42358040D009D3A45 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EFCC5CBF2362996F005E4B90 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
+		EFCC5CC123629A15005E4B90 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		EFCC5CC323629A58005E4B90 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
+		EFCC5CC52362A715005E4B90 /* CreateTripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripController.swift; sourceTree = "<group>"; };
 		EFF35262235962DD004B7386 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		EFF35265235968F7004B7386 /* TextFieldPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPadding.swift; sourceTree = "<group>"; };
 		EFF3526723596A3F004B7386 /* LoginSignupCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupCustomButton.swift; sourceTree = "<group>"; };
@@ -320,6 +328,7 @@
 		EF0372422356B61D006161CA = {
 			isa = PBXGroup;
 			children = (
+				EFCC5CBD2362994D005E4B90 /* CoreData */,
 				EF61C4E42358040D009D3A45 /* Default-568h@2x.png */,
 				EF03724D2356B61D006161CA /* Split Trip */,
 				EF03724C2356B61D006161CA /* Products */,
@@ -369,6 +378,7 @@
 				A49FCFBF236247B90086BDE6 /* TripController.swift */,
 				A49FCFC1236248150086BDE6 /* HTTPMethod.swift */,
 				A49FCFC5236269D10086BDE6 /* ExpenseController.swift */,
+				EFCC5CC52362A715005E4B90 /* CreateTripController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -430,6 +440,16 @@
 				3748BADC2358E78C0022C521 /* WelcomeBackViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EFCC5CBD2362994D005E4B90 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EFCC5CBE2362996F005E4B90 /* User.xcdatamodeld */,
+				EFCC5CC123629A15005E4B90 /* CoreDataStack.swift */,
+				EFCC5CC323629A58005E4B90 /* User+Convenience.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		EFF35264235968D6004B7386 /* Helpers */ = {
@@ -533,6 +553,7 @@
 				A49FCFC42362692F0086BDE6 /* Expense.swift in Sources */,
 				A46A47C12359F23500DBC01A /* FriendsVC.swift in Sources */,
 				A474C992235FC45C00EE1B90 /* ContactTableViewCell.swift in Sources */,
+				EFCC5CC62362A715005E4B90 /* CreateTripController.swift in Sources */,
 				A419D814235FCDB500552E43 /* AddFriendVC.swift in Sources */,
 				A4103226235B9A35004C4426 /* ViewTripVC.swift in Sources */,
 				A419D81A235FCE3C00552E43 /* AddExpensePaymentVC.swift in Sources */,
@@ -550,6 +571,7 @@
 				A49FCFC6236269D10086BDE6 /* ExpenseController.swift in Sources */,
 				A474C99F235FC94000EE1B90 /* SettingsVC.swift in Sources */,
 				A419D812235FCBB100552E43 /* AddParticipantVC.swift in Sources */,
+				EFCC5CC02362996F005E4B90 /* User.xcdatamodeld in Sources */,
 				A474C995235FC83C00EE1B90 /* SetDateVC.swift in Sources */,
 				EF23CE1D235EB361003504FC /* User.swift in Sources */,
 				3748BADB2358E2B30022C521 /* LoginViewController.swift in Sources */,
@@ -567,10 +589,12 @@
 				EF0372512356B61D006161CA /* SceneDelegate.swift in Sources */,
 				EFF3526823596A3F004B7386 /* LoginSignupCustomButton.swift in Sources */,
 				EF23CE1F235EB452003504FC /* CreateUserController.swift in Sources */,
+				EFCC5CC223629A15005E4B90 /* CoreDataStack.swift in Sources */,
 				EFF35266235968F7004B7386 /* TextFieldPadding.swift in Sources */,
 				EFF3526A23596DEC004B7386 /* CustomTextField.swift in Sources */,
 				A4401432235D2DFE0004DF9C /* ParticipantDetailVC.swift in Sources */,
 				A419D825235FD66200552E43 /* ExpensePaymentTableViewCell.swift in Sources */,
+				EFCC5CC423629A58005E4B90 /* User+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +794,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EFCC5CBE2362996F005E4B90 /* User.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EFCC5CBF2362996F005E4B90 /* User.xcdatamodel */,
+			);
+			currentVersion = EFCC5CBF2362996F005E4B90 /* User.xcdatamodel */;
+			path = User.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EF0372432356B61D006161CA /* Project object */;
 }

@@ -12,12 +12,12 @@ class CreateUserController {
     
     static let baseURL = URL(string: "https://tripsplitr.herokuapp.com")!
     
-    enum HTTPMethod: String {
-        case get    = "GET"
-        case put    = "PUT" // Update data - Will fail if data doens't exist
-        case post   = "POST"  // Create data - frowned upon if used to update data although it can.
-        case delete = "DELETE" // Delete data -
-    }
+//    enum HTTPMethod: String {
+//        case get    = "GET"
+//        case put    = "PUT" // Update data - Will fail if data doens't exist
+//        case post   = "POST"  // Create data - frowned upon if used to update data although it can.
+//        case delete = "DELETE" // Delete data -
+//    }
     
     enum RequestSetValue: String {
         case applicationJson = "application/json"
@@ -41,7 +41,12 @@ class CreateUserController {
         let jsonEncoder = JSONEncoder()
         
         do {
-            let jsonData = try jsonEncoder.encode(user)
+            guard let userRep = user.userRepresentation else {
+                completion(NSError())
+                return
+            }
+            try CoreDataStack.shared.save()
+            let jsonData = try jsonEncoder.encode(userRep)
             request.httpBody = jsonData
         } catch {
             NSLog("Error encoding user object: \(error)")
