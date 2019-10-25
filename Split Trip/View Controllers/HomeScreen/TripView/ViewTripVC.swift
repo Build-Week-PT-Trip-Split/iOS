@@ -155,8 +155,6 @@ class ViewTripVC: UIViewController {
         trip.base_cost = baseCost
         trip.destination = destination
         
-        
-        
         self.tripController.editTrip(with: trip)
         
         let savedAlert = UIAlertController(title: "Trip Updated", message: "Your trip was updated!", preferredStyle: .alert)
