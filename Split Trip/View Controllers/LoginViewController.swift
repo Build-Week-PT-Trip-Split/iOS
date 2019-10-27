@@ -20,10 +20,8 @@ class LoginViewController: UIViewController {
     //MARK: - Properties
     
     private var showHideButton: UIButton = UIButton()
-    
     private let showImage = UIImage(named: "EyeShow")
     private let hideImage = UIImage(named: "EyeClose")
-    
     var loginUserController = LoginUserController()
     
     //MARK: - Views
@@ -111,10 +109,21 @@ class LoginViewController: UIViewController {
                 NSLog("There was an error saving the User: \(error)")
             }
             
-            loginUserController.login(withEmail: username, withPassword: password) { (error) in
+            loginUserController.login(withEmail: username, withPassword: password) { (error, loginData) in
                 if let error = error {
                     print("Error occured during login: \(error)")
                 }
+                
+                guard let loginData = loginData,
+                    let id = loginData.user.id,
+                    let name = loginData.user.name,
+                    let email = loginData.user.email else {
+                    print("No Login Data Found.")
+                    return
+                }
+                
+                CurrentUser.shared.assignCurrentUser(id: id, name: name, username: loginData.user.username, password: loginData.user.password, email: email)
+                print(CurrentUser.shared.name)
             }
         }
     }
@@ -137,7 +146,6 @@ class LoginViewController: UIViewController {
          if segue.identifier == "ShowWelcomeBackSegue" {
             if let destinationVC = segue.destination as? WelcomeBackViewController,
                 let user = loginUserController.fetchUser() {
-                destinationVC.user = user
             }
          }
      }

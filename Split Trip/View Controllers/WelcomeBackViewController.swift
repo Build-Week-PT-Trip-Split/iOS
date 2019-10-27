@@ -16,15 +16,11 @@ class WelcomeBackViewController: UIViewController {
     @IBOutlet weak var welcomeBackLabel: UILabel!
     
     //MARK: - Properties
-    var user: User?
     
     //MARK: - Views
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let user = user {
-            welcomeBackLabel.text = "Welcome Back, \(user.name?.capitalized ?? "User")!"
-        }
     }
     
     // MARK: - Navigation
@@ -32,10 +28,9 @@ class WelcomeBackViewController: UIViewController {
         print("Starting Segue")
         if segue.identifier == "ShowHomeScreenSegue" {
             print("Segue Identified")
-            if let destinationVC = segue.destination as? YourTripsVC,
-                let user = user {
+            if let destinationVC = segue.destination as? YourTripsVC {
                     print("YourTripsVC found")
-                    destinationVC.user = user
+
                 }
         }
     }

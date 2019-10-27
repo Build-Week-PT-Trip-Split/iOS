@@ -12,7 +12,7 @@ import CoreData
 class LoginUserController {
     
     static let baseURL = URL(string: "https://tripsplitr.herokuapp.com")!
-    typealias CompletionHandler = (Error?) -> Void
+    typealias CompletionHandler = (Error?, UserResult?) -> Void
     
     var createUserController = CreateUserController()
     
@@ -20,7 +20,7 @@ class LoginUserController {
         case post   = "POST"
     }
     
-    func login(withEmail email: String, withPassword password: String, completion: @escaping CompletionHandler = { _ in }) {
+    func login(withEmail email: String, withPassword password: String, completion: @escaping CompletionHandler = { (error, loginData)  in }) {
         let requestURL = LoginUserController.baseURL.appendingPathComponent("auth/login")
         
         var request = URLRequest(url: requestURL)
@@ -40,26 +40,27 @@ class LoginUserController {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 {
-                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                completion(NSError(domain: "", code: response.statusCode, userInfo: nil), nil)
                 return
             }
             
-            if let error = error { completion(error); return }
+            if let error = error { completion(error, nil); return }
             
-            guard let data = data else { completion(NSError()); return }
+            guard let data = data else {
+                completion(NSError(), nil);
+                return
+            }
             
             let decoder = JSONDecoder()
             
-//            do {
-//                let token = try decoder.decode(Token.self, from: data)
-//                UserDefaults.standard.set(token, forKey: "Token")
-//                
-//            } catch {
-//                print("Error decoding bearer object: \(error)")
-//                completion(error)
-//                return
-//            }
-            completion(nil)
+            do {
+                let data = try decoder.decode(UserResult.self, from: data)
+                completion(nil, data)
+            } catch {
+                print("Error decoding bearer object: \(error)")
+                completion(error, nil)
+                return
+            }
         }.resume()
     }
 }
@@ -73,7 +74,6 @@ extension LoginUserController {
         let moc = CoreDataStack.shared.mainContext
             do {
                 user = try moc.fetch(fetchRequest).first
-                print(user)
             } catch {
                 NSLog("There was an error getting the User from CoreData")
             }
