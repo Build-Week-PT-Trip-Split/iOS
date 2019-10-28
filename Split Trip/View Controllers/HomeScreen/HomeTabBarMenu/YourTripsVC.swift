@@ -91,6 +91,7 @@ class YourTripsVC: UIViewController {
             guard let viewTripVC = segue.destination as? ViewTripVC,
                 let selectedIndexPath = tripsTableView.indexPathForSelectedRow else { return }
             viewTripVC.trip = tripSearchResults[selectedIndexPath.row]
+            viewTripVC.delegate = self
         }
         
         if segue.identifier == "AddTripSegue" {
@@ -137,4 +138,14 @@ extension YourTripsVC: AddTripDelegate {
         loadTrips()
         tripsTableView.reloadData()
     }
+}
+
+extension YourTripsVC: DeleteTripDelegate {
+    func tripWasDeleted() {
+        navigationController?.popViewController(animated: true)
+        loadTrips()
+        tripsTableView.reloadData()
+    }
+    
+    
 }

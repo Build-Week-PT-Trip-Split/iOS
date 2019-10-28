@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DeleteTripDelegate {
+    func tripWasDeleted()
+}
+
 class ViewTripVC: UIViewController {
 
 //MARK: - IBOUTLETS
@@ -46,6 +50,7 @@ class ViewTripVC: UIViewController {
     var tripExpenses: [Expense] = []
     var trip: Trip?
     var totalTripCost: Int = 0
+    var delegate: DeleteTripDelegate!
     
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
@@ -170,13 +175,13 @@ class ViewTripVC: UIViewController {
 
         deleteAlert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (action: UIAlertAction!) in
             self.tripController.deleteTrip(with: trip)
+            self.delegate.tripWasDeleted()
         }))
 
-        deleteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
-            self.dismiss(animated: true, completion: nil) // NOT SURE ABOUT THIS
-        }))
+        deleteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
 
         present(deleteAlert, animated: true, completion: nil)
+        
     }
     
     
