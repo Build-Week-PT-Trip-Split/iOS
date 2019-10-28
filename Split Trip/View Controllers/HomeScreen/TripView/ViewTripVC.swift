@@ -148,12 +148,11 @@ class ViewTripVC: UIViewController {
     }
     
     @IBAction func saveTripTapped(_ sender: Any) {
-        guard var trip = trip, let name = tripNameLabel.text, let date = dateItemButton.titleLabel?.text, let destination = destinationItemButton.titleLabel?.text, let baseCost = Int16(totalSpentButton.titleLabel!.text!) else { return }
+        guard var trip = trip, let name = tripNameLabel.text, let date = dateItemButton.titleLabel?.text, let destination = destinationItemButton.titleLabel?.text, let baseCost = Int32(totalSpentButton.titleLabel!.text!) else { return }
         
         trip.name = name
         trip.date = date
         trip.base_cost = baseCost
-        trip.destination = destination
         
         self.tripController.editTrip(with: trip)
         

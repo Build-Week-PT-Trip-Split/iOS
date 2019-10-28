@@ -95,6 +95,7 @@ class YourTripsVC: UIViewController {
         
         if segue.identifier == "AddTripSegue" {
             guard let addTripVC = segue.destination as? AddTripVC  else { return }
+            addTripVC.delegate = self
         }
         
     }
@@ -128,4 +129,12 @@ extension YourTripsVC: UITableViewDelegate {
         let _ = tripsTableView.cellForRow(at: indexPath) as? TripTableViewCell
     }
     
+}
+
+extension YourTripsVC: AddTripDelegate {
+    func tripWasAdded() {
+        dismiss(animated: true, completion: nil)
+        loadTrips()
+        tripsTableView.reloadData()
+    }
 }

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AddTripDelegate {
+    func tripWasAdded()
+}
+
 class AddTripVC: UIViewController {
 
     //MARK: - IBOUTLETS
@@ -40,7 +44,8 @@ class AddTripVC: UIViewController {
     let lightPurpleColor = UIColor(red:0.42, green:0.15, blue:1.00, alpha:1.0)
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     let greenColor = UIColor(red:0.07, green:0.96, blue:0.74, alpha:1.0)
-    var user: User?
+    var tripController = TripController()
+    var delegate: AddTripDelegate!
     
     var tripDate: String? {
         didSet {
@@ -123,21 +128,19 @@ class AddTripVC: UIViewController {
         if let name = tripNameTextField.text,
             let date = tripDate,
             let baseCost = baseCost,
-            let userId = user?.id,
-            let destination = destinationItemButton.titleLabel?.text,
+            let userId = CurrentUser.shared.id,
             name.isEmpty == false {
             
-            let newTrip = Trip(id: nil, name: name, destination: destination, date: date, base_cost: Int16(baseCost), complete: nil, user_id: userId, img: nil, created_at: nil, updated_at: nil)
+            let newTrip = Trip(id: nil, name: name, date: date, base_cost: Int32(baseCost), complete: nil, user_id: Int16(userId), img: nil, created_at: nil, updated_at: nil)
             
-            dismissViewController(withTrip: newTrip)
+            tripController.addNewTrip(trip: newTrip) { (error) in
+                if let error = error {
+                    print("Error adding new trip: \(error)")
+                }
+            }
+            delegate.tripWasAdded()
+            //dismiss(animated: true, completion: nil)
         }
-    }
-    
-    func dismissViewController(withTrip trip: Trip) {
-        if let presentingVC = presentingViewController as? YourTripsVC {
-            presentingVC.tripSearchResults.append(trip)
-        }
-        dismiss(animated: true, completion: nil)
     }
     
     func promptForDestination() {

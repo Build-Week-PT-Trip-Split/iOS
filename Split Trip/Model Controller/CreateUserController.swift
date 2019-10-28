@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum RequestSetValue: String {
+    case applicationJson = "application/json"
+    case forHTTPHeaderField = "Content-Type"
+}
+
 class CreateUserController {
     
     static let baseURL = URL(string: "https://tripsplitr.herokuapp.com")!
@@ -18,11 +23,6 @@ class CreateUserController {
 //        case post   = "POST"  // Create data - frowned upon if used to update data although it can.
 //        case delete = "DELETE" // Delete data -
 //    }
-    
-    enum RequestSetValue: String {
-        case applicationJson = "application/json"
-        case forHTTPHeaderField = "Content-Type"
-    }
     
     func createUser(name: String, username: String, password: String, email: String) -> User {
         let user = User(name: name, username: username, password: password, email: email)
