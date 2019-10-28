@@ -15,7 +15,6 @@ protocol AddTripDelegate {
 class AddTripVC: UIViewController {
 
     //MARK: - IBOUTLETS
-    @IBOutlet weak var tripHeaderImageView: UIImageView!
     @IBOutlet weak var tripNameTextField: UITextField!
     @IBOutlet weak var participantsLabel: UILabel!
     @IBOutlet weak var addParticipantButton: UIButton!
@@ -71,12 +70,6 @@ class AddTripVC: UIViewController {
     
     //MARK: - PRIVATE FUNCTIONS
     func setupViewProperties() {
-        //Configure tripHeaderImageView Layout
-        tripHeaderImageView.layer.borderColor = darkPurpleColor.cgColor
-        tripHeaderImageView.layer.cornerRadius = 8
-        tripHeaderImageView.layer.borderWidth = 2
-        tripHeaderImageView.image = UIImage(named: "ChooseImagePlaceholder")
-
         //Configure tripNameTextField Layout
         tripNameTextField.borderStyle = .none
         tripNameTextField.textColor = darkPurpleColor
@@ -140,6 +133,13 @@ class AddTripVC: UIViewController {
             }
             delegate.tripWasAdded()
             //dismiss(animated: true, completion: nil)
+        } else {
+            let missingDataAlert = UIAlertController(title: "Incomplete Data", message: "Please enter a value for all required fields.", preferredStyle: .alert)
+            
+            let dismissAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            missingDataAlert.addAction(dismissAction)
+            
+            present(missingDataAlert, animated: true, completion: nil)
         }
     }
     

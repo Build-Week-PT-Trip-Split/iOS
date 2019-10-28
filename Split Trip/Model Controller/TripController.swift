@@ -71,20 +71,26 @@ class TripController {
         
         var request = URLRequest(url: baseUrl)
         request.httpMethod = HTTPMethod.put.rawValue
+        let jsonEncoder = JSONEncoder()
         
         do {
-            request.httpBody = try JSONEncoder().encode(trip)
+            let jsonData = try jsonEncoder.encode(trip)
+            request.httpBody = jsonData
         } catch {
             print("Error encoding edited trip: \(error)")
             return
         }
         
-        URLSession.shared.dataTask(with: request) { (_, _, error) in
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
                    
             if let error = error {
                 print("Error PUTting trip to server: \(error)")
                 completion(error)
                 return
+            }
+            
+            if let response = response {
+                print("Error received from server: \(response)")
             }
                    
             completion(nil)
