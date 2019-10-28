@@ -10,7 +10,7 @@
         <!--Log in-->
         <scene sceneID="o9C-50-ECK">
             <objects>
-                <viewController title="Log in" id="a5v-bc-DbH" customClass="LoginViewController" customModule="Split_Trip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Log in" id="a5v-bc-DbH" customClass="LoginViewController" customModule="TripSplit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yu8-OI-XR1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ct8-Pw-xj5">
-                                <rect key="frame" x="40" y="343" width="334" height="377"/>
+                                <rect key="frame" x="40" y="345" width="334" height="377"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TBV-j5-pdg">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
@@ -30,7 +30,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-aw-wYw" customClass="CustomTextField" customModule="Split_Trip" customModuleProvider="target">
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-aw-wYw" customClass="CustomTextField" customModule="TripSplit" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="20" width="334" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="POU-i1-45r"/>
@@ -55,7 +55,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5Z-Yk-YtH" customClass="CustomTextField" customModule="Split_Trip" customModuleProvider="target">
+                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5Z-Yk-YtH" customClass="CustomTextField" customModule="TripSplit" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="23" width="334" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="evB-RI-Z9O"/>
@@ -113,7 +113,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO PIC" translatesAutoresizingMaskIntoConstraints="NO" id="ZIl-n5-hBx">
-                                <rect key="frame" x="123" y="119" width="168" height="168"/>
+                                <rect key="frame" x="122" y="119" width="170" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZIl-n5-hBx" secondAttribute="height" multiplier="1:1" id="llS-2l-1n9"/>
                                 </constraints>
@@ -126,6 +126,7 @@
                             <constraint firstItem="j8s-hp-ie7" firstAttribute="leading" secondItem="yu8-OI-XR1" secondAttribute="leading" id="G27-Vx-l3V"/>
                             <constraint firstItem="ZIl-n5-hBx" firstAttribute="centerX" secondItem="yu8-OI-XR1" secondAttribute="centerX" id="HJW-C1-dEm"/>
                             <constraint firstItem="Ct8-Pw-xj5" firstAttribute="leading" secondItem="wGm-RF-exe" secondAttribute="leading" constant="40" id="UMV-Jc-463"/>
+                            <constraint firstItem="wGm-RF-exe" firstAttribute="bottom" secondItem="Ct8-Pw-xj5" secondAttribute="bottom" constant="140" id="Ucx-nY-E4s"/>
                             <constraint firstItem="Ct8-Pw-xj5" firstAttribute="top" secondItem="ZIl-n5-hBx" secondAttribute="bottom" constant="56" id="bd8-aI-5Xd"/>
                             <constraint firstAttribute="bottom" secondItem="j8s-hp-ie7" secondAttribute="bottom" id="fvc-eY-vGB"/>
                             <constraint firstItem="wGm-RF-exe" firstAttribute="trailing" secondItem="Ct8-Pw-xj5" secondAttribute="trailing" constant="40" id="kar-lh-XUF"/>
