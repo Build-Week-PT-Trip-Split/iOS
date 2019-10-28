@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import CoreData
 
 class LoginUserController {
@@ -44,7 +45,10 @@ class LoginUserController {
                 return
             }
             
-            if let error = error { completion(error, nil); return }
+            if let error = error {
+                completion(error, nil)
+                return
+            }
             
             guard let data = data else {
                 completion(NSError(), nil);

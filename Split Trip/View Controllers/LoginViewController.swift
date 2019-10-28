@@ -23,16 +23,14 @@ class LoginViewController: UIViewController {
     private let showImage = UIImage(named: "EyeShow")
     private let hideImage = UIImage(named: "EyeClose")
     var loginUserController = LoginUserController()
+    let user = CurrentUser.shared
     
     //MARK: - Views
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateViews()
         checkUsername()
-
- }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,23 +38,6 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: - Functions
-   
-    // I added this functionality to the `CustomTextField.swift` file so we don't need it here anymore.
-    
-//    func doneBarBtn() {
-//        let toolBar = UIToolbar()
-//        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-//        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.doneClicked))
-//        toolBar.setItems([flexibleSpace,doneButton], animated: false)
-//        toolBar.sizeToFit()
-//        passwordTextField.inputAccessoryView = toolBar
-//
-//    }
-//
-//    @objc func doneClicked() {
-//        view.endEditing(true)
-//    }
-    
     
     @objc func showHideTapped() {
         if showHideButton.currentImage == showImage {
@@ -101,30 +82,42 @@ class LoginViewController: UIViewController {
         
         if let username = UsernameTextField.text, !username.isEmpty,
             let password = passwordTextField.text, !password.isEmpty {
-        
-            // Saving to CoreData
-            do {
-                try CoreDataStack.shared.save()
-            } catch {
-                NSLog("There was an error saving the User: \(error)")
-            }
-            
-            loginUserController.login(withEmail: username, withPassword: password) { (error, loginData) in
-                if let error = error {
-                    print("Error occured during login: \(error)")
+                
+                // Saving to CoreData
+                do {
+                    try CoreDataStack.shared.save()
+                } catch {
+                    NSLog("There was an error saving the User: \(error)")
                 }
                 
-                guard let loginData = loginData,
-                    let id = loginData.user.id,
-                    let name = loginData.user.name,
-                    let email = loginData.user.email else {
-                    print("No Login Data Found.")
-                    return
+                loginUserController.login(withEmail: username, withPassword: password) { (error, loginData) in
+                    if let error = error {
+                        print("Error occured during login: \(error)")
+                    }
+                    
+                    guard let loginData = loginData,
+                        let id = loginData.user.id,
+                        let name = loginData.user.name,
+                        let email = loginData.user.email else {
+                        print("No Login Data Found.")
+                        return
+                    }
+                    
+                    self.user.assignCurrentUser(id: id, name: name, username: loginData.user.username, password: loginData.user.password, email: email)
+                    
+                    DispatchQueue.main.async {
+                        let storyboard = UIStoryboard(name: "WelcomeBackScreen", bundle: nil)
+                        let welcomeBackStoryboard = storyboard.instantiateInitialViewController()!
+                        welcomeBackStoryboard.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                        self.present(welcomeBackStoryboard, animated: true, completion: nil)
+                    }
                 }
-                
-                CurrentUser.shared.assignCurrentUser(id: id, name: name, username: loginData.user.username, password: loginData.user.password, email: email)
-                print(CurrentUser.shared.name)
-            }
+        } else {
+            let loginErrorAlert = UIAlertController(title: "Login Unsuccessful", message: "Could not log in with entered details. Make sure details are valid and try again.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            loginErrorAlert.addAction(action)
+            present(loginErrorAlert, animated: true, completion: nil)
+            return
         }
     }
     
@@ -140,14 +133,5 @@ class LoginViewController: UIViewController {
             passwordTextField.text = ""
         }
     }
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "ShowWelcomeBackSegue" {
-            if let destinationVC = segue.destination as? WelcomeBackViewController,
-                let user = loginUserController.fetchUser() {
-            }
-         }
-     }
 
 }

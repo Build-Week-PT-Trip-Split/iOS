@@ -14,24 +14,12 @@ class WelcomeBackViewController: UIViewController {
 
     @IBOutlet weak var welcomeBackImageView: UIImageView!
     @IBOutlet weak var welcomeBackLabel: UILabel!
-    
-    //MARK: - Properties
-    
-    //MARK: - Views
+    let user = CurrentUser.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Starting Segue")
-        if segue.identifier == "ShowHomeScreenSegue" {
-            print("Segue Identified")
-            if let destinationVC = segue.destination as? YourTripsVC {
-                    print("YourTripsVC found")
-
-                }
+        if let name = user.name {
+            welcomeBackLabel.text = "Welcome back, \(name)!"
         }
     }
 
