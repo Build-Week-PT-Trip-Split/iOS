@@ -16,7 +16,7 @@ class CreateTripController {
     }
     
     func createTrip(id: Int16, name: String, date: String, destination: String, baseCost: Int, complete: Int16, userID: Int16, img: String, createdAt: String, updatedAt: String) -> Trip {
-        let trip = Trip(id: id, name: name, destination: destination, date: date, base_cost: Int16(baseCost), complete: complete, user_id: userID, img: img, created_at: createdAt, updated_at: updatedAt)
+        let trip = Trip(id: id, name: name, date: date, base_cost: Int32(baseCost), complete: complete, user_id: userID, img: img, created_at: createdAt, updated_at: updatedAt)
         return trip
     }
     

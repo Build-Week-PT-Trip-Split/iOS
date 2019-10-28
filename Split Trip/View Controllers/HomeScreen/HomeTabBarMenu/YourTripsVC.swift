@@ -20,8 +20,7 @@ class YourTripsVC: UIViewController {
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     let tripController = TripController()
     var tripSearchResults: [Trip] = []
-    var user: User?
-    
+    var user = CurrentUser.shared
     
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
@@ -31,6 +30,13 @@ class YourTripsVC: UIViewController {
         tripsTableView.dataSource = self
         tripsTableView.delegate = self
         loadTrips()
+        
+        if let name = user.name {
+            print(name)
+        } else {
+            print("No Name Found")
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,8 +49,8 @@ class YourTripsVC: UIViewController {
     //MARK: - PRIVATE FUNCTIONS
     
     func loadTrips() {
-        guard let user = user else { return }
-        tripController.loadTripsFromOnlineStore(userId: Int(user.id), completion: { error in
+        guard let id = user.id else { return }
+        tripController.loadTripsFromOnlineStore(userId: id, completion: { error in
             if let error = error {
                 print("Unable to request trips: \(error)")
             } else {
@@ -85,12 +91,13 @@ class YourTripsVC: UIViewController {
             guard let viewTripVC = segue.destination as? ViewTripVC,
                 let selectedIndexPath = tripsTableView.indexPathForSelectedRow else { return }
             viewTripVC.trip = tripSearchResults[selectedIndexPath.row]
+            viewTripVC.delegate = self
+            viewTripVC.updateDelegate = self
         }
         
         if segue.identifier == "AddTripSegue" {
-            guard let addTripVC = segue.destination as? AddTripVC,
-                let user = user else { return }
-            addTripVC.user = user
+            guard let addTripVC = segue.destination as? AddTripVC  else { return }
+            addTripVC.delegate = self
         }
         
     }
@@ -124,4 +131,28 @@ extension YourTripsVC: UITableViewDelegate {
         let _ = tripsTableView.cellForRow(at: indexPath) as? TripTableViewCell
     }
     
+}
+
+extension YourTripsVC: AddTripDelegate {
+    func tripWasAdded() {
+        dismiss(animated: true, completion: nil)
+        loadTrips()
+        tripsTableView.reloadData()
+    }
+}
+
+extension YourTripsVC: DeleteTripDelegate {
+    func tripWasDeleted() {
+        navigationController?.popViewController(animated: true)
+        loadTrips()
+        tripsTableView.reloadData()
+    }
+}
+
+extension YourTripsVC: UpdateTripDelegate {
+    func tripWasUpdated() {
+        navigationController?.popViewController(animated: true)
+        loadTrips()
+        tripsTableView.reloadData()
+    }
 }

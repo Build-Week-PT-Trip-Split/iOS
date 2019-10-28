@@ -8,10 +8,13 @@
 
 import UIKit
 
+protocol AddTripDelegate {
+    func tripWasAdded()
+}
+
 class AddTripVC: UIViewController {
 
     //MARK: - IBOUTLETS
-    @IBOutlet weak var tripHeaderImageView: UIImageView!
     @IBOutlet weak var tripNameTextField: UITextField!
     @IBOutlet weak var participantsLabel: UILabel!
     @IBOutlet weak var addParticipantButton: UIButton!
@@ -40,7 +43,8 @@ class AddTripVC: UIViewController {
     let lightPurpleColor = UIColor(red:0.42, green:0.15, blue:1.00, alpha:1.0)
     let darkPurpleColor = UIColor(red:0.22, green:0.08, blue:0.36, alpha:1.0)
     let greenColor = UIColor(red:0.07, green:0.96, blue:0.74, alpha:1.0)
-    var user: User?
+    var tripController = TripController()
+    var delegate: AddTripDelegate!
     
     var tripDate: String? {
         didSet {
@@ -66,12 +70,6 @@ class AddTripVC: UIViewController {
     
     //MARK: - PRIVATE FUNCTIONS
     func setupViewProperties() {
-        //Configure tripHeaderImageView Layout
-        tripHeaderImageView.layer.borderColor = darkPurpleColor.cgColor
-        tripHeaderImageView.layer.cornerRadius = 8
-        tripHeaderImageView.layer.borderWidth = 2
-        tripHeaderImageView.image = UIImage(named: "ChooseImagePlaceholder")
-
         //Configure tripNameTextField Layout
         tripNameTextField.borderStyle = .none
         tripNameTextField.textColor = darkPurpleColor
@@ -123,21 +121,26 @@ class AddTripVC: UIViewController {
         if let name = tripNameTextField.text,
             let date = tripDate,
             let baseCost = baseCost,
-            let userId = user?.id,
-            let destination = destinationItemButton.titleLabel?.text,
+            let userId = CurrentUser.shared.id,
             name.isEmpty == false {
             
-            let newTrip = Trip(id: nil, name: name, destination: destination, date: date, base_cost: Int16(baseCost), complete: nil, user_id: userId, img: nil, created_at: nil, updated_at: nil)
+            let newTrip = Trip(id: nil, name: name, date: date, base_cost: Int32(baseCost), complete: nil, user_id: Int16(userId), img: nil, created_at: nil, updated_at: nil)
             
-            dismissViewController(withTrip: newTrip)
+            tripController.addNewTrip(trip: newTrip) { (error) in
+                if let error = error {
+                    print("Error adding new trip: \(error)")
+                }
+            }
+            delegate.tripWasAdded()
+            //dismiss(animated: true, completion: nil)
+        } else {
+            let missingDataAlert = UIAlertController(title: "Incomplete Data", message: "Please enter a value for all required fields.", preferredStyle: .alert)
+            
+            let dismissAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            missingDataAlert.addAction(dismissAction)
+            
+            present(missingDataAlert, animated: true, completion: nil)
         }
-    }
-    
-    func dismissViewController(withTrip trip: Trip) {
-        if let presentingVC = presentingViewController as? YourTripsVC {
-            presentingVC.tripSearchResults.append(trip)
-        }
-        dismiss(animated: true, completion: nil)
     }
     
     func promptForDestination() {

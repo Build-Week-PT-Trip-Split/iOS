@@ -108,13 +108,14 @@
 		A474C998235FC8D100EE1B90 /* AddExpenseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseVC.swift; sourceTree = "<group>"; };
 		A474C99E235FC94000EE1B90 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		A474C9A0235FC94F00EE1B90 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountVC.swift; path = "Split Trip/View Controllers/HomeScreen/SettingsNavBarMenu/AccountVC.swift"; sourceTree = SOURCE_ROOT; };
+		A486DB972366914200FEF0C1 /* TripSplit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TripSplit.entitlements; sourceTree = "<group>"; };
 		A49FCFBD236245B00086BDE6 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		A49FCFBF236247B90086BDE6 /* TripController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripController.swift; sourceTree = "<group>"; };
 		A49FCFC1236248150086BDE6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		A49FCFC32362692F0086BDE6 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		A49FCFC5236269D10086BDE6 /* ExpenseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseController.swift; sourceTree = "<group>"; };
 		A4FB58AA2359DF79002A1A39 /* backgroundImage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundImage@3x.png"; sourceTree = "<group>"; };
-		EF03724B2356B61D006161CA /* Split Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF03724B2356B61D006161CA /* TripSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF03724E2356B61D006161CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0372502356B61D006161CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EF0372552356B61D006161CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LandingPage.storyboard; sourceTree = "<group>"; };
@@ -316,6 +317,13 @@
 			path = SettingsNavBarMenu;
 			sourceTree = "<group>";
 		};
+		A4B1A906236690DA00A19393 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4FB58A92359DF6A002A1A39 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,13 +341,14 @@
 				EF61C4E42358040D009D3A45 /* Default-568h@2x.png */,
 				EF03724D2356B61D006161CA /* Split Trip */,
 				EF03724C2356B61D006161CA /* Products */,
+				A4B1A906236690DA00A19393 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		EF03724C2356B61D006161CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF03724B2356B61D006161CA /* Split Trip.app */,
+				EF03724B2356B61D006161CA /* TripSplit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +356,7 @@
 		EF03724D2356B61D006161CA /* Split Trip */ = {
 			isa = PBXGroup;
 			children = (
+				A486DB972366914200FEF0C1 /* TripSplit.entitlements */,
 				EFCC5CBD2362994D005E4B90 /* CoreData */,
 				EFF35264235968D6004B7386 /* Helpers */,
 				EF0372622356BE33006161CA /* Model */,
@@ -483,7 +493,7 @@
 			);
 			name = "Split Trip";
 			productName = "Split Trip";
-			productReference = EF03724B2356B61D006161CA /* Split Trip.app */;
+			productReference = EF03724B2356B61D006161CA /* TripSplit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -743,18 +753,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Split Trip/TripSplit.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SBB8C9E36E;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "$(SRCROOT)/Split Trip/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Seschwan.com.Split-Trip";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.split-trip";
+				PRODUCT_NAME = TripSplit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -762,18 +777,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Split Trip/TripSplit.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SBB8C9E36E;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "$(SRCROOT)/Split Trip/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Seschwan.com.Split-Trip";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.split-trip";
+				PRODUCT_NAME = TripSplit;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -93,7 +93,6 @@
                                                 <state key="normal" image="LOG IN BTN"/>
                                                 <connections>
                                                     <action selector="loginButtonTapped:" destination="a5v-bc-DbH" eventType="touchUpInside" id="SAW-OR-QnE"/>
-                                                    <segue destination="cGw-Vd-283" kind="show" identifier="ShowWelcomeBackSegue" id="d7S-yF-x7B"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yi-gn-jHH">

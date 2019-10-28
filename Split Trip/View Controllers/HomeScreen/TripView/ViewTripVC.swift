@@ -8,10 +8,17 @@
 
 import UIKit
 
+protocol DeleteTripDelegate {
+    func tripWasDeleted()
+}
+
+protocol UpdateTripDelegate {
+    func tripWasUpdated()
+}
+
 class ViewTripVC: UIViewController {
 
 //MARK: - IBOUTLETS
-    @IBOutlet weak var tripHeaderImageView: UIImageView!
     @IBOutlet weak var tripNameLabel: UILabel!
     @IBOutlet weak var withLabel: UILabel!
     @IBOutlet weak var participantsLabel: UILabel!
@@ -45,7 +52,10 @@ class ViewTripVC: UIViewController {
     let tripController = TripController()
     var tripExpenses: [Expense] = []
     var trip: Trip?
+    var baseCost: Int?
     var totalTripCost: Int = 0
+    var delegate: DeleteTripDelegate!
+    var updateDelegate: UpdateTripDelegate!
     
     //MARK: - VIEW LIFECYCLE
     override func viewDidLoad() {
@@ -93,13 +103,48 @@ class ViewTripVC: UIViewController {
         })
     }
     
+    func promptForDestination() {
+        let destinationAlert = UIAlertController(title: "Enter Destination", message: nil, preferredStyle: .alert)
+        destinationAlert.addTextField()
+        
+        let submit = UIAlertAction(title: "Confirm", style: .default) { __ in
+            guard let destinationString = destinationAlert.textFields![0].text else { return }
+            if destinationString != "" {
+                self.destinationItemButton.setTitle(destinationString, for: .normal)
+            } else {
+                self.destinationItemButton.setTitle("Select", for: .normal)
+            }
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        destinationAlert.addAction(submit)
+        destinationAlert.addAction(cancel)
+        present(destinationAlert, animated: true)
+    }
+    
+    func promptForBaseCost() {
+        let baseCostAlert = UIAlertController(title: "Enter Base Cost", message: nil, preferredStyle: .alert)
+        baseCostAlert.addTextField()
+        
+        let submit = UIAlertAction(title: "Confirm ", style: .default) { __ in
+            guard let baseCostString = baseCostAlert.textFields![0].text else { return }
+            if baseCostString != "" {
+                self.totalSpentButton.setTitle(baseCostString, for: .normal)
+                self.baseCost = Int(baseCostString)
+            } else {
+                self.totalSpentButton.setTitle("Select", for: .normal)
+            }
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        baseCostAlert.addAction(submit)
+        baseCostAlert.addAction(cancel)
+        present(baseCostAlert, animated: true)
+    }
+    
     func setupViewProperties() {
-        //Configure tripHeaderImageView Layout
-        tripHeaderImageView.layer.borderColor = darkPurpleColor.cgColor
-        tripHeaderImageView.layer.cornerRadius = 8
-        tripHeaderImageView.layer.borderWidth = 2
-        tripHeaderImageView.image = UIImage(named: "ChooseImagePlaceholder")
-
         //Configure tripNameLabel and withLabel Layout
         tripNameLabel.textColor = darkPurpleColor
         withLabel.textColor = darkPurpleColor
@@ -148,19 +193,20 @@ class ViewTripVC: UIViewController {
     }
     
     @IBAction func saveTripTapped(_ sender: Any) {
-        guard var trip = trip, let name = tripNameLabel.text, let date = dateItemButton.titleLabel?.text, let destination = destinationItemButton.titleLabel?.text, let baseCost = Int16(totalSpentButton.titleLabel!.text!) else { return }
+        guard var trip = trip, let name = tripNameLabel.text, let date = dateItemButton.titleLabel?.text, let baseCost = Int32(totalSpentButton.titleLabel!.text!) else { return }
         
         trip.name = name
         trip.date = date
         trip.base_cost = baseCost
-        trip.destination = destination
         
         self.tripController.editTrip(with: trip)
         
         let savedAlert = UIAlertController(title: "Trip Updated", message: "Your trip was updated!", preferredStyle: .alert)
         savedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
-            self.dismiss(animated: true, completion: nil)
+            self.updateDelegate.tripWasUpdated()
         }))
+        
+        present(savedAlert, animated: true, completion: nil)
     }
     
     @IBAction func deleteTripTapped(_ sender: Any) {
@@ -171,15 +217,23 @@ class ViewTripVC: UIViewController {
 
         deleteAlert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (action: UIAlertAction!) in
             self.tripController.deleteTrip(with: trip)
+            self.delegate.tripWasDeleted()
         }))
 
-        deleteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
-            self.dismiss(animated: true, completion: nil) // NOT SURE ABOUT THIS
-        }))
+        deleteAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
 
         present(deleteAlert, animated: true, completion: nil)
+        
     }
     
+    @IBAction func destinationTapped(_ sender: Any) {
+        promptForDestination()
+    }
+    
+    
+    @IBAction func baseCostTapped(_ sender: Any) {
+        promptForBaseCost()
+    }
     
     //MARK: - NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
